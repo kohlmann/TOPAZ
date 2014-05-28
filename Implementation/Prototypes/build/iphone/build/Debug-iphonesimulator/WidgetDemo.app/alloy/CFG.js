@@ -1,0 +1,1 @@
+module.exports={"dependencies":{"listboxWgt":"1.0","CowInfo":"1.0","tiflexigrid":"1.1"}};

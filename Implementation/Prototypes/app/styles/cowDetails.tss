@@ -1,0 +1,16 @@
+"#cowDetail" : {
+    backgroundColor: 'white',
+    
+},
+"#cow" : {
+    width: Titanium.UI.FILL
+},
+"#details" : {
+    width: Titanium.UI.FILL
+},
+"#details02" : {
+    width: Titanium.UI.FILL
+},
+"#breeding" : {
+    width: Titanium.UI.FILL
+}

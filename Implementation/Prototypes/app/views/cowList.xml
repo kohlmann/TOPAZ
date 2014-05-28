@@ -1,0 +1,38 @@
+<!-- Damit die Datenbindung funktioniert, muss die dataCollection
+in <ListSection>dataCollection="cowModel"</ListSection> gesetzt werden. -->
+<Alloy>
+	<Collection src="cowModel" />
+    <ListView id="listView" defaultItemTemplate="template">
+
+          <!-- Sets ListView's searchView property.
+         For Android, you can also do <SearchView platform="android" />
+         to use a Ti.UI.Android.SearchView instead of a search bar. -->
+        <SearchBar id="searchBar" barColor="#000" visible="false"  />
+
+            
+        <!-- The Templates tag sets the ListView's templates property -->
+        <Templates>
+
+            <!-- Define your item templates within the Templates tags or use the
+                 Require tag to include a view that only contains an ItemTemplate -->
+
+            <ItemTemplate name="template" id="template">
+                <ImageView bindId="pic" id="icon" />
+                <Label bindId="info" id="title" />
+                <Label bindId="es_info" id="subtitle" />
+            </ItemTemplate>
+
+        </Templates>
+        
+        <ListSection dataCollection="cowModel">
+			
+            <!-- You can specify any ListItem or ListDataItem properties in ListItem -->
+
+            <!-- Specify data to bind to the item template with inline attributes
+                 defined as <bindId>:<Ti.UI.Component.property> -->
+
+			<ListItem info:text="{name}" es_info:text="{description}" pic:image="{cowImage}" searchableText="{name}" />
+        </ListSection>
+
+    </ListView> 
+</Alloy>

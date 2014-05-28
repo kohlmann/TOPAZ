@@ -1,0 +1,22 @@
+<Alloy>
+	<Window>
+		<TableView id="cowDetail" defaultItemTemplate="template" onClick="itemclick">
+
+            <TableViewSection headerTitle="Details">
+				<TableViewRow>
+					<ImageView id="cow" image="/images/cow.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="details" image="/images/cowDetails01.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="details02" image="/images/cowDetails02.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="breeding" image="/images/breedingValues.png"></ImageView>
+				</TableViewRow>
+            </TableViewSection>
+
+        </TableView>  
+	</Window>        
+</Alloy>
