@@ -1,5 +1,5 @@
 "#cowDetail" : {
-    backgroundColor: 'white',
+    backgroundColor: 'white'
     
 },
 "#cow" : {
@@ -13,4 +13,24 @@
 },
 "#breeding" : {
     width: Titanium.UI.FILL
+},
+
+"#img" : {
+	width: Titanium.UI.SIZE,
+	height: Titanium.UI.SIZE,
+	top:'10',
+	left:'10',
+	righ:'10'
+}
+
+"#lb" : {
+	color:'white',
+	top:'50%',
+	left:'10'
+}
+
+"#lb1" : {
+	color:'white',
+	top:'50%',
+	right:'10'
 }

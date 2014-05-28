@@ -2,6 +2,7 @@
 in <ListSection>dataCollection="cowModel"</ListSection> gesetzt werden. -->
 <Alloy>
 	<Collection src="cowModel" />
+	
     <ListView id="listView" defaultItemTemplate="template">
 
           <!-- Sets ListView's searchView property.

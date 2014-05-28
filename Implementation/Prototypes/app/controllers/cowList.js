@@ -44,6 +44,7 @@ $.listView.addEventListener('itemclick', function(e){
 	sections=$.listView.getSections();
 	items=sections[0].getItems();
 	console.log(items[3]);
+	
 	var win=Alloy.createController('cowDetails').getView();
 	win.open();
 });

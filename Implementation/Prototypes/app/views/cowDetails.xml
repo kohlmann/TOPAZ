@@ -1,6 +1,7 @@
 <Alloy>
+	<Model id="model" src="cowModel" instance="true"></Model>
 	<Window>
-		<TableView id="cowDetail" defaultItemTemplate="template" onClick="itemclick">
+		<!-- <TableView id="cowDetail" defaultItemTemplate="template" onClick="itemclick">
 
             <TableViewSection headerTitle="Details">
 				<TableViewRow>
@@ -17,6 +18,11 @@
 				</TableViewRow>
             </TableViewSection>
 
-        </TableView>  
+        </TableView>   -->
+        <View>
+        	<ImageView id="img" image="/images/cow.png"></ImageView>
+        	<Label id="lb0" text="GRZG"></Label>
+        	<Label id="lb1" text="GRZM"></Label>
+        </View>
 	</Window>        
 </Alloy>
