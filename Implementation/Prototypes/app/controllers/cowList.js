@@ -43,7 +43,7 @@ $.listView.addEventListener('itemclick', function(e){
 	var section = Titanium.UI.ListSection;
 	sections=$.listView.getSections();
 	items=sections[0].getItems();
-	console.log(items[3]);
+	console.log(items[3].itemId);
 	
 	var win=Alloy.createController('cowDetails').getView();
 	win.open();

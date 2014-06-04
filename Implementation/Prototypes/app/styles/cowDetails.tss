@@ -1,19 +1,19 @@
 "#cowDetail" : {
     backgroundColor: 'white'
     
-},
+}
 "#cow" : {
     width: Titanium.UI.FILL
-},
-"#details" : {
-    width: Titanium.UI.FILL
-},
-"#details02" : {
-    width: Titanium.UI.FILL
-},
-"#breeding" : {
-    width: Titanium.UI.FILL
-},
+}
+// "#details" : {
+    // width: Titanium.UI.FILL
+// },
+// "#details02" : {
+    // width: Titanium.UI.FILL
+// },
+// "#breeding" : {
+    // width: Titanium.UI.FILL
+// },
 
 "#img" : {
 	width: Titanium.UI.SIZE,
@@ -23,14 +23,458 @@
 	righ:'10'
 }
 
-"#lb" : {
+"#tr0" : {
+	backgroundColor:'#04638b'
+}
+
+"#tr1" : {
+	backgroundColor:'#da4e07',
 	color:'white',
-	top:'50%',
-	left:'10'
+	font:{fontSize:'18dp'},
+}
+
+"#tr2" : {
+	backgroundColor:'#da4e07',
+	color:'white',
+	font:{fontSize:'18dp'},
+}
+
+"#tr3" : {
+	backgroundColor:'#04638b',
+	color:'white',
+	font:{fontSize:'14dp'},
+}
+
+"#tr5" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr7" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr9" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr11" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr13" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr15" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr17" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr19" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#tr21" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+"#lb0" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'18dp', fontWeight:'bold'}
 }
 
 "#lb1" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb2" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'18dp'}
+}
+
+"#lb3" : {
 	color:'white',
-	top:'50%',
-	right:'10'
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb4" : {
+	color:'white',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+"#lb5" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb6" : {
+	color:'black',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+"#lb7" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb8" : {
+	color:'black',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+"#lb9" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb10" : {
+	color:'black',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+"#lb11" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb12" : {
+	color:'black',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+"#lb13" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb14" : {
+	color:'black',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+"#lb15" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb16" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb17" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb18" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb19" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb20" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb21" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb22" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb23" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb24" : {
+	color:'white',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb25" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb26" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb27" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb28" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb29" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb30" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb31" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb32" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb33" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb34" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb35" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb36" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb37" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb38" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb39" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb40" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb41" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb42" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb43" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb44" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb45" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb46" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb47" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb48" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb49" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb50" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb51" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb52" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb53" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb54" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb55" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb56" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb57" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb58" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb59" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb60" : {
+	color:'black',
+	right:'10',
+	font:{fontSize:'14dp'}
+}
+
+"#lb61" : {
+	backgroundColor:'orange',
+	left:Alloy.CFG.screenHalf
 }

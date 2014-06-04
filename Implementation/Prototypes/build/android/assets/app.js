@@ -14,4 +14,6 @@ Alloy.CFG.itemLeft = 8.33 * Titanium.Platform.displayCaps.platformWidth / 100;
 
 Alloy.CFG.itemTop = 3.47 * Titanium.Platform.displayCaps.platformWidth / 100;
 
+Alloy.CFG.screenHalf = Titanium.Platform.displayCaps.platformWidth / 2;
+
 Alloy.createController("index");

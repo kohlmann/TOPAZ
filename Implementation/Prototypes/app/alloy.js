@@ -20,9 +20,14 @@ Alloy.Collections.cowModel = Alloy.createCollection("cowModel");
 Alloy.CFG.itemIconWidth = (Titanium.Platform.displayCaps.platformWidth * 6.94)/100;
 Alloy.CFG.itemIconHeight = (Titanium.Platform.displayCaps.platformHeight * 3.91)/100;
 
+// Alloy.CFG.itemIconWidth = (Titanium.Platform.displayCaps.platformWidth * 17)/100;
+// Alloy.CFG.itemIconHeight = (Titanium.Platform.displayCaps.platformHeight * 10)/100;
+
 Alloy.CFG.itemTitleFontsize = (Titanium.Platform.displayCaps.platformWidth * 2.78)/100;
 
 Alloy.CFG.itemSubtitleFontsize = (Titanium.Platform.displayCaps.platformWidth * 1.94)/100;
 
 Alloy.CFG.itemLeft = (Titanium.Platform.displayCaps.platformWidth * 8.33)/100;
 Alloy.CFG.itemTop = (Titanium.Platform.displayCaps.platformWidth * 3.47)/100;
+
+Alloy.CFG.screenHalf = Titanium.Platform.displayCaps.platformWidth/2;
