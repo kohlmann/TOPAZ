@@ -1,14 +1,20 @@
 function Controller() {
-    function __alloyId26(e) {
+    function __alloyId25(e) {
         if (e && e.fromAdapter) return;
-        var opts = __alloyId26.opts || {};
-        var models = __alloyId25.models;
+        var opts = __alloyId25.opts || {};
+        var models = __alloyId24.models;
         var len = models.length;
         var __alloyId21 = [];
         for (var i = 0; len > i; i++) {
             var __alloyId22 = models[i];
             __alloyId22.__transform = {};
-            var __alloyId24 = {
+            var __alloyId23 = {
+                properties: {
+                    width: Titanium.UI.FILL,
+                    height: Titanium.UI.FILL,
+                    left: "10",
+                    searchableText: "undefined" != typeof __alloyId22.__transform["name"] ? __alloyId22.__transform["name"] : __alloyId22.get("name")
+                },
                 info: {
                     text: "undefined" != typeof __alloyId22.__transform["name"] ? __alloyId22.__transform["name"] : __alloyId22.get("name")
                 },
@@ -17,12 +23,9 @@ function Controller() {
                 },
                 pic: {
                     image: "undefined" != typeof __alloyId22.__transform["cowImage"] ? __alloyId22.__transform["cowImage"] : __alloyId22.get("cowImage")
-                },
-                properties: {
-                    searchableText: "undefined" != typeof __alloyId22.__transform["name"] ? __alloyId22.__transform["name"] : __alloyId22.get("name")
                 }
             };
-            __alloyId21.push(__alloyId24);
+            __alloyId21.push(__alloyId23);
         }
         opts.animation ? $.__views.__alloyId20.setItems(__alloyId21, opts.animation) : $.__views.__alloyId20.setItems(__alloyId21);
     }
@@ -95,12 +98,12 @@ function Controller() {
     $.__views.__alloyId20 = Ti.UI.createListSection({
         id: "__alloyId20"
     });
-    var __alloyId25 = Alloy.Collections["cowModel"] || cowModel;
-    __alloyId25.on("fetch destroy change add remove reset", __alloyId26);
-    var __alloyId27 = [];
-    __alloyId27.push($.__views.__alloyId20);
+    var __alloyId24 = Alloy.Collections["cowModel"] || cowModel;
+    __alloyId24.on("fetch destroy change add remove reset", __alloyId25);
+    var __alloyId26 = [];
+    __alloyId26.push($.__views.__alloyId20);
     $.__views.listView = Ti.UI.createListView({
-        sections: __alloyId27,
+        sections: __alloyId26,
         templates: __alloyId14,
         searchView: $.__views.searchBar,
         id: "listView",
@@ -108,7 +111,7 @@ function Controller() {
     });
     $.__views.listView && $.addTopLevelView($.__views.listView);
     exports.destroy = function() {
-        __alloyId25.off("fetch destroy change add remove reset", __alloyId26);
+        __alloyId24.off("fetch destroy change add remove reset", __alloyId25);
     };
     _.extend($, $.__views);
     require("cow");

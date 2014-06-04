@@ -3,7 +3,8 @@
     width: Alloy.CFG.itemIconWidth,
     height: Alloy.CFG.itemIconHeight,
     left: 0
-},
+}
+
 "#title" : {
     // color: 'black',
     // backgroundColor: 'transparent',
@@ -13,7 +14,8 @@
     backgroundColor: 'transparent',
     font: { fontFamily:'Arial', fontSize: Alloy.CFG.itemTitleFontsize, fontWeight:'bold' },
     left: Alloy.CFG.itemLeft, top: 0
-},
+}
+
 "#subtitle" : {
     // color: 'gray',
     // backgroundColor: 'transparent',
@@ -24,3 +26,11 @@
     font: { fontFamily:'Arial', fontSize: Alloy.CFG.itemSubtitleFontsize },
     left: Alloy.CFG.itemLeft, top: Alloy.CFG.itemTop
 }
+
+"#listItem" :{
+	width: Titanium.UI.FILL,
+	height: Titanium.UI.FILL,
+	left:'10'
+}
+
+

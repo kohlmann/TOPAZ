@@ -32,7 +32,7 @@ in <ListSection>dataCollection="cowModel"</ListSection> gesetzt werden. -->
             <!-- Specify data to bind to the item template with inline attributes
                  defined as <bindId>:<Ti.UI.Component.property> -->
 
-			<ListItem info:text="{name}" es_info:text="{description}" pic:image="{cowImage}" searchableText="{name}" />
+			<ListItem id="listItem" info:text="{name}" es_info:text="{description}" pic:image="{cowImage}" searchableText="{name}" />
         </ListSection>
 
     </ListView> 
