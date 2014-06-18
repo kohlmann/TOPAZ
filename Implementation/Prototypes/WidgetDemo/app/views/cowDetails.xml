@@ -1,0 +1,153 @@
+<Alloy>
+	<Model id="model" src="cowModel" instance="true"></Model>
+	<Window>
+		<!-- <TableView id="cowDetail" defaultItemTemplate="template" onClick="itemclick">
+            <TableViewSection headerTitle="Details">
+				<TableViewRow>
+					<ImageView id="cow" image="/images/cow.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="details" image="/images/cowDetails01.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="details02" image="/images/cowDetails02.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="breeding" image="/images/breedingValues.png"></ImageView>
+				</TableViewRow>
+            </TableViewSection>
+        </TableView>   -->
+        
+        
+        <TableView id="cowDetail" defaultItemTemplate="template" onClick="itemclick">
+            <TableViewSection headerTitle="Details">
+				<TableViewRow>
+					<ImageView id="cow" image="/images/cow.png"></ImageView>
+				</TableViewRow>
+				<TableViewRow layout="vertical">
+					<Label id="lb0" text="Empire	- 823060"></Label>
+					<Label id="lb1" text="Epic  x Legend  x Shottle"></Label>
+					<Label id="lb2" text="0 Tö. | CVF BLF BYF | aAa: 312546"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr0">
+					<Label id="lb3" text="gRZG"></Label>
+					<Label id="lb4" text="142"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label id="lb5" class="rzvBold" text="gRZM"></Label>
+					<Label id="lb6" class="rzv" text="124"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label id="lb7" class="rzvBold" text="gRZE"></Label>
+					<Label id="lb8" class="rzv" text="138"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label id="lb9" class="rzvBold" text="gRZR"></Label>
+					<Label id="lb10" class="rzv" text="104"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label id="lb11" class="rzvBold" text="gRZS"></Label>
+					<Label id="lb12" class="rzv" text="116"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label id="lb13" class="rzvBold" text="gRZKd"></Label>
+					<Label id="lb14" class="rzv" text="107"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr1" title="Milchzuchtwert"></TableViewRow>
+				<TableViewRow id="tr22" layout="horizontal">
+					<Label id="lb15" class="gRZM" text="Milch kg\n +1.632"></Label>
+					<Label id="lb16" class="gRZM" text="Fett %\n-0,11"></Label>
+					<Label id="lb17" class="gRZM" text="Fett kg\n+55"></Label>
+					<Label id="lb18" class="gRZM" text="Eiweiß %\n-0,07"></Label>	
+					<Label id="lb19" class="gRZM"text="Eiweiß kg\n+48"></Label>	
+				</TableViewRow>
+				<TableViewRow id="tr2" title="Exterier"></TableViewRow>
+				<TableViewRow layout="horizontal">
+					<Label id="lb20" class="gRZE" text="Milchtyp\n 114"></Label>
+					<Label id="lb21" class="gRZE" text="Körper\n118"></Label>
+					<Label id="lb22" class="gRZE" text="Fundament\n125"></Label>
+					<Label id="lb23" class="gRZE" text="Euter\n132"></Label>	
+				</TableViewRow>
+				<TableViewRow id="tr3">
+					<Label id="lb24" text="Standardisierte Zuchtwerte"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr4" class="nonColored">
+					<Label id="lb25" class="right" text="Größe"></Label>
+					<Label id="lb61" width="119"></Label>
+					<Label id="lb26" class="left" text="119 groß"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr5" class="colored">
+					<Label id="lb27" class="right" text="Milchcharakter"></Label>
+					<Label id="lb28" class="left" text="112 edel"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr6" class="nonColored">
+					<Label id="lb29" class="right" text="Körpertiefe"></Label>
+					<Label id="lb30" class="left" text="107 viel"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr7" class="colored">
+					<Label id="lb31" class="right" text="Stärke"></Label>
+					<Label id="lb32" class="left" text="110 stark"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr8" class="nonColored">
+					<Label id="lb33" class="right" text="Beckenneigung"></Label>
+					<Label id="lb34" class="left" text="98 abfallend"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr9" class="colored">
+					<Label id="lb35" class="right" text="Beckenbreite"></Label>
+					<Label id="lb36" class="left" text="104 breit"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr10" class="nonColored">
+					<Label id="lb37" class="right" text="Hi.Beinwinkelung"></Label>
+					<Label id="lb38" class="left" text="96 gewinkelt"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr11" class="colored">
+					<Label id="lb39" class="right" text="Klauen"></Label>
+					<Label id="lb40" class="left" text="128 hoch"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr12" class="nonColored">
+					<Label id="lb41" class="right" text="Sprunggelenk"></Label>
+					<Label id="lb42" class="left" text="128 hoch"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr13" class="colored">
+					<Label id="lb43" class="right" text="Hi.Beinstellung"></Label>
+					<Label id="lb44" class="left" text="115 parallel"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr14" class="nonColored">
+					<Label id="lb45" class="right" text="Bewegung"></Label>
+					<Label id="lb46" class="left" text="121 gut"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr15" class="colored">
+					<Label id="lb47" class="right" text="Hintereuter"></Label>
+					<Label id="lb48" class="left" text="123 hoch"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr16" class="nonColored">
+					<Label id="lb49" class="right" text="Zentralband"></Label>
+					<Label id="lb50" class="left" text="112 stark"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr17" class="colored">
+					<Label id="lb51" class="right" text="Strichplaz. vorne"></Label>
+					<Label id="lb52" class="left" text="119 innen"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr18" class="nonColored">
+					<Label id="lb53" class="right" text="Strichplaz. hinten"></Label>
+					<Label id="lb54" class="left" text="106 innen"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr19" class="colored">
+					<Label id="lb55" class="right" text="Vordereuter"></Label>
+					<Label id="lb56" class="left" text="122 fest"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr20" class="nonColored">
+					<Label id="lb57" class="right" text="Eutertiefe"></Label>
+					<Label id="lb58" class="left" text="124 hoch"></Label>
+				</TableViewRow>
+				<TableViewRow id="tr21" class="colored">
+					<Label id="lb59" class="right" text="Strichlänge"></Label>
+					<Label id="lb60" class="left" text="92 lang"></Label>
+				</TableViewRow>
+				<TableViewRow>
+				</TableViewRow>
+            </TableViewSection>
+        </TableView>  
+      
+	</Window>        
+</Alloy>

@@ -1,0 +1,126 @@
+"#cowDetail" : {
+    backgroundColor: 'white'
+    
+}
+"#cow" : {
+    width: Titanium.UI.FILL
+}
+
+// "#img" : {
+	// width: Titanium.UI.SIZE,
+	// height: Titanium.UI.SIZE,
+	// top:'10',
+	// left:'10',
+	// righ:'10'
+// }
+
+"#tr0" : {
+	backgroundColor:'#04638b'
+}
+
+"#tr1" : {
+	backgroundColor:'#da4e07',
+	color:'white',
+	font:{fontSize:'18dp'},
+}
+
+"#tr2" : {
+	backgroundColor:'#da4e07',
+	color:'white',
+	font:{fontSize:'18dp'},
+}
+
+"#tr3" : {
+	backgroundColor:'#04638b',
+	color:'white',
+	font:{fontSize:'14dp'},
+}
+
+// "#tr22" : {
+	// width: Ti.UI.FILL
+// }
+
+".colored" : {
+	backgroundColor:'#c5d9ec',
+	color:'white',
+	font:{fontSize:'14dp'},
+	title:'20'
+}
+
+
+"#lb0" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb1" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+"#lb2" : {
+	color:'black',
+	left:'10',
+	font:{fontSize:'18dp'}
+}
+
+"#lb3" : {
+	color:'white',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb4" : {
+	color:'white',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+
+".rzvBold" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp', fontWeight:'bold'}
+}
+
+".rzv" : {
+	color:'black',
+	right:'100',
+	font:{fontSize:'18dp'}
+}
+
+".gRZM" : {
+	width:Alloy.CFG.gRZM,
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+".gRZE" : {
+	width:Alloy.CFG.gRZE,
+	color:'black',
+	left:'20',
+	font:{fontSize:'18dp'}
+}
+
+"#lb24" : {
+	color:'white',
+	left:'10',
+	font:{fontSize:'14dp'}
+}
+
+".right" : {
+	color:'black',
+	left:'20',
+	font:{fontSize:'14dp'}
+}
+
+".left" : {
+	color:'black',
+	right:'20',
+	font:{fontSize:'14dp'}
+}
+
+

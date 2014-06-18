@@ -1,6 +1,0 @@
-"/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/build/android/gen/de/medienkontor/kohlmann/widgetdemo/ApplicationStylesheet.java"
-"/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/build/android/gen/de/medienkontor/kohlmann/widgetdemo/AssetCryptImpl.java"
-"/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/build/android/gen/de/medienkontor/kohlmann/widgetdemo/R.java"
-"/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/build/android/gen/de/medienkontor/kohlmann/widgetdemo/WidgetdemoActivity.java"
-"/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/build/android/gen/de/medienkontor/kohlmann/widgetdemo/WidgetdemoAppInfo.java"
-"/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/build/android/gen/de/medienkontor/kohlmann/widgetdemo/WidgetdemoApplication.java"
