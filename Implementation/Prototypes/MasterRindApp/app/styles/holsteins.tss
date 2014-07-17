@@ -1,0 +1,15 @@
+"#body": {
+	width: Alloy.Globals.screenWidth,
+	height: Alloy.Globals.screenHeight,
+	backgroundImage: '/images/grid_an_hintergrund_ap01.png'
+},
+"#header":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundImage: "/images/MAR_Logo01_xl.png"	
+},
+"#footer":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL ,
+	backgroundImage: "/images/MAR_Logo01_xl.png"	
+}

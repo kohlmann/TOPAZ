@@ -1,5 +1,32 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-	</Window>
+	<Window class="container" layout="vertical">
+		<!-- <Require src="startScreen"></Require> -->
+		<View id="header"></View>
+		<View id="body" layout="horizontal" horizontalWrap="true">
+			<Button id="about" class="button"/>
+	        <Button id="contacts" class="button"/>
+	        <Button id="appointments" class="button"/>
+	        <Button id="favorites" class="button"/>
+	        
+	        <Button id="holsteins" class="button"/>
+	        <Button id="blackColored" class="button"/>
+	        <Button id="redColored" class="button"/>
+	        <Button id="hornless" class="button"/>
+	        
+	        <Button id="daughterTested" class="button"/>
+	        <Button id="genomics" class="button"/>
+	        <Button id="sexed" class="button"/>
+	        <Button id="freshSemen" class="button"/>
+	        
+	        <Button id="properties" class="button"/>
+	        <Button id="manual" class="button"/>
+	        <Button id="imprint" class="button"/>
+	        <!-- <Button class="button"/> -->
+	        
+		</View>
+		<View id="footer" >
+			<ImageView id="home"></ImageView>
+			<ImageView id="search"></ImageView>
+		</View>
+	</Window>    
 </Alloy>

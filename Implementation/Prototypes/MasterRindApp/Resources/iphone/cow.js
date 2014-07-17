@@ -1,6 +1,7 @@
 TOPAZ.namespace("TOPAZ.masterrind.cow");
 
 TOPAZ.masterrind.cow = {
+    imgage: "null",
     gRZG: "null",
     gRZM: "null",
     milkKg: "null",

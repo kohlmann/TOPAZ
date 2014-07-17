@@ -1,8 +1,115 @@
 ".container": {
-	backgroundColor:"white"
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor:'white'
 },
-"Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
-} 
+
+".button":{
+	width:'25%',
+	height:'25%',
+	borderWidth:'5'
+},
+
+"#about":{
+	backgroundImage:'/images/grid_icon_ueber_uns.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#contacts":{
+	backgroundImage:'/images/grid_icon_ap.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#appointments":{
+	backgroundImage:'/images/grid_icon_termine.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#favorites":{
+	backgroundImage:'/images/grid_icon_fav.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#holsteins":{
+	backgroundImage:'/images/grid_icon_holstein.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#blackColored":{
+	backgroundImage:'/images/grid_icon_sbt.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#redColored":{
+	backgroundImage:'/images/grid_icon_rbt.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#hornless":{
+	backgroundImage:'/images/grid_icon_hornlose.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#daughterTested":{
+	backgroundImage:'/images/grid_icon_gepruefte.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#genomics":{
+	backgroundImage:'/images/grid_icon_genomics.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#sexed":{
+	backgroundImage:'/images/grid_icon_gesext.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#freshSemen":{
+	backgroundImage:'/images/grid_icon_sperma.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#properties":{
+	backgroundImage:'/images/grid_icon_settings.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#manual":{
+	backgroundImage:'/images/grid_icon_handbuch.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#imprint":{
+	backgroundImage:'/images/grid_icon_impressum.png',
+	backgroundSelectedColor:'blue'
+},
+
+"#header":{
+	width:Ti.UI.FILL,
+	height:'10%',
+	backgroundImage: '/images/MAR_Logo01_xl.png'
+},
+
+"#body": {
+	width: Ti.UI.FILL,
+	height: '80%',
+	backgroundImage: '/images/grid_an_hintergrund_ap01.png'
+},
+
+"#footer":{
+	width:Ti.UI.FILL,
+	height:'10%',
+},
+
+"#home":{
+	image : '/images/ios7_icon_home_xl.png',
+	left:'20%',
+	top:'20%'
+},
+
+"#search":{
+	image : '/images/icon_in_der_naehe_2_xl.png',
+	right:'20%',
+	top:'25%'
+}
