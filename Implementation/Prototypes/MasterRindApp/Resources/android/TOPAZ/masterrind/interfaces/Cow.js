@@ -39,6 +39,7 @@ TOPAZ.masterrind.interfaces.Cow = function() {
     var m_gRZS = "null";
     var m_gRZD = "null";
     var m_gRZR = "null";
+    var m_gRZkd = "null";
     var m_gRZKM = "null";
     var m_calfRunningDirectly = "null";
     this.getA = function() {
@@ -156,7 +157,7 @@ TOPAZ.masterrind.interfaces.Cow = function() {
         return m_gRZR;
     };
     this.getGRZkd = function() {
-        return m_gRkd;
+        return m_gRZkd;
     };
     this.getGRZKM = function() {
         return m_gRZKM;
