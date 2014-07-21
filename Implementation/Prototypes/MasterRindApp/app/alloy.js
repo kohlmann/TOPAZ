@@ -18,7 +18,6 @@ Alloy.Globals.screenHeight = (Titanium.Platform.displayCaps.platformHeight)/Tita
 /**
  *  Hauptnamensraum
  * 
- * @module TSA
  * */
 var TOPAZ = TOPAZ || {};
 

@@ -10,7 +10,7 @@ var model;
 //Ursache: unbekannt
 //Mögliche Lösung: unbekannt
 $.about.addEventListener('click', function(e) {
-	
+
 	for ( i = 0; i < cowList.length; i++) {
 
 		cow = cowList[i];
@@ -22,7 +22,7 @@ $.about.addEventListener('click', function(e) {
 
 		Alloy.Collections.cowCol.add(model);
 	}
-	
+
 	var win = Alloy.createController('about').getView();
 	win.open();
 
@@ -31,7 +31,6 @@ $.about.addEventListener('click', function(e) {
 $.appointments.addEventListener('click', function(e) {
 	var win = Alloy.createController('appointments').getView();
 	//win.open();
-
 
 	var mr = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.CowFactory());
 	mr.loadCowsFromDB();
@@ -54,8 +53,12 @@ $.blackColored.addEventListener('click', function(e) {
 $.contacts.addEventListener('click', function(e) {
 	var win = Alloy.createController('contacts').getView();
 	win.open();
-	
-		var cowList = new Array();
+
+	var appointments = new Array();
+	var companies = new Array();
+	var contacts = new Array();
+	var cows = new Array();
+	var favorites = new Array();
 	var model;
 	// Richtlinie: listen immer im plural bennen
 	// TODO muster für das Laden der Daten aus der DB überlegen.
@@ -63,14 +66,29 @@ $.contacts.addEventListener('click', function(e) {
 	// Error: Daten werden erst angezeigt, wenn mann zwei Mal auf den Zurückbutton drückt.
 	// Error: Wenn der Fehler not a function auftritt, alle Klassennamen und requires überprüfen.
 
-	var mr = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.CowFactory());
-	mr.loadCowsFromDB();
-	cowList = mr.getCows('Holsteins');
-	// mr.createCow('DaughterTested').test();
-	// mr.createCow('sdg');
-	for ( i = 0; i < cowList.length; i++) {
+	var mr_app = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.AppointmentFactory());
+	mr_app.loadAppointmentsFromDB();
+	appointments = mr_app.getAppointments('Meeting');
+	console.log(appointments.length);
+	for ( i = 0; i < appointments.length; i++) {
+		app = appointments[i];
+		console.log(app.getName());
+	}
 
-		cow = cowList[i];
+	var mr_fav = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.FavoriteFactory());
+	mr_fav.addFavorite("12","Peniskopf","1","PeniskopfFav");
+	mr_fav.loadFavoritesFromDB();
+	favorites = mr_fav.getFavorites('cow');
+	for ( i = 0; i < favorites.length; i++) {
+	console.log(favorites[i].getName());
+	}
+
+	var mr_cow = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.CowFactory());
+	mr_cow.loadCowsFromDB();
+	cows = mr_cow.getCows('Holsteins');
+	for ( i = 0; i < cows.length; i++) {
+
+		cow = cows[i];
 		console.log(cow.getId() + ' ' + cow.getBase());
 
 		model = Alloy.createModel('cowsMod', {
@@ -78,16 +96,12 @@ $.contacts.addEventListener('click', function(e) {
 		});
 
 		Alloy.Collections.cowCol.add(model);
-		// console.log(Alloy.Collections.cowCol);
+
 	}
 
-	var mr_fav = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.FavoriteFactory());
-	console.log(mr_fav.addFavorite('cow', '23', 'Peniskopf').getName());
+	// var mr_fav = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.FavoriteFactory());
+	// console.log(mr_fav.addFavorite('cow', '23', 'Peniskopf').getName());
 
-	var mr_app = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.AppointmentFactory());
-
-	console.log(mr_app.getAppointment("Auction").getName());
-	
 });
 
 $.about.addEventListener('click', function(e) {

@@ -4,6 +4,10 @@ TOPAZ.masterrind.datatypes.Company = function() {
     var m_name = "null";
     var m_description = "null";
     var m_imprint = "null";
+    var m_id = "null";
+    this.getId = function() {
+        return m_id;
+    };
     this.getName = function() {
         return m_name;
     };
@@ -21,5 +25,8 @@ TOPAZ.masterrind.datatypes.Company = function() {
     };
     this.setImprint = function(imprint) {
         m_imprint = imprint;
+    };
+    this.setId = function(id) {
+        m_id = id;
     };
 };

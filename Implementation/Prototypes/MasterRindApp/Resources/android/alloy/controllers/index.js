@@ -223,23 +223,36 @@ function Controller() {
     $.contacts.addEventListener("click", function() {
         var win = Alloy.createController("contacts").getView();
         win.open();
-        var cowList = new Array();
+        var appointments = new Array();
+        new Array();
+        new Array();
+        var cows = new Array();
+        var favorites = new Array();
         var model;
-        var mr = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.CowFactory());
-        mr.loadCowsFromDB();
-        cowList = mr.getCows("Holsteins");
-        for (i = 0; cowList.length > i; i++) {
-            cow = cowList[i];
+        var mr_app = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.AppointmentFactory());
+        mr_app.loadAppointmentsFromDB();
+        appointments = mr_app.getAppointments("Meeting");
+        console.log(appointments.length);
+        for (i = 0; appointments.length > i; i++) {
+            app = appointments[i];
+            console.log(app.getName());
+        }
+        var mr_fav = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.FavoriteFactory());
+        mr_fav.addFavorite("12", "Peniskopf", "1", "PeniskopfFav");
+        mr_fav.loadFavoritesFromDB();
+        favorites = mr_fav.getFavorites("cow");
+        for (i = 0; favorites.length > i; i++) console.log(favorites[i].getName());
+        var mr_cow = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.CowFactory());
+        mr_cow.loadCowsFromDB();
+        cows = mr_cow.getCows("Holsteins");
+        for (i = 0; cows.length > i; i++) {
+            cow = cows[i];
             console.log(cow.getId() + " " + cow.getBase());
             model = Alloy.createModel("cowsMod", {
                 ID: cow.getId()
             });
             Alloy.Collections.cowCol.add(model);
         }
-        var mr_fav = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.FavoriteFactory());
-        console.log(mr_fav.addFavorite("cow", "23", "Peniskopf").getName());
-        var mr_app = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.AppointmentFactory());
-        console.log(mr_app.getAppointment("Auction").getName());
     });
     $.about.addEventListener("click", function() {
         var win = Alloy.createController("about").getView();

@@ -7,6 +7,10 @@ TOPAZ.masterrind.datatypes.Contact = function() {
     var m_zipCode = "null";
     var m_town = "null";
     var m_country = "null";
+    var m_id = "null";
+    this.getId = function() {
+        return m_id;
+    };
     this.getName = function() {
         return m_name;
     };
@@ -39,5 +43,8 @@ TOPAZ.masterrind.datatypes.Contact = function() {
     };
     this.setCountry = function(country) {
         m_country = country;
+    };
+    this.setId = function(id) {
+        m_id = id;
     };
 };

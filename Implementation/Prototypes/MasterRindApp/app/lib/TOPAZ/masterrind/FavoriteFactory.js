@@ -3,6 +3,12 @@ TOPAZ.namespace('TOPAZ.masterrind.FavoriteFactory');
 require('TOPAZ/masterrind/interfaces/Favorite');
 require('TOPAZ/masterrind/impl/CowFavorite');
 
+/**
+ * Realisiert MasterRindFactory.js.
+ *
+ * @namespace TOPAZ.masterrind
+ * @class FavoriteFactory
+ */
 TOPAZ.masterrind.FavoriteFactory = function() {
 
 	/**

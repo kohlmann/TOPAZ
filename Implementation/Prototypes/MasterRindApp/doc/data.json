@@ -1,0 +1,1997 @@
+{
+    "project": {},
+    "files": {
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.datatypes.Company": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.datatypes": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.datatypes.Contact": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.datatypes": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Auction.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Auction.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Auction": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/BlackColored.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/BlackColored.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.BlackColored": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Course.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Course.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Course": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/CowFavorite.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/CowFavorite.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.CowFavorite": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/DaughterTested.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/DaughterTested.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.DaughterTested": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Exhibition.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Exhibition.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Exhibition": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Genomics.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Genomics.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Genomics": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Holsteins.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Holsteins.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Holsteins": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Hornless.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Hornless.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Hornless": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MeetCattle.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MeetCattle.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.MeetCattle": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Meeting.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Meeting.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.Meeting": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/RedColored.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/RedColored.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.RedColored": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/YoungBreeder.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/YoungBreeder.js",
+            "modules": {},
+            "classes": {
+                "TOPAZ.masterrind.impl.YoungBreeder": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TOPAZ.masterrind.impl": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/MasterRindFactory.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/MasterRindFactory.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/AppointmentFactory.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/AppointmentFactory.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/CowFactory.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/CowFactory.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/FavoriteFactory.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/FavoriteFactory.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "TOPAZ.masterrind.datatypes.Company": {
+            "name": "TOPAZ.masterrind.datatypes.Company",
+            "shortname": "TOPAZ.masterrind.datatypes.Company",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.datatypes",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 3,
+            "description": "Bildet eine Datenstruktur zum Speichern von Daten einer Firma."
+        },
+        "TOPAZ.masterrind.datatypes.Contact": {
+            "name": "TOPAZ.masterrind.datatypes.Contact",
+            "shortname": "TOPAZ.masterrind.datatypes.Contact",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.datatypes",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 3,
+            "description": "Bildet eine Datenstruktur zum Speichern von Daten eines Kontaktes."
+        },
+        "TOPAZ.masterrind.impl.Auction": {
+            "name": "TOPAZ.masterrind.impl.Auction",
+            "shortname": "TOPAZ.masterrind.impl.Auction",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Auction.js",
+            "line": 5,
+            "description": "Realisiert Appointment.js."
+        },
+        "TOPAZ.masterrind.impl.BlackColored": {
+            "name": "TOPAZ.masterrind.impl.BlackColored",
+            "shortname": "TOPAZ.masterrind.impl.BlackColored",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/BlackColored.js",
+            "line": 5,
+            "description": "Realisiert Cow.js."
+        },
+        "TOPAZ.masterrind.impl.Course": {
+            "name": "TOPAZ.masterrind.impl.Course",
+            "shortname": "TOPAZ.masterrind.impl.Course",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Course.js",
+            "line": 5,
+            "description": "Realisiert Appointment.js."
+        },
+        "TOPAZ.masterrind.impl.CowFavorite": {
+            "name": "TOPAZ.masterrind.impl.CowFavorite",
+            "shortname": "TOPAZ.masterrind.impl.CowFavorite",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/CowFavorite.js",
+            "line": 5,
+            "description": "Realisiert Favorte.js."
+        },
+        "TOPAZ.masterrind.impl.DaughterTested": {
+            "name": "TOPAZ.masterrind.impl.DaughterTested",
+            "shortname": "TOPAZ.masterrind.impl.DaughterTested",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/DaughterTested.js",
+            "line": 5,
+            "description": "Realisiert Cow.js."
+        },
+        "TOPAZ.masterrind.impl.Exhibition": {
+            "name": "TOPAZ.masterrind.impl.Exhibition",
+            "shortname": "TOPAZ.masterrind.impl.Exhibition",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Exhibition.js",
+            "line": 5,
+            "description": "Realisiert Appointment.js."
+        },
+        "TOPAZ.masterrind.impl.Genomics": {
+            "name": "TOPAZ.masterrind.impl.Genomics",
+            "shortname": "TOPAZ.masterrind.impl.Genomics",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Genomics.js",
+            "line": 5,
+            "description": "Realisiert Cow.js."
+        },
+        "TOPAZ.masterrind.impl.Holsteins": {
+            "name": "TOPAZ.masterrind.impl.Holsteins",
+            "shortname": "TOPAZ.masterrind.impl.Holsteins",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Holsteins.js",
+            "line": 5,
+            "description": "Realisiert Cow.js."
+        },
+        "TOPAZ.masterrind.impl.Hornless": {
+            "name": "TOPAZ.masterrind.impl.Hornless",
+            "shortname": "TOPAZ.masterrind.impl.Hornless",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Hornless.js",
+            "line": 5,
+            "description": "Realisiert Cow.js."
+        },
+        "TOPAZ.masterrind.impl.MeetCattle": {
+            "name": "TOPAZ.masterrind.impl.MeetCattle",
+            "shortname": "TOPAZ.masterrind.impl.MeetCattle",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MeetCattle.js",
+            "line": 5,
+            "description": "Realisiert Appointment.js."
+        },
+        "TOPAZ.masterrind.impl.Meeting": {
+            "name": "TOPAZ.masterrind.impl.Meeting",
+            "shortname": "TOPAZ.masterrind.impl.Meeting",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Meeting.js",
+            "line": 5,
+            "description": "Realisiert Appointment.js."
+        },
+        "TOPAZ.masterrind.impl.RedColored": {
+            "name": "TOPAZ.masterrind.impl.RedColored",
+            "shortname": "TOPAZ.masterrind.impl.RedColored",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/RedColored.js",
+            "line": 5,
+            "description": "Realisiert Cow.js."
+        },
+        "TOPAZ.masterrind.impl.YoungBreeder": {
+            "name": "TOPAZ.masterrind.impl.YoungBreeder",
+            "shortname": "TOPAZ.masterrind.impl.YoungBreeder",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "TOPAZ.masterrind.impl",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/YoungBreeder.js",
+            "line": 5,
+            "description": "Realisiert Appointment.js."
+        }
+    },
+    "classitems": [
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 15,
+            "description": "Gibt die Id der Firma zurück.",
+            "itemtype": "method",
+            "name": "getId",
+            "return": {
+                "description": "m_id",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 25,
+            "description": "Gibt den Namen der Firma zurück.",
+            "itemtype": "method",
+            "name": "getName",
+            "return": {
+                "description": "m_name",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 35,
+            "description": "Gibt die Beschreibung der Firma zurück.",
+            "itemtype": "method",
+            "name": "getDescription",
+            "return": {
+                "description": "m_description",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 45,
+            "description": "Gibt den Text des Impressums zurück.",
+            "itemtype": "method",
+            "name": "getImprint",
+            "return": {
+                "description": "m_imprint",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 55,
+            "description": "Setzt den Name der Firma.",
+            "itemtype": "method",
+            "name": "setName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 66,
+            "description": "Setzt die Beschreibung der Firma.",
+            "itemtype": "method",
+            "name": "setDescription",
+            "params": [
+                {
+                    "name": "description",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 77,
+            "description": "Setzt den Tex des Impressums.",
+            "itemtype": "method",
+            "name": "setImprint",
+            "params": [
+                {
+                    "name": "imprint",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Company.js",
+            "line": 88,
+            "description": "Setzt die Id der Firma.",
+            "itemtype": "method",
+            "name": "setId",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Company",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 18,
+            "description": "Gibt die Id des Kontakts zurück.",
+            "itemtype": "method",
+            "name": "getId",
+            "return": {
+                "description": "m_id",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 28,
+            "description": "Gibt den Namen des Kontakts zurück.",
+            "itemtype": "method",
+            "name": "getName",
+            "return": {
+                "description": "m_name",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 38,
+            "description": "Gibt die Strasse des Kontakts zurück.",
+            "itemtype": "method",
+            "name": "getStreet",
+            "return": {
+                "description": "m_street",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 48,
+            "description": "Gibt die PLZ des Kontakts zurück.",
+            "itemtype": "method",
+            "name": "getZipCode",
+            "return": {
+                "description": "m_zipCode",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 58,
+            "description": "Gibt die des Kontakts zurück.",
+            "itemtype": "method",
+            "name": "getTown",
+            "return": {
+                "description": "m_town",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 68,
+            "description": "Gibt das Land des Kontakts zurück.",
+            "itemtype": "method",
+            "name": "getCountry",
+            "return": {
+                "description": "m_country",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 78,
+            "description": "Setzt den Namen des Kontakts.",
+            "itemtype": "method",
+            "name": "setName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 89,
+            "description": "Setzt die Strasse des Kontakts.",
+            "itemtype": "method",
+            "name": "setStreet",
+            "params": [
+                {
+                    "name": "street",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 100,
+            "description": "Setzt die Nummer des Kontakts.",
+            "itemtype": "method",
+            "name": "setNumber",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 111,
+            "description": "Setzt die PLZ des Kontakts.",
+            "itemtype": "method",
+            "name": "setName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 122,
+            "description": "Setzt die Stadt des Kontakts.",
+            "itemtype": "method",
+            "name": "setTown",
+            "params": [
+                {
+                    "name": "town",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 133,
+            "description": "Setzt das Land des Kontakts.",
+            "itemtype": "method",
+            "name": "setCountry",
+            "params": [
+                {
+                    "name": "country",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Contact.js",
+            "line": 144,
+            "description": "Setzt die Id des Kontakts.",
+            "itemtype": "method",
+            "name": "setId",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.datatypes.Contact",
+            "namespace": "TOPAZ.masterrind.datatypes"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 14,
+            "description": "Gibt die Id des Termins zurück.",
+            "itemtype": "method",
+            "name": "getId",
+            "return": {
+                "description": "m_id",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 24,
+            "description": "Gibt den Namen des Termins zurück.",
+            "itemtype": "method",
+            "name": "getName",
+            "return": {
+                "description": "m_name",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 34,
+            "description": "Gibt das Datum des Termins zurück.",
+            "itemtype": "method",
+            "name": "getDate",
+            "return": {
+                "description": "m_date",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 44,
+            "description": "Gibt die Firma des Termins zurück.",
+            "itemtype": "method",
+            "name": "getCompany",
+            "return": {
+                "description": "m_company",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 54,
+            "description": "Gibt den Kontakt des Termins zurück.",
+            "itemtype": "method",
+            "name": "getContact",
+            "return": {
+                "description": "m_contact",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 64,
+            "description": "Setzt den Namen des Termins.",
+            "itemtype": "method",
+            "name": "setName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 75,
+            "description": "Setzt das Datum des Termins.",
+            "itemtype": "method",
+            "name": "setDate",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 86,
+            "description": "Setzt die Firma des Termins.",
+            "itemtype": "method",
+            "name": "setCompany",
+            "params": [
+                {
+                    "name": "company",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 97,
+            "description": "Setzt den Kontakt des Termins.",
+            "itemtype": "method",
+            "name": "setContact",
+            "params": [
+                {
+                    "name": "contact",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Appointment.js",
+            "line": 108,
+            "description": "Setzt die Id des Termins.",
+            "itemtype": "method",
+            "name": "setId",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 50,
+            "description": "Gibt a der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getA",
+            "return": {
+                "description": "m_a",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 60,
+            "description": "Gibt aAa der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getAAA",
+            "return": {
+                "description": "m_aAa",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 70,
+            "description": "Gibt Anpaarung der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMating",
+            "return": {
+                "description": "m_mating",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 80,
+            "description": "Gibt den Geburtsjahr der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getYearOfBirth",
+            "return": {
+                "description": "m_yearOfBirth",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 90,
+            "description": "Gibt den Geburtsmonat der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMonthOfBirth",
+            "return": {
+                "description": "m_monthOfBirth",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 100,
+            "description": "Gibt den Geburtstag der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getDayOfBirth",
+            "return": {
+                "description": "m_dayOfBirth",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 110,
+            "description": "Gibt Genedefekt der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getGeneDefect",
+            "return": {
+                "description": "m_geneDefect",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 120,
+            "description": "Gibt die Herdbuchnummer der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getHerdBookNumber",
+            "return": {
+                "description": "m_herdBookNumber",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 130,
+            "description": "Gibt den Muttersmuttervaternamen der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMMFName",
+            "return": {
+                "description": "m_mmfName",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 140,
+            "description": "Gibt den Muttersmuttervattersvater der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMMFF",
+            "return": {
+                "description": "m_mmff",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 150,
+            "description": "Gibt den Muttersvaternamen der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMFName",
+            "return": {
+                "description": "m_mfName",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 160,
+            "description": "Gibt den Muttervatersvater der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMFF",
+            "return": {
+                "description": "m_mff",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 170,
+            "description": "Gibt den Vatersmuttervater der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getFMF",
+            "return": {
+                "description": "m_fmf",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 180,
+            "description": "Gibt den Vatervater der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getFF",
+            "return": {
+                "description": "m_ff",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 190,
+            "description": "Gibt den Vatervatervater der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getFFF",
+            "return": {
+                "description": "m_ff",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 200,
+            "description": "Gibt den Vater der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getFather",
+            "return": {
+                "description": "m_father",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 210,
+            "description": "Gibt den Züchter Kuh zurück.",
+            "itemtype": "method",
+            "name": "getBreeder",
+            "return": {
+                "description": "m_breeder",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 220,
+            "description": "Gibt das Bild der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getImage",
+            "return": {
+                "description": "m_image",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 230,
+            "description": "Gibt den Namen der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getName",
+            "return": {
+                "description": "m_name",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 240,
+            "description": "Gibt die Rasse der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getRace",
+            "return": {
+                "description": "m_race",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 250,
+            "description": "Gibt die Id der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getId",
+            "return": {
+                "description": "m_id",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 268,
+            "description": "Gibt MilckKg der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMilkKg",
+            "return": {
+                "description": "m_milkKg",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 278,
+            "description": "Gibt Milchfettanteil der Kuh in Prozent zurück.",
+            "itemtype": "method",
+            "name": "getFatPercent",
+            "return": {
+                "description": "m_fatPercent",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 288,
+            "description": "Gibt den Milchfettanteil der Kuhin kg zurück.",
+            "itemtype": "method",
+            "name": "getFatKg",
+            "return": {
+                "description": "m_fatKg",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 298,
+            "description": "Gibt den Milcheiweißanteil der Kuh in Prozent zurück.",
+            "itemtype": "method",
+            "name": "getProteinPercent",
+            "return": {
+                "description": "m_proteinPercent",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 308,
+            "description": "Gibt den Milcheiweißanteil der Kuh in kg zurück.",
+            "itemtype": "method",
+            "name": "getProteinKg",
+            "return": {
+                "description": "m_proteinKg",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 322,
+            "description": "Gibt den Milchtyp der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getMilkType",
+            "return": {
+                "description": "m_milkType",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 332,
+            "description": "Gibt den Körper der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getBody",
+            "return": {
+                "description": "m_body",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 342,
+            "description": "Gibt den Fundament der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getBase",
+            "return": {
+                "description": "m_base",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 352,
+            "description": "Gibt Euter der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getUdder",
+            "return": {
+                "description": "m_udder",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 390,
+            "description": "Gibt den direkten Kalbverlauf der Kuh zurück.",
+            "itemtype": "method",
+            "name": "getCalfRunningDirectly",
+            "return": {
+                "description": "m_calfRunningDirectly",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 400,
+            "description": "Setzt a der Kuh.",
+            "itemtype": "method",
+            "name": "setA",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 411,
+            "description": "Setzt aAa der Kuh.",
+            "itemtype": "method",
+            "name": "setAAA",
+            "params": [
+                {
+                    "name": "aAa",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 422,
+            "description": "Setzt Anpaarung der Kuh.",
+            "itemtype": "method",
+            "name": "setMating",
+            "params": [
+                {
+                    "name": "mating",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 433,
+            "description": "Setzt Geburtsjahr der Kuh.",
+            "itemtype": "method",
+            "name": "setYearOfBirth",
+            "params": [
+                {
+                    "name": "yearOfBirth",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 444,
+            "description": "Setzt Geburtsmonat der Kuh.",
+            "itemtype": "method",
+            "name": "setMonthOfBirth",
+            "params": [
+                {
+                    "name": "monthOfBirth",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 455,
+            "description": "Setzt den Geburtstag der Kuh.",
+            "itemtype": "method",
+            "name": "setDayOfBirth",
+            "params": [
+                {
+                    "name": "dayOfBirth",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 466,
+            "description": "Setzt Gendefect der Kuh.",
+            "itemtype": "method",
+            "name": "setGeneDefect",
+            "params": [
+                {
+                    "name": "geneDefect",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 477,
+            "description": "Setzt die Herdbuchnummer der Kuh.",
+            "itemtype": "method",
+            "name": "setHerdBookNumber",
+            "params": [
+                {
+                    "name": "herdBooknumber",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 488,
+            "description": "Setzt den Muttermuttervaternamen der Kuh.",
+            "itemtype": "method",
+            "name": "setMMFName",
+            "params": [
+                {
+                    "name": "mmfName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 499,
+            "description": "Setzt den Muttersmuttervatervater der Kuh.",
+            "itemtype": "method",
+            "name": "setMMFF",
+            "params": [
+                {
+                    "name": "mmff",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 510,
+            "description": "Setzt den Muttersvaternamen der Kuh.",
+            "itemtype": "method",
+            "name": "setMFName",
+            "params": [
+                {
+                    "name": "mfName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 521,
+            "description": "Setzt den Muttersvatervater der Kuh.",
+            "itemtype": "method",
+            "name": "setMFF",
+            "params": [
+                {
+                    "name": "mff",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 532,
+            "description": "Setzt den Vatersmuttervater der Kuh.",
+            "itemtype": "method",
+            "name": "setFMF",
+            "params": [
+                {
+                    "name": "fmf",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 543,
+            "description": "Setzt den Vatervater der Kuh.",
+            "itemtype": "method",
+            "name": "setFF",
+            "params": [
+                {
+                    "name": "ff",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 554,
+            "description": "Setzt den Vatervatervater der Kuh.",
+            "itemtype": "method",
+            "name": "setFFF",
+            "params": [
+                {
+                    "name": "fff",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 565,
+            "description": "Setzt den Vater der Kuh.",
+            "itemtype": "method",
+            "name": "setFather",
+            "params": [
+                {
+                    "name": "father",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 576,
+            "description": "Setzt den Züchter der Kuh.",
+            "itemtype": "method",
+            "name": "setBreeder",
+            "params": [
+                {
+                    "name": "breeder",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 587,
+            "description": "Setzt das Bild der Kuh.",
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "image",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 598,
+            "description": "Setzt den Namen der Kuh.",
+            "itemtype": "method",
+            "name": "setName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 609,
+            "description": "Setzt die Rasse der Kuh.",
+            "itemtype": "method",
+            "name": "setRace",
+            "params": [
+                {
+                    "name": "race",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 620,
+            "description": "Setzt die Id der Kuh.",
+            "itemtype": "method",
+            "name": "setId",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 639,
+            "description": "Setzt den MilchKg der Kuh.",
+            "itemtype": "method",
+            "name": "setMilkKg",
+            "params": [
+                {
+                    "name": "milkKg",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 650,
+            "description": "Setzt den Milchfettanteil der Kuh in Prozent.",
+            "itemtype": "method",
+            "name": "setFatPercent",
+            "params": [
+                {
+                    "name": "fatPercent",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 661,
+            "description": "Setzt Milchfettanteil der Kuh in kg.",
+            "itemtype": "method",
+            "name": "setFatKg",
+            "params": [
+                {
+                    "name": "fatKg",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 672,
+            "description": "Setzt den Milcheiweißanteil der Kuh in Prozent.",
+            "itemtype": "method",
+            "name": "setProteinPercent",
+            "params": [
+                {
+                    "name": "proteinPercent",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 683,
+            "description": "Setzt den Milcheiweißanteil der Kuh in kg.",
+            "itemtype": "method",
+            "name": "setProteinKg",
+            "params": [
+                {
+                    "name": "proteinKg",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 698,
+            "description": "Setzt den Milchtyp der Kuh.",
+            "itemtype": "method",
+            "name": "setMilkType",
+            "params": [
+                {
+                    "name": "milkType",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 709,
+            "description": "Setzt den Körper der Kuh.",
+            "itemtype": "method",
+            "name": "setBody",
+            "params": [
+                {
+                    "name": "body",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 720,
+            "description": "Setzt den Fundament der Kuh.",
+            "itemtype": "method",
+            "name": "setBase",
+            "params": [
+                {
+                    "name": "base",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 731,
+            "description": "Setzt Euter der Kuh.",
+            "itemtype": "method",
+            "name": "setUdder",
+            "params": [
+                {
+                    "name": "udder",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 770,
+            "description": "Setzt den direkten Kalbverlauf der Kuh.",
+            "itemtype": "method",
+            "name": "setCalfRunningDirectly",
+            "params": [
+                {
+                    "name": "calfRunningDirectly",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 10,
+            "description": "Gibt Id des Favorits zurück.",
+            "itemtype": "method",
+            "name": "getId",
+            "return": {
+                "description": "m_id",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 20,
+            "description": "Gibt den Namen des Favorits zurück.",
+            "itemtype": "method",
+            "name": "getName",
+            "return": {
+                "description": "m_name",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 30,
+            "description": "Gibt Kuhid des Favorits zurück.",
+            "itemtype": "method",
+            "name": "getCowId",
+            "return": {
+                "description": "m_cowId",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 40,
+            "description": "Gibt den Kuhamen des Favorits zurück.",
+            "itemtype": "method",
+            "name": "getCowName",
+            "return": {
+                "description": "m_cowName",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 50,
+            "description": "Setzt Id des Favorits.",
+            "itemtype": "method",
+            "name": "setId",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 61,
+            "description": "Setzt den Namen des Favorits.",
+            "itemtype": "method",
+            "name": "setName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 72,
+            "description": "Setzt Kuhid des Favorits.",
+            "itemtype": "method",
+            "name": "setCowId",
+            "params": [
+                {
+                    "name": "cowId",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Favorite.js",
+            "line": 83,
+            "description": "Setzt den Kuhnamen des Favorits.",
+            "itemtype": "method",
+            "name": "setCowName",
+            "params": [
+                {
+                    "name": "cowName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/MasterRindFactory.js",
+            "line": 5,
+            "description": "Erstellt Objekte.",
+            "itemtype": "method",
+            "name": "create",
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/AppointmentFactory.js",
+            "line": 13,
+            "description": "Erstellt Terminobjekte.",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "appointment",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/CowFactory.js",
+            "line": 14,
+            "description": "Erstellt Kuhobjekte.",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "cow",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/FavoriteFactory.js",
+            "line": 8,
+            "description": "Erstellt Favoritobjekte.",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "favorite",
+                "type": "String"
+            },
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js",
+            "line": 18,
+            "description": "Hauptnamensraum",
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js",
+            "line": 24,
+            "description": "Methode zum Anlegen vom Namensräumen.",
+            "params": [
+                {
+                    "name": "ns",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "ns_string",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "namespace": "TOPAZ.masterrind.impl"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nHauptnamensraum",
+            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js:18"
+        },
+        {
+            "message": "Missing item type\nMethode zum Anlegen vom Namensräumen.",
+            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js:24"
+        }
+    ]
+}

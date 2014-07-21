@@ -9,6 +9,12 @@ require('TOPAZ/masterrind/impl/Hornless');
 require('TOPAZ/masterrind/impl/RedColored');
 require('TOPAZ/masterrind/interfaces/MasterRindFactory');
 
+/**
+ * Realisiert MasterRindFactory.js.
+ *
+ * @namespace TOPAZ.masterrind
+ * @class CowFactory
+ */
 TOPAZ.masterrind.CowFactory = function() {
 
 	/**

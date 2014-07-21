@@ -8,6 +8,12 @@ require('TOPAZ/masterrind/impl/MeetCattle');
 require('TOPAZ/masterrind/impl/Meeting');
 require('TOPAZ/masterrind/impl/YoungBreeder');
 
+/**
+ * Realisiert MasterRindFactory.js.
+ *
+ * @namespace TOPAZ.masterrind
+ * @class AppointmentFactory
+ */
 TOPAZ.masterrind.AppointmentFactory = function() {
 
 	/**
