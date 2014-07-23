@@ -187,7 +187,7 @@ function Controller() {
     $.__views.footer.add($.__views.search);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    require("TOPAZ/masterrind/impl/MasterRind");
+    require("TOPAZ/masterrind/impl/MasterRindFacade");
     require("TOPAZ/masterrind/interfaces/Cow");
     require("TOPAZ/masterrind/datatypes/BlackColored");
     require("TOPAZ/masterrind/interfaces/Favorite");
@@ -197,8 +197,9 @@ function Controller() {
         win.open();
     });
     $.appointments.addEventListener("click", function() {
-        var win = Alloy.createController("appointments").getView();
-        win.open();
+        Alloy.createController("appointments").getView();
+        var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
+        mr_fav.addFavorite("15", "Huj", "1", "HujFavorit");
     });
     $.blackColored.addEventListener("click", function() {
         var win = Alloy.createController("blackColored").getView();
@@ -213,7 +214,7 @@ function Controller() {
         var cows = new Array();
         var favorites = new Array();
         var model;
-        var mr_app = new TOPAZ.masterrind.impl.MasterRind(new TOPAZ.masterrind.impl.AppointmentFactory());
+        var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
         mr_app.loadAppointmentsFromDB();
         appointments = mr_app.getAppointments("Meeting");
         console.log(appointments.length);
@@ -221,12 +222,11 @@ function Controller() {
             app = appointments[i];
             console.log(app.getName());
         }
-        var mr_fav = new TOPAZ.masterrind.impl.MasterRind(new TOPAZ.masterrind.impl.FavoriteFactory());
-        mr_fav.addFavorite("12", "Peniskopf", "1", "PeniskopfFav");
+        var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
         mr_fav.loadFavoritesFromDB();
         favorites = mr_fav.getFavorites("cow");
         for (i = 0; favorites.length > i; i++) console.log(favorites[i].getName());
-        var mr_cow = new TOPAZ.masterrind.impl.MasterRind(new TOPAZ.masterrind.impl.CowFactory());
+        var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
         mr_cow.loadCowsFromDB();
         cows = mr_cow.getCows("Holsteins");
         for (i = 0; cows.length > i; i++) {

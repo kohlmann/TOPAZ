@@ -1,5 +1,11 @@
 TOPAZ.namespace('TOPAZ.masterrind.interfaces.Favorite');
 
+/**
+ * Bildet eine Datenstruktur zum Speichern von Daten eines Favorites.
+ *
+ * @namespace TOPAZ.masterrind.interfaces
+ * @class Favorite
+ */
 TOPAZ.masterrind.interfaces.Favorite = function() {
 
 	var m_id = "null";

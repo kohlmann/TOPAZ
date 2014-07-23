@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>TOPAZ.masterrind.datatypes.Company</title>
+    <title>TOPAZ.masterrind.interfaces.Favorite</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -126,7 +126,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>TOPAZ.masterrind.datatypes.Company Class</h1>
+                        <h1>TOPAZ.masterrind.interfaces.Favorite Class</h1>
 <div class="box meta">
     
 
@@ -134,7 +134,7 @@
 
     
         <div class="foundat">
-            Defined in: <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l3"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:3</code></a>
+            Defined in: <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l3"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:3</code></a>
         </div>
     
 
@@ -146,7 +146,7 @@
 
 
 <div class="box intro">
-    <p>Bildet eine Datenstruktur zum Speichern von Daten einer Firma.</p>
+    <p>Bildet eine Datenstruktur zum Speichern von Daten eines Favorites.</p>
 
 </div>
 
@@ -175,7 +175,14 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
-                                <a href="#method_getDescription">getDescription</a>
+                                <a href="#method_getCowId">getCowId</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getCowName">getCowName</a>
 
                                 
                                 
@@ -189,13 +196,6 @@
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_getImprint">getImprint</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
                                 <a href="#method_getName">getName</a>
 
                                 
@@ -203,7 +203,14 @@
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_setDescription">setDescription</a>
+                                <a href="#method_setCowId">setCowId</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setCowName">setCowName</a>
 
                                 
                                 
@@ -211,13 +218,6 @@
                         
                             <li class="index-item method">
                                 <a href="#method_setId">setId</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_setImprint">setImprint</a>
 
                                 
                                 
@@ -246,8 +246,8 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_getDescription" class="method item">
-    <h3 class="name"><code>getDescription</code></h3>
+                    <div id="method_getCowId" class="method item">
+    <h3 class="name"><code>getCowId</code></h3>
 
     
         <span class="paren">()</span>
@@ -282,7 +282,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l35"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:35</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l36"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:36</code></a>
         
         </p>
 
@@ -293,7 +293,7 @@
     </div>
 
     <div class="description">
-        <p>Gibt die Beschreibung der Firma zurück.</p>
+        <p>Gibt Kuhid des Favorits zurück.</p>
 
     </div>
 
@@ -308,7 +308,80 @@
                     
                         <span class="type">String</span>:
                     
-                    <p>m_description</p>
+                    <p>m_cowId</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getCowName" class="method item">
+    <h3 class="name"><code>getCowName</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l46"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:46</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Gibt den Kuhamen des Favorits zurück.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">String</span>:
+                    
+                    <p>m_cowName</p>
 
                 
             </div>
@@ -355,7 +428,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l15"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:15</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l16"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:16</code></a>
         
         </p>
 
@@ -366,7 +439,7 @@
     </div>
 
     <div class="description">
-        <p>Gibt die Id der Firma zurück.</p>
+        <p>Gibt Id des Favorits zurück.</p>
 
     </div>
 
@@ -382,79 +455,6 @@
                         <span class="type">String</span>:
                     
                     <p>m_id</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_getImprint" class="method item">
-    <h3 class="name"><code>getImprint</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type">String</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l45"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:45</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Gibt den Text des Impressums zurück.</p>
-
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">String</span>:
-                    
-                    <p>m_imprint</p>
 
                 
             </div>
@@ -501,7 +501,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l25"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:25</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l26"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:26</code></a>
         
         </p>
 
@@ -512,7 +512,7 @@
     </div>
 
     <div class="description">
-        <p>Gibt den Namen der Firma zurück.</p>
+        <p>Gibt den Namen des Favorits zurück.</p>
 
     </div>
 
@@ -538,8 +538,8 @@
 </div>
 
                 
-                    <div id="method_setDescription" class="method item">
-    <h3 class="name"><code>setDescription</code></h3>
+                    <div id="method_setCowId" class="method item">
+    <h3 class="name"><code>setCowId</code></h3>
 
     
         <div class="args">
@@ -547,7 +547,7 @@
             
                 <li class="arg">
                     
-                        <code>description</code>
+                        <code>cowId</code>
                     
                 </li>
             
@@ -580,7 +580,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l66"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:66</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l78"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:78</code></a>
         
         </p>
 
@@ -591,7 +591,7 @@
     </div>
 
     <div class="description">
-        <p>Setzt die Beschreibung der Firma.</p>
+        <p>Setzt Kuhid des Favorits.</p>
 
     </div>
 
@@ -603,7 +603,95 @@
             
                 <li class="param">
                     
-                        <code class="param-name">description</code>
+                        <code class="param-name">cowId</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_setCowName" class="method item">
+    <h3 class="name"><code>setCowName</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>cowName</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l89"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:89</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Setzt den Kuhnamen des Favorits.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">cowName</code>
                         <span class="type">String</span>
                     
 
@@ -668,7 +756,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l88"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:88</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l56"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:56</code></a>
         
         </p>
 
@@ -679,7 +767,7 @@
     </div>
 
     <div class="description">
-        <p>Setzt die Id der Firma.</p>
+        <p>Setzt Id des Favorits.</p>
 
     </div>
 
@@ -692,94 +780,6 @@
                 <li class="param">
                     
                         <code class="param-name">id</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_setImprint" class="method item">
-    <h3 class="name"><code>setImprint</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>imprint</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l77"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:77</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Setzt den Tex des Impressums.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">imprint</code>
                         <span class="type">String</span>
                     
 
@@ -844,7 +844,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l55"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:55</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Favorite.js.html#l67"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Favorite.js:67</code></a>
         
         </p>
 
@@ -855,7 +855,7 @@
     </div>
 
     <div class="description">
-        <p>Setzt den Name der Firma.</p>
+        <p>Setzt den Namen des Favorits.</p>
 
     </div>
 

@@ -7,6 +7,7 @@ require('TOPAZ/masterrind/interfaces/Appointment');
  *
  * @namespace TOPAZ.masterrind.datatypes
  * @class Auction
+ * 
  */
 TOPAZ.masterrind.datatypes.Auction = function() {
 

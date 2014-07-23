@@ -1,6 +1,11 @@
 TOPAZ.namespace('TOPAZ.masterrind.interfaces.Cow');
 
-//TODO Methodenkommentare vervollständigen.
+/**
+ * Bildet eine Datenstruktur zum Speichern von Daten einer Kuh.
+ *
+ * @namespace TOPAZ.masterrind.interfaces
+ * @class Cow
+ */
 TOPAZ.masterrind.interfaces.Cow = function() {
 
 	var m_a = "null";

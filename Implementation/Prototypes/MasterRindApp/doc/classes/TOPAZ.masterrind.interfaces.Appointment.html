@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>TOPAZ.masterrind.datatypes.Company</title>
+    <title>TOPAZ.masterrind.interfaces.Appointment</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -126,7 +126,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>TOPAZ.masterrind.datatypes.Company Class</h1>
+                        <h1>TOPAZ.masterrind.interfaces.Appointment Class</h1>
 <div class="box meta">
     
 
@@ -134,7 +134,7 @@
 
     
         <div class="foundat">
-            Defined in: <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l3"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:3</code></a>
+            Defined in: <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l6"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:6</code></a>
         </div>
     
 
@@ -146,7 +146,7 @@
 
 
 <div class="box intro">
-    <p>Bildet eine Datenstruktur zum Speichern von Daten einer Firma.</p>
+    <p>Bildet eine Datenstruktur zum Speichern von Daten eines Termins.</p>
 
 </div>
 
@@ -175,7 +175,21 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
-                                <a href="#method_getDescription">getDescription</a>
+                                <a href="#method_getCompany">getCompany</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getContact">getContact</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getDate">getDate</a>
 
                                 
                                 
@@ -189,13 +203,6 @@
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_getImprint">getImprint</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
                                 <a href="#method_getName">getName</a>
 
                                 
@@ -203,7 +210,21 @@
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_setDescription">setDescription</a>
+                                <a href="#method_setCompany">setCompany</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setContact">setContact</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setDate">setDate</a>
 
                                 
                                 
@@ -211,13 +232,6 @@
                         
                             <li class="index-item method">
                                 <a href="#method_setId">setId</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_setImprint">setImprint</a>
 
                                 
                                 
@@ -246,8 +260,8 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_getDescription" class="method item">
-    <h3 class="name"><code>getDescription</code></h3>
+                    <div id="method_getCompany" class="method item">
+    <h3 class="name"><code>getCompany</code></h3>
 
     
         <span class="paren">()</span>
@@ -282,7 +296,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l35"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:35</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l50"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:50</code></a>
         
         </p>
 
@@ -293,7 +307,7 @@
     </div>
 
     <div class="description">
-        <p>Gibt die Beschreibung der Firma zurück.</p>
+        <p>Gibt die Firma des Termins zurück.</p>
 
     </div>
 
@@ -308,7 +322,153 @@
                     
                         <span class="type">String</span>:
                     
-                    <p>m_description</p>
+                    <p>m_company</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getContact" class="method item">
+    <h3 class="name"><code>getContact</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l60"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:60</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Gibt den Kontakt des Termins zurück.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">String</span>:
+                    
+                    <p>m_contact</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getDate" class="method item">
+    <h3 class="name"><code>getDate</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l40"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:40</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Gibt das Datum des Termins zurück.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">String</span>:
+                    
+                    <p>m_date</p>
 
                 
             </div>
@@ -355,7 +515,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l15"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:15</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l20"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:20</code></a>
         
         </p>
 
@@ -366,7 +526,7 @@
     </div>
 
     <div class="description">
-        <p>Gibt die Id der Firma zurück.</p>
+        <p>Gibt die Id des Termins zurück.</p>
 
     </div>
 
@@ -382,79 +542,6 @@
                         <span class="type">String</span>:
                     
                     <p>m_id</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_getImprint" class="method item">
-    <h3 class="name"><code>getImprint</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type">String</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l45"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:45</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Gibt den Text des Impressums zurück.</p>
-
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">String</span>:
-                    
-                    <p>m_imprint</p>
 
                 
             </div>
@@ -501,7 +588,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l25"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:25</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l30"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:30</code></a>
         
         </p>
 
@@ -512,7 +599,7 @@
     </div>
 
     <div class="description">
-        <p>Gibt den Namen der Firma zurück.</p>
+        <p>Gibt den Namen des Termins zurück.</p>
 
     </div>
 
@@ -538,8 +625,8 @@
 </div>
 
                 
-                    <div id="method_setDescription" class="method item">
-    <h3 class="name"><code>setDescription</code></h3>
+                    <div id="method_setCompany" class="method item">
+    <h3 class="name"><code>setCompany</code></h3>
 
     
         <div class="args">
@@ -547,7 +634,7 @@
             
                 <li class="arg">
                     
-                        <code>description</code>
+                        <code>company</code>
                     
                 </li>
             
@@ -580,7 +667,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l66"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:66</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l92"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:92</code></a>
         
         </p>
 
@@ -591,7 +678,7 @@
     </div>
 
     <div class="description">
-        <p>Setzt die Beschreibung der Firma.</p>
+        <p>Setzt die Firma des Termins.</p>
 
     </div>
 
@@ -603,7 +690,183 @@
             
                 <li class="param">
                     
-                        <code class="param-name">description</code>
+                        <code class="param-name">company</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_setContact" class="method item">
+    <h3 class="name"><code>setContact</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>contact</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l103"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:103</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Setzt den Kontakt des Termins.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">contact</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_setDate" class="method item">
+    <h3 class="name"><code>setDate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>date</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l81"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:81</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Setzt das Datum des Termins.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">date</code>
                         <span class="type">String</span>
                     
 
@@ -668,7 +931,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l88"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:88</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l114"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:114</code></a>
         
         </p>
 
@@ -679,7 +942,7 @@
     </div>
 
     <div class="description">
-        <p>Setzt die Id der Firma.</p>
+        <p>Setzt die Id des Termins.</p>
 
     </div>
 
@@ -692,94 +955,6 @@
                 <li class="param">
                     
                         <code class="param-name">id</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_setImprint" class="method item">
-    <h3 class="name"><code>setImprint</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>imprint</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l77"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:77</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Setzt den Tex des Impressums.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">imprint</code>
                         <span class="type">String</span>
                     
 
@@ -844,7 +1019,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_datatypes_Company.js.html#l55"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;datatypes&#x2F;Company.js:55</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_interfaces_Appointment.js.html#l70"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;interfaces&#x2F;Appointment.js:70</code></a>
         
         </p>
 
@@ -855,7 +1030,7 @@
     </div>
 
     <div class="description">
-        <p>Setzt den Name der Firma.</p>
+        <p>Setzt den Namen des Termins.</p>
 
     </div>
 

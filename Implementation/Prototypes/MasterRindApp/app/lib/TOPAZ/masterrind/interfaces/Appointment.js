@@ -3,6 +3,12 @@ TOPAZ.namespace('TOPAZ.masterrind.interfaces.Appointment');
 require('TOPAZ/masterrind/datatypes/Company');
 require('TOPAZ/masterrind/datatypes/Contact');
 
+/**
+ * Bildet eine Datenstruktur zum Speichern von Daten eines Termins.
+ *
+ * @namespace TOPAZ.masterrind.interfaces
+ * @class Appointment
+ */
 TOPAZ.masterrind.interfaces.Appointment = function() {
 
 	var m_id = "null";
