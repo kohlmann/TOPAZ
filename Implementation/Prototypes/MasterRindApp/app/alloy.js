@@ -24,17 +24,17 @@ var TOPAZ = TOPAZ || {};
 /**
  * Methode zum Anlegen vom Namensräumen.
  *
- * @param {Object} ns
- * @param {Object} ns_string
+ * @param {String} name
+ * @return {Object} parent
  */
-TOPAZ.namespace = function(ns_string) {
-	var parts = ns_string.split('.'), parent = TOPAZ, i;
+TOPAZ.namespace = function(name) {
+	var parts = name.split('.'), parent = TOPAZ, i;
 	if (parts[0] === "TOPAZ") {
 		parts = parts.slice(1);
 	}
 	pl = parts.length;
 	for ( i = 0; i < parts.length; i++) {
-		//create a property if it doesnt exist
+		
 		if ( typeof parent[parts[i]] === 'undefined') {
 			parent[parts[i]] = {};
 		}

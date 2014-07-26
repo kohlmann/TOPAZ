@@ -1,21 +1,21 @@
 function Controller() {
-    function __alloyId28(e) {
+    function __alloyId13(e) {
         if (e && e.fromAdapter) return;
-        var opts = __alloyId28.opts || {};
-        var models = __alloyId27.models;
+        var opts = __alloyId13.opts || {};
+        var models = __alloyId12.models;
         var len = models.length;
-        var __alloyId24 = [];
+        var __alloyId9 = [];
         for (var i = 0; len > i; i++) {
-            var __alloyId25 = models[i];
-            __alloyId25.__transform = {};
-            var __alloyId26 = {
+            var __alloyId10 = models[i];
+            __alloyId10.__transform = {};
+            var __alloyId11 = {
                 info: {
-                    text: "undefined" != typeof __alloyId25.__transform["ID"] ? __alloyId25.__transform["ID"] : __alloyId25.get("ID")
+                    text: "undefined" != typeof __alloyId10.__transform["ID"] ? __alloyId10.__transform["ID"] : __alloyId10.get("ID")
                 }
             };
-            __alloyId24.push(__alloyId26);
+            __alloyId9.push(__alloyId11);
         }
-        opts.animation ? $.__views.__alloyId23.setItems(__alloyId24, opts.animation) : $.__views.__alloyId23.setItems(__alloyId24);
+        opts.animation ? $.__views.__alloyId8.setItems(__alloyId9, opts.animation) : $.__views.__alloyId8.setItems(__alloyId9);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "blackColored";
@@ -29,55 +29,55 @@ function Controller() {
         id: "blackColored"
     });
     $.__views.blackColored && $.addTopLevelView($.__views.blackColored);
-    var __alloyId17 = {};
-    var __alloyId19 = [];
-    var __alloyId20 = {
+    var __alloyId2 = {};
+    var __alloyId4 = [];
+    var __alloyId5 = {
         type: "Ti.UI.ImageView",
         bindId: "pic",
         properties: {
             bindId: "pic"
         }
     };
-    __alloyId19.push(__alloyId20);
-    var __alloyId21 = {
+    __alloyId4.push(__alloyId5);
+    var __alloyId6 = {
         type: "Ti.UI.Label",
         bindId: "info",
         properties: {
             bindId: "info"
         }
     };
-    __alloyId19.push(__alloyId21);
-    var __alloyId22 = {
+    __alloyId4.push(__alloyId6);
+    var __alloyId7 = {
         type: "Ti.UI.Label",
         bindId: "es_info",
         properties: {
             bindId: "es_info"
         }
     };
-    __alloyId19.push(__alloyId22);
-    var __alloyId18 = {
+    __alloyId4.push(__alloyId7);
+    var __alloyId3 = {
         properties: {
             name: "template"
         },
-        childTemplates: __alloyId19
+        childTemplates: __alloyId4
     };
-    __alloyId17["template"] = __alloyId18;
-    $.__views.__alloyId23 = Ti.UI.createListSection({
-        id: "__alloyId23"
+    __alloyId2["template"] = __alloyId3;
+    $.__views.__alloyId8 = Ti.UI.createListSection({
+        id: "__alloyId8"
     });
-    var __alloyId27 = Alloy.Collections["Alloy.Collections.cowCol"] || Alloy.Collections.cowCol;
-    __alloyId27.on("fetch destroy change add remove reset", __alloyId28);
-    var __alloyId29 = [];
-    __alloyId29.push($.__views.__alloyId23);
+    var __alloyId12 = Alloy.Collections["Alloy.Collections.cowCol"] || Alloy.Collections.cowCol;
+    __alloyId12.on("fetch destroy change add remove reset", __alloyId13);
+    var __alloyId14 = [];
+    __alloyId14.push($.__views.__alloyId8);
     $.__views.listView = Ti.UI.createListView({
-        sections: __alloyId29,
-        templates: __alloyId17,
+        sections: __alloyId14,
+        templates: __alloyId2,
         id: "listView",
         defaultItemTemplate: "template"
     });
     $.__views.blackColored.add($.__views.listView);
     exports.destroy = function() {
-        __alloyId27.off("fetch destroy change add remove reset", __alloyId28);
+        __alloyId12.off("fetch destroy change add remove reset", __alloyId13);
     };
     _.extend($, $.__views);
     _.extend($, exports);

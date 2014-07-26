@@ -4,6 +4,8 @@ require('TOPAZ/masterrind/datatypes/BlackColored');
 require('TOPAZ/masterrind/interfaces/Favorite');
 require('TOPAZ/masterrind/datatypes/Holsteins');
 
+require('TOPAZ/masterrind/impl/Calc');
+
 //Fehler: Schritt zurück erst möglich, wenn die Taste dreimal gedrückt wird.
 //Ursache: eventListener für AboutButton wird mehrfach im Code aufgerufen
 //Lösung: EventListener nur einmal aufrufen.

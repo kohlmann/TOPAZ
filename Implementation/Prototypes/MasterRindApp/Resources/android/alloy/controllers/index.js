@@ -192,9 +192,11 @@ function Controller() {
     require("TOPAZ/masterrind/datatypes/BlackColored");
     require("TOPAZ/masterrind/interfaces/Favorite");
     require("TOPAZ/masterrind/datatypes/Holsteins");
+    require("TOPAZ/masterrind/impl/Calc");
     $.about.addEventListener("click", function() {
-        var win = Alloy.createController("about").getView();
-        win.open();
+        Alloy.createController("about").getView();
+        var calc = new TOPAZ.masterrind.impl.Calc();
+        console.log(calc.add(2, 3));
     });
     $.appointments.addEventListener("click", function() {
         Alloy.createController("appointments").getView();

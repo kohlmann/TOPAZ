@@ -2607,16 +2607,15 @@
             "description": "Methode zum Anlegen vom Namensräumen.",
             "params": [
                 {
-                    "name": "ns",
+                    "name": "name",
                     "description": "",
-                    "type": "Object"
-                },
-                {
-                    "name": "ns_string",
-                    "description": "",
-                    "type": "Object"
+                    "type": "String"
                 }
             ],
+            "return": {
+                "description": "parent",
+                "type": "Object"
+            },
             "class": "",
             "namespace": "TOPAZ.masterrind.interfaces"
         }
