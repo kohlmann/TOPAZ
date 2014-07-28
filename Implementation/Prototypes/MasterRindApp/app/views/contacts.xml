@@ -28,7 +28,7 @@
 				<!-- Specify data to bind to the item template with inline attributes
 				defined as <bindId>:<Ti.UI.Component.property> -->
 
-				<ListItem id="listItem" info:text="{ID}"/>
+				<ListItem id="listItem" info:text="{id}"/>
 			</ListSection>
 
 		</ListView>

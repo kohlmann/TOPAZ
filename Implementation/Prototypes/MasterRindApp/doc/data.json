@@ -184,6 +184,15 @@
                 "TOPAZ.masterrind.impl": 1
             }
         },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {
+                "JSDriverDemo": 1
+            }
+        },
         "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/CowFactory.js": {
             "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/CowFactory.js",
             "modules": {},
@@ -259,6 +268,17 @@
             "fors": {},
             "namespaces": {
                 "TOPAZ.masterrind.interfaces": 1
+            }
+        },
+        "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/test/CalcTest.js": {
+            "name": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/test/CalcTest.js",
+            "modules": {},
+            "classes": {
+                "JSDriverDemo.Calc": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "JSDriverDemo": 1
             }
         },
         "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js": {
@@ -479,6 +499,19 @@
             "line": 11,
             "description": "Realisiert MasterRindFactory.js."
         },
+        "JSDriverDemo.Calc": {
+            "name": "JSDriverDemo.Calc",
+            "shortname": "JSDriverDemo.Calc",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "JSDriverDemo",
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/test/CalcTest.js",
+            "line": 8,
+            "description": "Die Klasse CalcTest testet die vier Grundrechenarten\nmit JSDriver Framework. Es gibt zwei Arten zum Erstellen\neines Tests. Mit Literalen und mit Prototypes. Die Tests\nin diesem Beispiel werden mit Literalen durchgeführt.\n\nWie man die Tests mit Prototypen erstellt zeigt dieses\nBeispiel:\n\nCalcTest = TestCase(\"CalcTest\");\nCalcTest.prototype.testSubtraktion = function() {\n\t\tvar calc = new JSDriverDemo.Calc();\n\t\tassertEquals(\"TEST FAILED\", \"1\", calc.sub(3, 2));\n\t};"
+        },
         "TOPAZ.masterrind.impl.CowFactory": {
             "name": "TOPAZ.masterrind.impl.CowFactory",
             "shortname": "TOPAZ.masterrind.impl.CowFactory",
@@ -574,14 +607,14 @@
     "classitems": [
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/controllers/index.js",
-            "line": 16,
+            "line": 17,
             "description": "Fehler: Favorit wird mehrmals (>10) eingefügt.\nUrsache: unbekannt\nLösung: unbekannt",
             "class": "TOPAZ.masterrind.datatypes.Auction"
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/controllers/index.js",
-            "line": 34,
-            "description": "Fehler: Liste wird erweitert beim mehrmaligen Klicken.\nUrsache: unbekannt\nLösung: unbekant",
+            "line": 77,
+            "description": "Fehler: Liste wird erweitert beim mehrmaligen Klicken.\nUrsache: Alloy.Collections.cowCol muss auf leer gesetzt werden\nLösung: unbekant",
             "class": "TOPAZ.masterrind.datatypes.Auction"
         },
         {
@@ -911,6 +944,42 @@
             "namespace": "TOPAZ.masterrind.impl"
         },
         {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js",
+            "line": 10,
+            "description": "Führt Addition durch.",
+            "itemtype": "method",
+            "name": "add",
+            "class": "JSDriverDemo.Calc",
+            "namespace": "JSDriverDemo"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js",
+            "line": 19,
+            "description": "Führt Subtraktoin durch.",
+            "itemtype": "method",
+            "name": "add",
+            "class": "JSDriverDemo.Calc",
+            "namespace": "JSDriverDemo"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js",
+            "line": 28,
+            "description": "Führt Multiplikation durch.",
+            "itemtype": "method",
+            "name": "mult",
+            "class": "JSDriverDemo.Calc",
+            "namespace": "JSDriverDemo"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js",
+            "line": 37,
+            "description": "Führt Division durch.",
+            "itemtype": "method",
+            "name": "div",
+            "class": "JSDriverDemo.Calc",
+            "namespace": "JSDriverDemo"
+        },
+        {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/CowFactory.js",
             "line": 20,
             "description": "Erstellt Kuhobjekte.",
@@ -988,7 +1057,14 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 130,
+            "line": 124,
+            "description": "Fehler: Es wird immer die gleiche Kuh eingefügt (mit id=4).\nUrsache: cow wurde außerhalb der Schleife erstellt, deshalb\n\t\t\twurde das gleiche Cowobjekt in Array geschrieben und\n\t\t\tdabei auch überschrieben.\nLösung: Cow innerhalb der Schleife erstellen.",
+            "class": "TOPAZ.masterrind.impl.MasterRindFacade",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
+            "line": 138,
             "description": "Holt Favoritendaten aus der Datenbank.",
             "itemtype": "method",
             "name": "loadCompaniesFromDB",
@@ -997,7 +1073,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 155,
+            "line": 163,
             "description": "Erstellt eine Liste mit Terminobjekten.",
             "itemtype": "method",
             "name": "getAppointments",
@@ -1017,7 +1093,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 179,
+            "line": 187,
             "description": "Erstellt eine Liste mit Firmenobjekten.",
             "itemtype": "method",
             "name": "getCompanies",
@@ -1037,7 +1113,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 204,
+            "line": 212,
             "description": "Erstellt eine Liste mit Kontaktobjekten.",
             "itemtype": "method",
             "name": "getContacts",
@@ -1057,7 +1133,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 232,
+            "line": 240,
             "description": "Erstellt eine Liste mit Kuhobjekten.",
             "itemtype": "method",
             "name": "getCows",
@@ -1077,7 +1153,14 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 254,
+            "line": 257,
+            "description": "Fehler:verschiedene Objekte mit gleichen Eigenschften\n\t\t\tim Array.\nUrsache: wahrscheinlich liegt die Ursache in abgeleiteten Objekten.\nLösung: javascript Vererbung nachschlagen.",
+            "class": "TOPAZ.masterrind.impl.MasterRindFacade",
+            "namespace": "TOPAZ.masterrind.impl"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
+            "line": 284,
             "description": "Erstellt eine Liste mit Favoritobjekten.",
             "itemtype": "method",
             "name": "getFavorites",
@@ -1097,7 +1180,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 281,
+            "line": 311,
             "description": "Schreibt einen Favoriten in die Datenbank.",
             "itemtype": "method",
             "name": "addFavorite",
@@ -1117,7 +1200,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js",
-            "line": 303,
+            "line": 333,
             "description": "Löscht einen Favoriten aus der Datenbank.",
             "itemtype": "method",
             "name": "removeFavorite",
@@ -1282,7 +1365,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 55,
+            "line": 56,
             "description": "Gibt a der Kuh zurück.",
             "itemtype": "method",
             "name": "getA",
@@ -1295,7 +1378,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 65,
+            "line": 66,
             "description": "Gibt aAa der Kuh zurück.",
             "itemtype": "method",
             "name": "getAAA",
@@ -1308,7 +1391,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 75,
+            "line": 76,
             "description": "Gibt Anpaarung der Kuh zurück.",
             "itemtype": "method",
             "name": "getMating",
@@ -1321,7 +1404,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 85,
+            "line": 86,
             "description": "Gibt den Geburtsjahr der Kuh zurück.",
             "itemtype": "method",
             "name": "getYearOfBirth",
@@ -1334,7 +1417,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 95,
+            "line": 96,
             "description": "Gibt den Geburtsmonat der Kuh zurück.",
             "itemtype": "method",
             "name": "getMonthOfBirth",
@@ -1347,7 +1430,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 105,
+            "line": 106,
             "description": "Gibt den Geburtstag der Kuh zurück.",
             "itemtype": "method",
             "name": "getDayOfBirth",
@@ -1360,7 +1443,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 115,
+            "line": 116,
             "description": "Gibt Genedefekt der Kuh zurück.",
             "itemtype": "method",
             "name": "getGeneDefect",
@@ -1373,7 +1456,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 125,
+            "line": 126,
             "description": "Gibt die Herdbuchnummer der Kuh zurück.",
             "itemtype": "method",
             "name": "getHerdBookNumber",
@@ -1386,7 +1469,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 135,
+            "line": 136,
             "description": "Gibt den Muttersmuttervaternamen der Kuh zurück.",
             "itemtype": "method",
             "name": "getMMFName",
@@ -1399,7 +1482,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 145,
+            "line": 146,
             "description": "Gibt den Muttersmuttervattersvater der Kuh zurück.",
             "itemtype": "method",
             "name": "getMMFF",
@@ -1412,7 +1495,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 155,
+            "line": 156,
             "description": "Gibt den Muttersvaternamen der Kuh zurück.",
             "itemtype": "method",
             "name": "getMFName",
@@ -1425,7 +1508,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 165,
+            "line": 166,
             "description": "Gibt den Muttervatersvater der Kuh zurück.",
             "itemtype": "method",
             "name": "getMFF",
@@ -1438,7 +1521,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 175,
+            "line": 176,
             "description": "Gibt den Vatersmuttervater der Kuh zurück.",
             "itemtype": "method",
             "name": "getFMF",
@@ -1451,7 +1534,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 185,
+            "line": 186,
             "description": "Gibt den Vatervater der Kuh zurück.",
             "itemtype": "method",
             "name": "getFF",
@@ -1464,7 +1547,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 195,
+            "line": 196,
             "description": "Gibt den Vatervatervater der Kuh zurück.",
             "itemtype": "method",
             "name": "getFFF",
@@ -1477,7 +1560,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 205,
+            "line": 206,
             "description": "Gibt den Vater der Kuh zurück.",
             "itemtype": "method",
             "name": "getFather",
@@ -1490,7 +1573,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 215,
+            "line": 216,
             "description": "Gibt den Züchter Kuh zurück.",
             "itemtype": "method",
             "name": "getBreeder",
@@ -1503,7 +1586,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 225,
+            "line": 226,
             "description": "Gibt das Bild der Kuh zurück.",
             "itemtype": "method",
             "name": "getImage",
@@ -1516,7 +1599,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 235,
+            "line": 236,
             "description": "Gibt den Namen der Kuh zurück.",
             "itemtype": "method",
             "name": "getName",
@@ -1529,7 +1612,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 245,
+            "line": 246,
             "description": "Gibt die Rasse der Kuh zurück.",
             "itemtype": "method",
             "name": "getRace",
@@ -1542,7 +1625,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 255,
+            "line": 256,
             "description": "Gibt die Id der Kuh zurück.",
             "itemtype": "method",
             "name": "getId",
@@ -1555,7 +1638,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 265,
+            "line": 266,
             "description": "Gibt den Gesamtzuchtwert der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZG",
@@ -1568,7 +1651,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 275,
+            "line": 276,
             "description": "Gibt Relativzuchtwert Milch der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZM",
@@ -1581,7 +1664,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 285,
+            "line": 286,
             "description": "Gibt MilckKg der Kuh zurück.",
             "itemtype": "method",
             "name": "getMilkKg",
@@ -1594,7 +1677,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 295,
+            "line": 296,
             "description": "Gibt Milchfettanteil der Kuh in Prozent zurück.",
             "itemtype": "method",
             "name": "getFatPercent",
@@ -1607,7 +1690,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 305,
+            "line": 306,
             "description": "Gibt den Milchfettanteil der Kuhin kg zurück.",
             "itemtype": "method",
             "name": "getFatKg",
@@ -1620,7 +1703,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 315,
+            "line": 316,
             "description": "Gibt den Milcheiweißanteil der Kuh in Prozent zurück.",
             "itemtype": "method",
             "name": "getProteinPercent",
@@ -1633,7 +1716,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 325,
+            "line": 326,
             "description": "Gibt den Milcheiweißanteil der Kuh in kg zurück.",
             "itemtype": "method",
             "name": "getProteinKg",
@@ -1646,7 +1729,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 335,
+            "line": 336,
             "description": "Gibt Relativzuchtwert Exterieur der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZE",
@@ -1659,7 +1742,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 345,
+            "line": 346,
             "description": "Gibt den Milchtyp der Kuh zurück.",
             "itemtype": "method",
             "name": "getMilkType",
@@ -1672,7 +1755,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 355,
+            "line": 356,
             "description": "Gibt den Körper der Kuh zurück.",
             "itemtype": "method",
             "name": "getBody",
@@ -1685,7 +1768,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 365,
+            "line": 366,
             "description": "Gibt den Fundament der Kuh zurück.",
             "itemtype": "method",
             "name": "getBase",
@@ -1698,7 +1781,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 375,
+            "line": 376,
             "description": "Gibt Euter der Kuh zurück.",
             "itemtype": "method",
             "name": "getUdder",
@@ -1711,7 +1794,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 385,
+            "line": 386,
             "description": "Gibt den Fitnesszuchtwert der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZFit",
@@ -1724,7 +1807,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 395,
+            "line": 396,
             "description": "Gibt Relativzuchtwert Nutzungsdauer der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZN",
@@ -1737,7 +1820,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 405,
+            "line": 406,
             "description": "Gibt Relativzuchtwert Zellzahl der Kuh zurück.",
             "itemtype": "method",
             "name": "getId",
@@ -1750,7 +1833,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 415,
+            "line": 416,
             "description": "Gibt Relativzuchtwert Melkbarkeit der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZD",
@@ -1763,7 +1846,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 425,
+            "line": 426,
             "description": "Gibt Relativzuchtwert Reproduktion der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZR",
@@ -1776,7 +1859,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 435,
+            "line": 436,
             "description": "Gibt Relativzuchtwert Kalbverlauf direkt der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZkd",
@@ -1789,7 +1872,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 445,
+            "line": 446,
             "description": "Gibt Relativzuchtwert Kalbverlauf maternal der Kuh zurück.",
             "itemtype": "method",
             "name": "getGRZkd",
@@ -1802,7 +1885,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 455,
+            "line": 456,
             "description": "Gibt den direkten Kalbverlauf der Kuh zurück.",
             "itemtype": "method",
             "name": "getCalfRunningDirectly",
@@ -1815,7 +1898,20 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 465,
+            "line": 466,
+            "description": "Gibt den Kuhtyp zurück.",
+            "itemtype": "method",
+            "name": "getCowType",
+            "return": {
+                "description": "m_cowType",
+                "type": "String"
+            },
+            "class": "TOPAZ.masterrind.interfaces.Cow",
+            "namespace": "TOPAZ.masterrind.interfaces"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 476,
             "description": "Setzt a der Kuh.",
             "itemtype": "method",
             "name": "setA",
@@ -1831,7 +1927,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 476,
+            "line": 487,
             "description": "Setzt aAa der Kuh.",
             "itemtype": "method",
             "name": "setAAA",
@@ -1847,7 +1943,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 487,
+            "line": 498,
             "description": "Setzt Anpaarung der Kuh.",
             "itemtype": "method",
             "name": "setMating",
@@ -1863,7 +1959,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 498,
+            "line": 509,
             "description": "Setzt Geburtsjahr der Kuh.",
             "itemtype": "method",
             "name": "setYearOfBirth",
@@ -1879,7 +1975,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 509,
+            "line": 520,
             "description": "Setzt Geburtsmonat der Kuh.",
             "itemtype": "method",
             "name": "setMonthOfBirth",
@@ -1895,7 +1991,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 520,
+            "line": 531,
             "description": "Setzt den Geburtstag der Kuh.",
             "itemtype": "method",
             "name": "setDayOfBirth",
@@ -1911,7 +2007,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 531,
+            "line": 542,
             "description": "Setzt Gendefect der Kuh.",
             "itemtype": "method",
             "name": "setGeneDefect",
@@ -1927,7 +2023,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 542,
+            "line": 553,
             "description": "Setzt die Herdbuchnummer der Kuh.",
             "itemtype": "method",
             "name": "setHerdBookNumber",
@@ -1943,7 +2039,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 553,
+            "line": 564,
             "description": "Setzt den Muttermuttervaternamen der Kuh.",
             "itemtype": "method",
             "name": "setMMFName",
@@ -1959,7 +2055,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 564,
+            "line": 575,
             "description": "Setzt den Muttersmuttervatervater der Kuh.",
             "itemtype": "method",
             "name": "setMMFF",
@@ -1975,7 +2071,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 575,
+            "line": 586,
             "description": "Setzt den Muttersvaternamen der Kuh.",
             "itemtype": "method",
             "name": "setMFName",
@@ -1991,7 +2087,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 586,
+            "line": 597,
             "description": "Setzt den Muttersvatervater der Kuh.",
             "itemtype": "method",
             "name": "setMFF",
@@ -2007,7 +2103,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 597,
+            "line": 608,
             "description": "Setzt den Vatersmuttervater der Kuh.",
             "itemtype": "method",
             "name": "setFMF",
@@ -2023,7 +2119,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 608,
+            "line": 619,
             "description": "Setzt den Vatervater der Kuh.",
             "itemtype": "method",
             "name": "setFF",
@@ -2039,7 +2135,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 619,
+            "line": 630,
             "description": "Setzt den Vatervatervater der Kuh.",
             "itemtype": "method",
             "name": "setFFF",
@@ -2055,7 +2151,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 630,
+            "line": 641,
             "description": "Setzt den Vater der Kuh.",
             "itemtype": "method",
             "name": "setFather",
@@ -2071,7 +2167,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 641,
+            "line": 652,
             "description": "Setzt den Züchter der Kuh.",
             "itemtype": "method",
             "name": "setBreeder",
@@ -2087,7 +2183,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 652,
+            "line": 663,
             "description": "Setzt das Bild der Kuh.",
             "itemtype": "method",
             "name": "setImage",
@@ -2103,7 +2199,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 663,
+            "line": 674,
             "description": "Setzt den Namen der Kuh.",
             "itemtype": "method",
             "name": "setName",
@@ -2119,7 +2215,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 674,
+            "line": 685,
             "description": "Setzt die Rasse der Kuh.",
             "itemtype": "method",
             "name": "setRace",
@@ -2135,7 +2231,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 685,
+            "line": 696,
             "description": "Setzt die Id der Kuh.",
             "itemtype": "method",
             "name": "setId",
@@ -2151,7 +2247,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 696,
+            "line": 707,
             "description": "Setzt den Gesamtzuchtwert der Kuh.",
             "itemtype": "method",
             "name": "setGRZG",
@@ -2167,7 +2263,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 707,
+            "line": 718,
             "description": "Setzt Relativzuchtwert Milch der Kuh.",
             "itemtype": "method",
             "name": "setGRZM",
@@ -2183,7 +2279,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 718,
+            "line": 729,
             "description": "Setzt den MilchKg der Kuh.",
             "itemtype": "method",
             "name": "setMilkKg",
@@ -2199,7 +2295,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 729,
+            "line": 740,
             "description": "Setzt den Milchfettanteil der Kuh in Prozent.",
             "itemtype": "method",
             "name": "setFatPercent",
@@ -2215,7 +2311,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 740,
+            "line": 751,
             "description": "Setzt Milchfettanteil der Kuh in kg.",
             "itemtype": "method",
             "name": "setFatKg",
@@ -2231,7 +2327,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 751,
+            "line": 762,
             "description": "Setzt den Milcheiweißanteil der Kuh in Prozent.",
             "itemtype": "method",
             "name": "setProteinPercent",
@@ -2247,7 +2343,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 762,
+            "line": 773,
             "description": "Setzt den Milcheiweißanteil der Kuh in kg.",
             "itemtype": "method",
             "name": "setProteinKg",
@@ -2263,7 +2359,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 773,
+            "line": 784,
             "description": "Setzt Relativzuchtwert Exterieur der Kuh.",
             "itemtype": "method",
             "name": "setGRZE",
@@ -2279,7 +2375,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 784,
+            "line": 795,
             "description": "Setzt den Milchtyp der Kuh.",
             "itemtype": "method",
             "name": "setMilkType",
@@ -2295,7 +2391,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 795,
+            "line": 806,
             "description": "Setzt den Körper der Kuh.",
             "itemtype": "method",
             "name": "setBody",
@@ -2311,7 +2407,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 806,
+            "line": 817,
             "description": "Setzt den Fundament der Kuh.",
             "itemtype": "method",
             "name": "setBase",
@@ -2327,7 +2423,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 817,
+            "line": 828,
             "description": "Setzt Euter der Kuh.",
             "itemtype": "method",
             "name": "setUdder",
@@ -2343,7 +2439,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 828,
+            "line": 839,
             "description": "Setzt Fitnesszuchtwert der Kuh.",
             "itemtype": "method",
             "name": "setGRZFit",
@@ -2359,7 +2455,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 839,
+            "line": 850,
             "description": "Setzt Relativzuchtwert Nutzungsdauer der Kuh.",
             "itemtype": "method",
             "name": "setGRZN",
@@ -2375,7 +2471,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 850,
+            "line": 861,
             "description": "Setzt Relativzuchtwert Zellzahl der Kuh.",
             "itemtype": "method",
             "name": "setGRZS",
@@ -2391,7 +2487,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 861,
+            "line": 872,
             "description": "Setzt Relativzuchtwert Melkbarkeit der Kuh.",
             "itemtype": "method",
             "name": "setGRZD",
@@ -2407,7 +2503,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 872,
+            "line": 883,
             "description": "Setzt Relativzuchtwert Reproduktion der Kuh.",
             "itemtype": "method",
             "name": "setGRZR",
@@ -2423,7 +2519,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 883,
+            "line": 894,
             "description": "Setzt Relativzuchtwert Kalbverlauf direkt der Kuh.",
             "itemtype": "method",
             "name": "setGRZkd",
@@ -2439,7 +2535,7 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 894,
+            "line": 905,
             "description": "Setzt Relativzuchtwert Kalbverlauf maternal der Kuh.",
             "itemtype": "method",
             "name": "setGRZM",
@@ -2455,13 +2551,29 @@
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
-            "line": 905,
+            "line": 916,
             "description": "Setzt den direkten Kalbverlauf der Kuh.",
             "itemtype": "method",
             "name": "setCalfRunningDirectly",
             "params": [
                 {
                     "name": "calfRunningDirectly",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "TOPAZ.masterrind.interfaces.Cow",
+            "namespace": "TOPAZ.masterrind.interfaces"
+        },
+        {
+            "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/interfaces/Cow.js",
+            "line": 927,
+            "description": "Setzt den Kuhtyp.",
+            "itemtype": "method",
+            "name": "setCowType",
+            "params": [
+                {
+                    "name": "cowType",
                     "description": "",
                     "type": "String"
                 }
@@ -2599,7 +2711,7 @@
             "line": 18,
             "description": "Hauptnamensraum",
             "class": "",
-            "namespace": "TOPAZ.masterrind.interfaces"
+            "namespace": "JSDriverDemo"
         },
         {
             "file": "/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/alloy.js",
@@ -2617,17 +2729,25 @@
                 "type": "Object"
             },
             "class": "",
-            "namespace": "TOPAZ.masterrind.interfaces"
+            "namespace": "JSDriverDemo"
         }
     ],
     "warnings": [
         {
             "message": "Missing item type\nFehler: Favorit wird mehrmals (>10) eingefügt.\nUrsache: unbekannt\nLösung: unbekannt",
-            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/controllers/index.js:16"
+            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/controllers/index.js:17"
         },
         {
-            "message": "Missing item type\nFehler: Liste wird erweitert beim mehrmaligen Klicken.\nUrsache: unbekannt\nLösung: unbekant",
-            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/controllers/index.js:34"
+            "message": "Missing item type\nFehler: Liste wird erweitert beim mehrmaligen Klicken.\nUrsache: Alloy.Collections.cowCol muss auf leer gesetzt werden\nLösung: unbekant",
+            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/controllers/index.js:77"
+        },
+        {
+            "message": "Missing item type\nFehler: Es wird immer die gleiche Kuh eingefügt (mit id=4).\nUrsache: cow wurde außerhalb der Schleife erstellt, deshalb\n\t\t\twurde das gleiche Cowobjekt in Array geschrieben und\n\t\t\tdabei auch überschrieben.\nLösung: Cow innerhalb der Schleife erstellen.",
+            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js:124"
+        },
+        {
+            "message": "Missing item type\nFehler:verschiedene Objekte mit gleichen Eigenschften\n\t\t\tim Array.\nUrsache: wahrscheinlich liegt die Ursache in abgeleiteten Objekten.\nLösung: javascript Vererbung nachschlagen.",
+            "line": " /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/MasterRindFacade.js:257"
         },
         {
             "message": "Missing item type\nHauptnamensraum",

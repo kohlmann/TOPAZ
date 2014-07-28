@@ -41,6 +41,8 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
+                <li><a href="../classes/JSDriverDemo.Calc.html">JSDriverDemo.Calc</a></li>
+            
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.Auction.html">TOPAZ.masterrind.datatypes.Auction</a></li>
             
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.BlackColored.html">TOPAZ.masterrind.datatypes.BlackColored</a></li>
@@ -136,6 +138,8 @@ require(&#x27;TOPAZ/masterrind/datatypes/BlackColored&#x27;);
 require(&#x27;TOPAZ/masterrind/interfaces/Favorite&#x27;);
 require(&#x27;TOPAZ/masterrind/datatypes/Holsteins&#x27;);
 
+require(&#x27;TOPAZ/masterrind/impl/Calc&#x27;);
+
 //Fehler: Schritt zurück erst möglich, wenn die Taste dreimal gedrückt wird.
 //Ursache: eventListener für AboutButton wird mehrfach im Code aufgerufen
 //Lösung: EventListener nur einmal aufrufen.
@@ -143,7 +147,6 @@ $.about.addEventListener(&#x27;click&#x27;, function(e) {
 	var win = Alloy.createController(&#x27;about&#x27;).getView();
 	win.open();
 });
-
 
 /**
  * Fehler: Favorit wird mehrmals (&gt;10) eingefügt.
@@ -153,19 +156,61 @@ $.about.addEventListener(&#x27;click&#x27;, function(e) {
 $.appointments.addEventListener(&#x27;click&#x27;, function(e) {
 	var win = Alloy.createController(&#x27;appointments&#x27;).getView();
 	// win.open();
-	
+
 	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	mr_fav.addFavorite(&quot;15&quot;,&quot;Huj&quot;,&quot;1&quot;,&quot;HujFavorit&quot;);
+	mr_fav.addFavorite(&quot;15&quot;, &quot;Huj&quot;, &quot;1&quot;, &quot;HujFavorit&quot;);
 });
 
 $.blackColored.addEventListener(&#x27;click&#x27;, function(e) {
 	var win = Alloy.createController(&#x27;blackColored&#x27;).getView();
 	win.open();
+
+	var appointments = new Array();
+	var companies = new Array();
+	var contacts = new Array();
+	var cows = new Array();
+	var favorites = new Array();
+	var model;
+
+	var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
+	mr_app.loadAppointmentsFromDB();
+	appointments = mr_app.getAppointments(&#x27;Meeting&#x27;);
+	console.log(appointments.length);
+	for ( i = 0; i &lt; appointments.length; i++) {
+		app = appointments[i];
+		console.log(app.getName());
+	}
+
+	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
+	mr_fav.loadFavoritesFromDB();
+	favorites = mr_fav.getFavorites(&#x27;cow&#x27;);
+	for ( i = 0; i &lt; favorites.length; i++) {
+		console.log(favorites[i].getName());
+	}
+
+	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
+	mr_cow.loadCowsFromDB();
+	var cows =new Array();cows = mr_cow.getCows(&#x27;BlackColored&#x27;);
+	for ( i = 0; i &lt; cows.length; i++) {
+
+		var cow = cows[i];
+		console.log(cow.getId() + &#x27; &#x27; + cow.getName()+&#x27; &#x27; + cow.getFather());
+
+		model = Alloy.createModel(&#x27;cowsMod&#x27;, {
+			id : cow.getId(),
+			name : cow.getName(),
+			image : cow.getImage(),
+			info : cow.getFather()
+		});
+
+		Alloy.Collections.cowCol.add(model);
+
+	}
 });
 
 /**
  * Fehler: Liste wird erweitert beim mehrmaligen Klicken.
- * Ursache: unbekannt
+ * Ursache: Alloy.Collections.cowCol muss auf leer gesetzt werden
  * Lösung: unbekant
  */
 $.contacts.addEventListener(&#x27;click&#x27;, function(e) {
@@ -192,19 +237,19 @@ $.contacts.addEventListener(&#x27;click&#x27;, function(e) {
 	mr_fav.loadFavoritesFromDB();
 	favorites = mr_fav.getFavorites(&#x27;cow&#x27;);
 	for ( i = 0; i &lt; favorites.length; i++) {
-	console.log(favorites[i].getName());
+		console.log(favorites[i].getName());
 	}
 
 	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
 	mr_cow.loadCowsFromDB();
-	cows = mr_cow.getCows(&#x27;Holsteins&#x27;);
+	cows = mr_cow.getCows(&#x27;BlackColored&#x27;);
 	for ( i = 0; i &lt; cows.length; i++) {
 
 		cow = cows[i];
 		console.log(cow.getId() + &#x27; &#x27; + cow.getBase());
 
 		model = Alloy.createModel(&#x27;cowsMod&#x27;, {
-			ID : cow.getId()
+			id : cow.getId()
 		});
 
 		Alloy.Collections.cowCol.add(model);

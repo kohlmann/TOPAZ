@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Course.js</title>
+    <title>/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -128,24 +128,55 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Course.js</h1>
+                        <h1 class="file-heading">File: /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/impl/Calc.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
-TOPAZ.namespace(&#x27;TOPAZ.masterrind.datatypes.Course&#x27;);
-
-require(&#x27;TOPAZ/masterrind/interfaces/Appointment&#x27;);
-
+TOPAZ.namespace(&#x27;TOPAZ.masterrind.impl.Calc&#x27;);
 /**
- * Realisiert Appointment.js.
+ * Die Klasse Calc implementiert die vier Grundrechenarten.
  *
- * @namespace TOPAZ.masterrind.datatypes
- * @class Course
+ * @namespace JSDriverDemo
+ * @class Calc
  */
-TOPAZ.masterrind.datatypes.Course = function() {
+TOPAZ.masterrind.impl.Calc = function() {
 
+	/**
+	 * Führt Addition durch.
+	 *
+	 * @method add
+	 */
+	this.add = function(a, b) {
+		return a + b;
+	};
+
+	/**
+	 * Führt Subtraktoin durch.
+	 *
+	 * @method add
+	 */
+	this.sub = function(a, b) {
+		return a - b;
+	};
+	
+		/**
+	 * Führt Multiplikation durch.
+	 *
+	 * @method mult
+	 */
+	this.mult = function(a, b) {
+		return a * b;
+	};
+
+	/**
+	 * Führt Division durch.
+	 *
+	 * @method div
+	 */
+	this.div = function(a, b) {
+		return a / b;
+	};
 };
-TOPAZ.masterrind.datatypes.Course.prototype = new TOPAZ.masterrind.interfaces.Appointment();
 
     </pre>
 </div>

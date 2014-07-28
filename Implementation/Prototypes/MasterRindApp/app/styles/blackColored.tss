@@ -1,0 +1,60 @@
+
+"#tabGroup" :{
+	backgroundImage:'images/grid_icon_sbt.png',
+	backgroundSelectedColor:'blue'
+}
+
+"#allCowsTab" :{
+	height: '100dp',
+	title:'Alle',
+	backgroundImage:'/images/grid_icon_sbt.png',
+	backgroundSelectedColor:'blue'
+}
+
+"#hornlessTab" :{
+	title:'Hornlose',
+	backgroundImage:'/images/grid_icon_hornlose.png',
+	backgroundSelectedColor:'blue'
+}
+
+"#daughterTestedTab" :{
+	title:'Geprüfte',
+	backgroundImage:'/images/grid_icon_gepruefte.png',
+	backgroundSelectedColor:'blue'
+}
+
+"#genomicsTab" :{
+	title:'Genomics',
+	backgroundImage:'/images/grid_icon_genomics.png',
+	backgroundSelectedColor:'blue'
+}
+
+".StartProperties" :{
+	// backgroundColor:'white'
+}
+
+"#icon" : {
+    width: '50dp', height: '50dp', left: 0
+}
+
+"#title" : {
+    color: 'black',
+    backgroundColor: 'transparent',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '60dp', top: 0
+}
+
+"#subtitle" : {
+    color: 'gray',
+    backgroundColor: 'transparent',
+    font: { fontFamily:'Arial', fontSize: '14dp' },
+    left: '60dp', top: '25dp'
+}
+
+"#listItem" :{
+	width: Titanium.UI.FILL,
+	height: Titanium.UI.FILL,
+	left:'10'
+}
+
+

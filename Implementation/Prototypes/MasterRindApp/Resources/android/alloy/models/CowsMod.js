@@ -1,7 +1,10 @@
 exports.definition = {
     config: {
         columns: {
-            ID: "text"
+            id: "text",
+            name: "text",
+            image: "image",
+            info: "text"
         },
         adapter: {
             collection_name: "cowsMod"

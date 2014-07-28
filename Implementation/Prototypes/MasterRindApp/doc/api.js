@@ -1,6 +1,7 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "JSDriverDemo.Calc",
         "TOPAZ.masterrind.datatypes.Auction",
         "TOPAZ.masterrind.datatypes.BlackColored",
         "TOPAZ.masterrind.datatypes.Company",

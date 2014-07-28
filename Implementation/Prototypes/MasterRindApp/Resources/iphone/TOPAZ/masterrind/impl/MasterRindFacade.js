@@ -68,11 +68,14 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
         masterRindRS.close();
     };
     this.loadCowsFromDB = function() {
-        var masterRindRS = db.execute("SELECT id,base FROM cows");
+        var masterRindRS = db.execute("SELECT id,image,name,father FROM cows");
         var cow = new TOPAZ.masterrind.interfaces.Cow();
         while (masterRindRS.isValidRow()) {
             cow.setId(masterRindRS.fieldByName("id"));
-            cow.setBase(masterRindRS.fieldByName("base"));
+            cow.setImage(masterRindRS.fieldByName("image"));
+            cow.setName(masterRindRS.fieldByName("name"));
+            cow.setFather(masterRindRS.fieldByName("father"));
+            console.log(masterRindRS.fieldByName("id"));
             m_cows.push(cow);
             masterRindRS.next();
         }
@@ -134,7 +137,10 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
         for (i = 0; m_cows.length > i; i++) {
             cow = factory.create(type);
             cow.setId(m_cows[i].getId());
-            cow.setBase(m_cows[i].getBase());
+            cow.setImage(m_cows[i].getImage());
+            cow.setName(m_cows[i].getName());
+            cow.setFather(m_cows[i].getFather());
+            console.log(m_cows[2].getId());
             cows.push(cow);
         }
         return cows;

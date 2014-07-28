@@ -41,6 +41,8 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
+                <li><a href="../classes/JSDriverDemo.Calc.html">JSDriverDemo.Calc</a></li>
+            
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.Auction.html">TOPAZ.masterrind.datatypes.Auction</a></li>
             
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.BlackColored.html">TOPAZ.masterrind.datatypes.BlackColored</a></li>
@@ -243,16 +245,24 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	this.loadCowsFromDB = function() {
 
 		//RS=ResultSet
-		var masterRindRS = db.execute(&#x27;SELECT id,base FROM cows&#x27;);
-		var cow = new TOPAZ.masterrind.interfaces.Cow();
+		var masterRindRS = db.execute(&#x27;SELECT id,image,name,father FROM cows&#x27;);
 
 		while (masterRindRS.isValidRow()) {
-
+			var cow = new TOPAZ.masterrind.interfaces.Cow();
+			
 			cow.setId(masterRindRS.fieldByName(&#x27;id&#x27;));
-			cow.setBase(masterRindRS.fieldByName(&#x27;base&#x27;));
+			cow.setImage(masterRindRS.fieldByName(&#x27;image&#x27;));
+			cow.setName(masterRindRS.fieldByName(&#x27;name&#x27;));
+			cow.setFather(masterRindRS.fieldByName(&#x27;father&#x27;));
 
+			/**
+			 * Fehler: Es wird immer die gleiche Kuh eingefügt (mit id=4).
+			 * Ursache: cow wurde außerhalb der Schleife erstellt, deshalb
+			 * 			wurde das gleiche Cowobjekt in Array geschrieben und
+			 * 			dabei auch überschrieben.
+			 * Lösung: Cow innerhalb der Schleife erstellen.
+			 */
 			m_cows.push(cow);
-
 			masterRindRS.next();
 		}
 
@@ -368,19 +378,41 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	 * @param {String} type
 	 * @return {Array} cows
 	 */
+	
 	this.getCows = function(type) {
-		var cows = new Array();
-
+		cs = new Array();
+		//TODO: factory in allen Methoden anpassen.
+		//TODO: debugging, factories testen, 
+		//gleicher fehler wie bei load fromDB?????????
+		var factory=new TOPAZ.masterrind.impl.CowFactory();
+		
 		for ( i = 0; i &lt; m_cows.length; i++) {
-
-			cow = factory.create(type);
+			
+			/**
+			 * Fehler:verschiedene Objekte mit gleichen Eigenschften
+			 * 			im Array.
+			 * Ursache: wahrscheinlich liegt die Ursache in abgeleiteten Objekten.
+			 * Lösung: javascript Vererbung nachschlagen.
+			 */
+			var cow = new TOPAZ.masterrind.interfaces.Cow();
+			//factory.create(type);
 			cow.setId(m_cows[i].getId());
-			cow.setBase(m_cows[i].getBase());
-
-			cows.push(cow);
+			cow.setImage(m_cows[i].getImage());
+			cow.setName(m_cows[i].getName());
+			cow.setFather(m_cows[i].getFather());
+console.log(&quot;getCow &quot;+cow.getId());
+			cs.push(cow);
+		
+		console.log(&quot;liste-&gt; &quot;+cs[i].getId());	
+		}
+		
+		for(i=0;i&lt;cs.length;i++){
+			// if(i&gt;1)console.log(&quot;liste-&gt; &quot;+i+&quot; &quot;+Object.is(cs[i],cs[i-1]));
+			// console.log(&quot;cs-obejct-&gt; &quot;+cs[i]);
+			console.log(&quot;cs-&gt; &quot;+i+&quot; &quot;+cs[i].getId()+&quot; &quot;+cs[i].getName());
 		}
 
-		return cows;
+		return cs;
 	};
 
 	/**
@@ -434,7 +466,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	};
 	/**
 	 * Löscht einen Favoriten aus der Datenbank.
-	 * 
+	 *
 	 * @method removeFavorite
 	 * @param {String} id
 	 * @return {bool} true bei Erfolg

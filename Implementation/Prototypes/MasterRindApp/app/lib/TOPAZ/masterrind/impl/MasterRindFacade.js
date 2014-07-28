@@ -111,16 +111,24 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	this.loadCowsFromDB = function() {
 
 		//RS=ResultSet
-		var masterRindRS = db.execute('SELECT id,base FROM cows');
-		var cow = new TOPAZ.masterrind.interfaces.Cow();
+		var masterRindRS = db.execute('SELECT id,image,name,father FROM cows');
 
 		while (masterRindRS.isValidRow()) {
-
+			var cow = new TOPAZ.masterrind.interfaces.Cow();
+			
 			cow.setId(masterRindRS.fieldByName('id'));
-			cow.setBase(masterRindRS.fieldByName('base'));
+			cow.setImage(masterRindRS.fieldByName('image'));
+			cow.setName(masterRindRS.fieldByName('name'));
+			cow.setFather(masterRindRS.fieldByName('father'));
 
+			/**
+			 * Fehler: Es wird immer die gleiche Kuh eingefügt (mit id=4).
+			 * Ursache: cow wurde außerhalb der Schleife erstellt, deshalb
+			 * 			wurde das gleiche Cowobjekt in Array geschrieben und
+			 * 			dabei auch überschrieben.
+			 * Lösung: Cow innerhalb der Schleife erstellen.
+			 */
 			m_cows.push(cow);
-
 			masterRindRS.next();
 		}
 
@@ -236,19 +244,41 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	 * @param {String} type
 	 * @return {Array} cows
 	 */
+	
 	this.getCows = function(type) {
-		var cows = new Array();
-
+		cs = new Array();
+		//TODO: factory in allen Methoden anpassen.
+		//TODO: debugging, factories testen, 
+		//gleicher fehler wie bei load fromDB?????????
+		var factory=new TOPAZ.masterrind.impl.CowFactory();
+		
 		for ( i = 0; i < m_cows.length; i++) {
-
-			cow = factory.create(type);
+			
+			/**
+			 * Fehler:verschiedene Objekte mit gleichen Eigenschften
+			 * 			im Array.
+			 * Ursache: wahrscheinlich liegt die Ursache in abgeleiteten Objekten.
+			 * Lösung: javascript Vererbung nachschlagen.
+			 */
+			var cow = new TOPAZ.masterrind.interfaces.Cow();
+			//factory.create(type);
 			cow.setId(m_cows[i].getId());
-			cow.setBase(m_cows[i].getBase());
-
-			cows.push(cow);
+			cow.setImage(m_cows[i].getImage());
+			cow.setName(m_cows[i].getName());
+			cow.setFather(m_cows[i].getFather());
+console.log("getCow "+cow.getId());
+			cs.push(cow);
+		
+		console.log("liste-> "+cs[i].getId());	
+		}
+		
+		for(i=0;i<cs.length;i++){
+			// if(i>1)console.log("liste-> "+i+" "+Object.is(cs[i],cs[i-1]));
+			// console.log("cs-obejct-> "+cs[i]);
+			console.log("cs-> "+i+" "+cs[i].getId()+" "+cs[i].getName());
 		}
 
-		return cows;
+		return cs;
 	};
 
 	/**
@@ -302,7 +332,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	};
 	/**
 	 * Löscht einen Favoriten aus der Datenbank.
-	 * 
+	 *
 	 * @method removeFavorite
 	 * @param {String} id
 	 * @return {bool} true bei Erfolg

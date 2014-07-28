@@ -41,6 +41,8 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
+                <li><a href="../classes/JSDriverDemo.Calc.html">JSDriverDemo.Calc</a></li>
+            
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.Auction.html">TOPAZ.masterrind.datatypes.Auction</a></li>
             
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.BlackColored.html">TOPAZ.masterrind.datatypes.BlackColored</a></li>
@@ -130,7 +132,7 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
-TOPAZ.namespace(&#x27;TOPAZ.masterrind.imp.AppointmentFactory&#x27;);
+TOPAZ.namespace(&#x27;TOPAZ.masterrind.impl.AppointmentFactory&#x27;);
 
 require(&#x27;TOPAZ/masterrind/interfaces/Appointment&#x27;);
 require(&#x27;TOPAZ/masterrind/datatypes/Auction&#x27;);
@@ -171,7 +173,7 @@ TOPAZ.masterrind.impl.AppointmentFactory = function() {
 		} else if (type == &#x27;YoungBreeder&#x27;) {
 			appointment = new TOPAZ.masterrind.datatypes.YoungBreeder();
 		} else {
-			console.log(&quot;Unbekannte Kuhart&quot;);
+			console.log(&quot;Unbekannte Terminart&quot;);
 		}
 
 		return appointment;

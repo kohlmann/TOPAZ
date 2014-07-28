@@ -1,4 +1,4 @@
-TOPAZ.namespace('TOPAZ.masterrind.imp.AppointmentFactory');
+TOPAZ.namespace('TOPAZ.masterrind.impl.AppointmentFactory');
 
 require('TOPAZ/masterrind/interfaces/Appointment');
 require('TOPAZ/masterrind/datatypes/Auction');
@@ -39,7 +39,7 @@ TOPAZ.masterrind.impl.AppointmentFactory = function() {
 		} else if (type == 'YoungBreeder') {
 			appointment = new TOPAZ.masterrind.datatypes.YoungBreeder();
 		} else {
-			console.log("Unbekannte Kuhart");
+			console.log("Unbekannte Terminart");
 		}
 
 		return appointment;

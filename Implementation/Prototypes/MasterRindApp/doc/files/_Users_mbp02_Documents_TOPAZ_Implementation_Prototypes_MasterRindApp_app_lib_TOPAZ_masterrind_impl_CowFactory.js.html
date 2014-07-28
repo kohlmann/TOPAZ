@@ -41,6 +41,8 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
+                <li><a href="../classes/JSDriverDemo.Calc.html">JSDriverDemo.Calc</a></li>
+            
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.Auction.html">TOPAZ.masterrind.datatypes.Auction</a></li>
             
                 <li><a href="../classes/TOPAZ.masterrind.datatypes.BlackColored.html">TOPAZ.masterrind.datatypes.BlackColored</a></li>
@@ -161,8 +163,10 @@ TOPAZ.masterrind.impl.CowFactory = function() {
 
 		if (type == &#x27;BlackColored&#x27;) {
 			cow = new TOPAZ.masterrind.datatypes.BlackColored();
+			console.log(&quot;created: &quot;+type);
 		} else if (type == &#x27;DaughterTested&#x27;) {
 			cow = new TOPAZ.masterrind.datatypes.DaughterTested();
+			console.log(&quot;created: &quot;+type);
 		} else if (type == &#x27;Genomics&#x27;) {
 			cow = new TOPAZ.masterrind.datatypes.Genomics();
 		} else if (type == &#x27;Holsteins&#x27;) {

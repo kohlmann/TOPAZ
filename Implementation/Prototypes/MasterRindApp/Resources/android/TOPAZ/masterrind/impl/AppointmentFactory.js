@@ -1,4 +1,4 @@
-TOPAZ.namespace("TOPAZ.masterrind.imp.AppointmentFactory");
+TOPAZ.namespace("TOPAZ.masterrind.impl.AppointmentFactory");
 
 require("TOPAZ/masterrind/interfaces/Appointment");
 
@@ -17,7 +17,7 @@ require("TOPAZ/masterrind/datatypes/YoungBreeder");
 TOPAZ.masterrind.impl.AppointmentFactory = function() {
     this.create = function(type) {
         var appointment;
-        "Auction" == type ? appointment = new TOPAZ.masterrind.datatypes.Auction() : "Course" == type ? appointment = new TOPAZ.masterrind.datatypes.Course() : "Exhibition" == type ? appointment = new TOPAZ.masterrind.datatypes.Exhibition() : "MeetCattle" == type ? appointment = new TOPAZ.masterrind.datatypes.MeetCattle() : "Meeting" == type ? appointment = new TOPAZ.masterrind.datatypes.Meeting() : "YoungBreeder" == type ? appointment = new TOPAZ.masterrind.datatypes.YoungBreeder() : console.log("Unbekannte Kuhart");
+        "Auction" == type ? appointment = new TOPAZ.masterrind.datatypes.Auction() : "Course" == type ? appointment = new TOPAZ.masterrind.datatypes.Course() : "Exhibition" == type ? appointment = new TOPAZ.masterrind.datatypes.Exhibition() : "MeetCattle" == type ? appointment = new TOPAZ.masterrind.datatypes.MeetCattle() : "Meeting" == type ? appointment = new TOPAZ.masterrind.datatypes.Meeting() : "YoungBreeder" == type ? appointment = new TOPAZ.masterrind.datatypes.YoungBreeder() : console.log("Unbekannte Terminart");
         return appointment;
     };
 };

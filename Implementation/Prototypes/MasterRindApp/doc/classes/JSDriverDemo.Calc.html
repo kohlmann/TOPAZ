@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>TOPAZ.masterrind.impl.CowFactory</title>
+    <title>JSDriverDemo.Calc</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -128,7 +128,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>TOPAZ.masterrind.impl.CowFactory Class</h1>
+                        <h1>JSDriverDemo.Calc Class</h1>
 <div class="box meta">
     
 
@@ -136,7 +136,7 @@
 
     
         <div class="foundat">
-            Defined in: <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_impl_CowFactory.js.html#l12"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;impl&#x2F;CowFactory.js:12</code></a>
+            Defined in: <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_test_CalcTest.js.html#l8"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;test&#x2F;CalcTest.js:8</code></a>
         </div>
     
 
@@ -148,7 +148,17 @@
 
 
 <div class="box intro">
-    <p>Realisiert MasterRindFactory.js.</p>
+    <p>Die Klasse CalcTest testet die vier Grundrechenarten
+mit JSDriver Framework. Es gibt zwei Arten zum Erstellen
+eines Tests. Mit Literalen und mit Prototypes. Die Tests
+in diesem Beispiel werden mit Literalen durchgeführt.</p>
+<p>Wie man die Tests mit Prototypen erstellt zeigt dieses
+Beispiel:</p>
+<p>CalcTest = TestCase(&quot;CalcTest&quot;);
+CalcTest.prototype.testSubtraktion = function() {
+        var calc = new JSDriverDemo.Calc();
+        assertEquals(&quot;TEST FAILED&quot;, &quot;1&quot;, calc.sub(3, 2));
+    };</p>
 
 </div>
 
@@ -177,7 +187,28 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
-                                <a href="#method_create">create</a>
+                                <a href="#method_add">add</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_add">add</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_div">div</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_mult">mult</a>
 
                                 
                                 
@@ -199,27 +230,13 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_create" class="method item">
-    <h3 class="name"><code>create</code></h3>
+                    <div id="method_add" class="method item">
+    <h3 class="name"><code>add</code></h3>
 
     
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>type</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
     
 
-    
-        <span class="returns-inline">
-            <span class="type">String</span>
-        </span>
     
 
     
@@ -245,7 +262,7 @@
             
         
         
-        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_impl_CowFactory.js.html#l20"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;impl&#x2F;CowFactory.js:20</code></a>
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_impl_Calc.js.html#l10"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;impl&#x2F;Calc.js:10</code></a>
         
         </p>
 
@@ -256,49 +273,177 @@
     </div>
 
     <div class="description">
-        <p>Erstellt Kuhobjekte.</p>
+        <p>Führt Addition durch.</p>
 
     </div>
 
     
-        <div class="params">
-            <h4>Parameters:</h4>
 
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">type</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
     
 
     
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">String</span>:
-                    
-                    <p>cow</p>
+</div>
 
                 
-            </div>
-        </div>
+                    <div id="method_add" class="method item">
+    <h3 class="name"><code>add</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_impl_Calc.js.html#l19"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;impl&#x2F;Calc.js:19</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Führt Subtraktoin durch.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_div" class="method item">
+    <h3 class="name"><code>div</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_impl_Calc.js.html#l37"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;impl&#x2F;Calc.js:37</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Führt Division durch.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_mult" class="method item">
+    <h3 class="name"><code>mult</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/_Users_mbp02_Documents_TOPAZ_Implementation_Prototypes_MasterRindApp_app_lib_TOPAZ_masterrind_impl_Calc.js.html#l28"><code>&#x2F;Users&#x2F;mbp02&#x2F;Documents&#x2F;TOPAZ&#x2F;Implementation&#x2F;Prototypes&#x2F;MasterRindApp&#x2F;app&#x2F;lib&#x2F;TOPAZ&#x2F;masterrind&#x2F;impl&#x2F;Calc.js:28</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Führt Multiplikation durch.</p>
+
+    </div>
+
+    
+
     
 
     

@@ -29,8 +29,10 @@ TOPAZ.masterrind.impl.CowFactory = function() {
 
 		if (type == 'BlackColored') {
 			cow = new TOPAZ.masterrind.datatypes.BlackColored();
+			console.log("created: "+type);
 		} else if (type == 'DaughterTested') {
 			cow = new TOPAZ.masterrind.datatypes.DaughterTested();
+			console.log("created: "+type);
 		} else if (type == 'Genomics') {
 			cow = new TOPAZ.masterrind.datatypes.Genomics();
 		} else if (type == 'Holsteins') {

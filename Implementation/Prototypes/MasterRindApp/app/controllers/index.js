@@ -14,7 +14,6 @@ $.about.addEventListener('click', function(e) {
 	win.open();
 });
 
-
 /**
  * Fehler: Favorit wird mehrmals (>10) eingefügt.
  * Ursache: unbekannt
@@ -23,19 +22,61 @@ $.about.addEventListener('click', function(e) {
 $.appointments.addEventListener('click', function(e) {
 	var win = Alloy.createController('appointments').getView();
 	// win.open();
-	
+
 	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	mr_fav.addFavorite("15","Huj","1","HujFavorit");
+	mr_fav.addFavorite("15", "Huj", "1", "HujFavorit");
 });
 
 $.blackColored.addEventListener('click', function(e) {
 	var win = Alloy.createController('blackColored').getView();
 	win.open();
+
+	var appointments = new Array();
+	var companies = new Array();
+	var contacts = new Array();
+	var cows = new Array();
+	var favorites = new Array();
+	var model;
+
+	var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
+	mr_app.loadAppointmentsFromDB();
+	appointments = mr_app.getAppointments('Meeting');
+	console.log(appointments.length);
+	for ( i = 0; i < appointments.length; i++) {
+		app = appointments[i];
+		console.log(app.getName());
+	}
+
+	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
+	mr_fav.loadFavoritesFromDB();
+	favorites = mr_fav.getFavorites('cow');
+	for ( i = 0; i < favorites.length; i++) {
+		console.log(favorites[i].getName());
+	}
+
+	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
+	mr_cow.loadCowsFromDB();
+	var cows =new Array();cows = mr_cow.getCows('BlackColored');
+	for ( i = 0; i < cows.length; i++) {
+
+		var cow = cows[i];
+		console.log(cow.getId() + ' ' + cow.getName()+' ' + cow.getFather());
+
+		model = Alloy.createModel('cowsMod', {
+			id : cow.getId(),
+			name : cow.getName(),
+			image : cow.getImage(),
+			info : cow.getFather()
+		});
+
+		Alloy.Collections.cowCol.add(model);
+
+	}
 });
 
 /**
  * Fehler: Liste wird erweitert beim mehrmaligen Klicken.
- * Ursache: unbekannt
+ * Ursache: Alloy.Collections.cowCol muss auf leer gesetzt werden
  * Lösung: unbekant
  */
 $.contacts.addEventListener('click', function(e) {
@@ -62,19 +103,19 @@ $.contacts.addEventListener('click', function(e) {
 	mr_fav.loadFavoritesFromDB();
 	favorites = mr_fav.getFavorites('cow');
 	for ( i = 0; i < favorites.length; i++) {
-	console.log(favorites[i].getName());
+		console.log(favorites[i].getName());
 	}
 
 	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
 	mr_cow.loadCowsFromDB();
-	cows = mr_cow.getCows('Holsteins');
+	cows = mr_cow.getCows('BlackColored');
 	for ( i = 0; i < cows.length; i++) {
 
 		cow = cows[i];
 		console.log(cow.getId() + ' ' + cow.getBase());
 
 		model = Alloy.createModel('cowsMod', {
-			ID : cow.getId()
+			id : cow.getId()
 		});
 
 		Alloy.Collections.cowCol.add(model);

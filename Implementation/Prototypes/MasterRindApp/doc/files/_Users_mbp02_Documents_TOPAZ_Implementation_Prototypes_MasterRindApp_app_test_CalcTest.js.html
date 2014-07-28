@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Course.js</title>
+    <title>/Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/test/CalcTest.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -128,24 +128,57 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/lib/TOPAZ/masterrind/datatypes/Course.js</h1>
+                        <h1 class="file-heading">File: /Users/mbp02/Documents/TOPAZ/Implementation/Prototypes/MasterRindApp/app/test/CalcTest.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
-TOPAZ.namespace(&#x27;TOPAZ.masterrind.datatypes.Course&#x27;);
-
-require(&#x27;TOPAZ/masterrind/interfaces/Appointment&#x27;);
+/*
+ * Fehler: Test läuft nicht durch.
+ * Ursache: wahrscheinlich wird keine Referenz auf Calc übergeben.
+ * Lösung: nicht bekannt
+ */
+require(&#x27;TOPAZ/masterrind/impl/Calc&#x27;);
 
 /**
- * Realisiert Appointment.js.
+ * Die Klasse CalcTest testet die vier Grundrechenarten
+ * mit JSDriver Framework. Es gibt zwei Arten zum Erstellen
+ * eines Tests. Mit Literalen und mit Prototypes. Die Tests
+ * in diesem Beispiel werden mit Literalen durchgeführt.
  *
- * @namespace TOPAZ.masterrind.datatypes
- * @class Course
+ * Wie man die Tests mit Prototypen erstellt zeigt dieses
+ * Beispiel:
+ *
+ * CalcTest = TestCase(&quot;CalcTest&quot;);
+ * CalcTest.prototype.testSubtraktion = function() {
+ * 		var calc = new JSDriverDemo.Calc();
+ *		assertEquals(&quot;TEST FAILED&quot;, &quot;1&quot;, calc.sub(3, 2));
+ *	};
+ *
+ * @namespace JSDriverDemo
+ * @class Calc
  */
-TOPAZ.masterrind.datatypes.Course = function() {
+TestCase(&quot;CalcTest&quot;, {
+	calc : &quot;null&quot;,
 
-};
-TOPAZ.masterrind.datatypes.Course.prototype = new TOPAZ.masterrind.interfaces.Appointment();
+	setUp : function() {
+		this.calc = new TOPAZ.masterrind.impl.Calc();
+	},
+	testAddition : function() {
+		assertEquals(&quot;TEST FAILED&quot;, &quot;6&quot;, this.calc.add(4, 2));
+	},
+	testSubtraktion : function() {
+		assertEquals(&quot;TEST FAILED&quot;, &quot;2&quot;, this.calc.sub(4, 2));
+	},
+	testMultiplikation : function() {
+		assertEquals(&quot;TEST FAILED&quot;, &quot;8&quot;, this.calc.mult(4, 2));
+	},
+	testDivision : function() {
+		assertEquals(&quot;TEST FAILED&quot;, &quot;2&quot;, this.calc.div(4, 2));
+	},
+	tearDown : function() {
+		//code
+	}
+});
 
     </pre>
 </div>
