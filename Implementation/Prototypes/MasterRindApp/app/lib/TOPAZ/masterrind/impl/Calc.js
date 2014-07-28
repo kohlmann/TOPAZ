@@ -24,8 +24,8 @@ TOPAZ.masterrind.impl.Calc = function() {
 	this.sub = function(a, b) {
 		return a - b;
 	};
-	
-		/**
+
+	/**
 	 * Führt Multiplikation durch.
 	 *
 	 * @method mult
