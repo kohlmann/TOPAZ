@@ -1,0 +1,9 @@
+<Alloy>
+	<ItemTemplate name="requiredTemplate">
+		<ImageView bindId="leftALImage" id="leftImage" class="left row1" />
+		<Label bindId="headline" id="headline" class="title row1 left"/>
+		<Label bindId="subheadline" id="subheadline" class="row2 left"/>
+		<Label bindId="rasse" id="rasse" class="row2 right"/>
+		<Label bindId="itemId" id="itemId" class="row2 right"/>
+	</ItemTemplate>
+</Alloy>

@@ -1,0 +1,17 @@
+<Alloy>
+	<Collection src="kuehe" />
+	<Window id="redWindow" class="container" layout="vertical">
+		<View id="buttonview">
+			<Button id="closeWindow" onClick="closeWindow">Schließen</Button>
+		</View>
+		<ListView id="list" defaultItemTemplate="requiredTemplate">
+			<SearchBar id="searchBar" barColor="#000" visible="false"  />
+			<Templates>
+				<Require src="itemTemplate"/>
+			</Templates>
+			<ListSection dataCollection="kuehe" dataFilter="redFilter" dataTransform="transformFunction">
+				<Require src="listItem" />
+			</ListSection>
+		</ListView>
+	</Window>
+</Alloy>

@@ -1,0 +1,1 @@
+module.exports = [{"isId":true,"priority":100000.0001,"key":"buttonview","style":{backgroundColor:"red",height:"50dp",top:"20dp",}},{"isId":true,"priority":100000.0002,"key":"closeWindow","style":{color:"white",top:"10dp",font:{fontSize:"20dp",fontWeight:"bold",},}},{"isId":true,"priority":100000.0043,"key":"listItem","style":{height:Ti.UI.SIZE,backgroundColor:"#FFF",}}];

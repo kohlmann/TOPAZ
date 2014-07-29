@@ -1,0 +1,106 @@
+".container" : {
+  backgroundColor: 'white',
+}, 
+
+"#scrollDetail" : {
+	top: '5dp',
+},
+
+"#header" : {
+	layout: "vertical",
+	width: Ti.UI.FILL,
+	backgroundColor: '#CDECFF',
+	height: '70dp',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	bottom: '5dp'
+},
+
+".subheader" : {
+	layout: "vertical",
+	width: Ti.UI.FILL,
+	backgroundColor: '#CDECFF',
+	height: '40dp',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	top: '10dp',
+	bottom: '10dp'
+},
+
+".h1": {	
+	top: '5dp',
+	color : '#336699',		
+	font: {
+		fontSize: '20dp',
+		fontWeight: 'bold'
+	},	
+	left: '5%'
+},
+
+".h2": {	
+	top: '5dp',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,	
+	color : '#336699',
+	font: {
+		fontSize: '18dp',
+		fontWeight: 'bold'
+	},	
+	left: '5%'
+},
+
+'.wrapper' : {
+	layout: "horizontal",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FILL
+},
+
+"#zuchtwerte0" : {
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	width: '5%'
+},
+
+"#zuchtwerte1" : {
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	width: '30%'
+},
+
+"#zuchtwerte2" : {
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	width: '65%'
+},
+
+"#pedigree" : {
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FILL
+
+},
+
+"#info" : {
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FILL
+},
+
+"Label" :{
+	font: {
+		fontSize: '16dp',
+		fontFamily: 'Helvetica Neue'
+	},
+	width: Ti.UI.FILL,
+
+	height: '30dp',
+
+},
+
+".padding": {
+	left: '5%'
+	
+},
+
+".odd" :{
+	backgroundColor: '#eeeeee'
+}
+
+

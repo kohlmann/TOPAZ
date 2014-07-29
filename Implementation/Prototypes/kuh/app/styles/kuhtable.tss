@@ -1,0 +1,31 @@
+"#buttonview": {
+	backgroundColor: 'blue',
+	height: '50dp',
+	top: '20dp'		
+},
+"#closeWindow": {
+	color: 'white',
+	top: '7dp',
+	font: {
+		fontSize: '20dp',
+		fontWeight: 'bold'
+	}
+},
+"#name": {
+	top:'5dp',
+	left: '10dp',
+	height: '50dp',
+	font: {
+		fontSize: '20dp',
+		fontWeight: 'bold'
+	}
+},
+"#herdbuchnr": {
+	top:'10dp',
+	right: '10dp',
+	font: {
+		fontSize: '16dp',
+		fontWeight: 'normal'
+	}
+}
+

@@ -1,0 +1,86 @@
+<Alloy>
+	<Model src="kuehe" instance="true" id="kuhDetail"></Model>
+	<Window id="detail" class="container" layout="vertical" model="$.kuhDetail" dataTransform="dataTransformation">
+		<View id="buttonview">
+			<Button id="closeWindow" onClick="closeDetail">Schließen</Button>
+		</View>
+		<ScrollView id="scrollDetail" layout="vertical">
+			<View id="header">
+				<Label id="headerline" class="h1" text="{$.kuhDetail.headerline}" />
+				<Label id="subheaderline" class="h2" text="{$.kuhDetail.subheaderline}" />
+			</View>
+			<View class="subheader">
+				<Label class="h2">Zuchtwerte</Label>
+			</View>
+			
+			<View class="wrapper">
+				<View id="zuchtwerte0" layout="vertical">
+					<Label class="odd" text=" " />
+					<Label text=" " />
+					<Label class="odd"  text=" " />
+					<Label  text=" " />
+					<Label  class="odd"  text=" " />
+					<Label  text=" " />
+					<Label  class="odd"  text=" " />
+					<Label  text=" " />
+					<Label  class="odd"   text=" " />
+					<Label   text=" " />
+				</View>
+				<View id="zuchtwerte1" layout="vertical">
+					<Label id="grzglbl" class="odd" text="gRZG" />
+					<Label id="grzmlbl"  text="gRZM" />
+					<Label id="grzelbl"  class="odd"  text="gRZE" />
+					<Label id="grzfitlbl"  text="gRZFit" />
+					<Label id="grznlbl"  class="odd"  text="gRZN" />
+					<Label id="grzslbl"  text="gRZS" />
+					<Label id="grzkmlbl"  class="odd"  text="gRZKm" />
+					<Label id="grzrlbl"  text="gRZR" />
+					<Label id="grzdlbl" class="odd"   text="gRZD" />
+					<Label id="grzkdlbl"  text="gRZKd" />
+				</View>
+				<View id="zuchtwerte2" layout="vertical">
+					<Label id="grzg" class="odd"   text="{$.kuhDetail.grzg}" />
+					<Label id="grzm"  text="{$.kuhDetail.grzm}" />
+					<Label id="grze"  class="odd"  text="{$.kuhDetail.grze}" />
+					<Label id="grzfit"  text="{$.kuhDetail.grzfit}" />
+					<Label id="grzn"  class="odd"  text="{$.kuhDetail.grzn}" />
+					<Label id="grzs"  text="{$.kuhDetail.grzs}" />
+					<Label id="grzkm"  class="odd"  text="{$.kuhDetail.grzkm}" />
+					<Label id="grzr"  text="{$.kuhDetail.grzr}" />
+					<Label id="grzd"  class="odd"  text="{$.kuhDetail.grzd}" />
+					<Label id="grzkd"  text="{$.kuhDetail.grzkd}" />
+				</View>
+
+			</View>
+			<View class="subheader">
+				<Label class="h2">Pedigree</Label>
+			</View>
+			<View id="pedigree" layout="vertical">
+				<Label id="vatervv" class="padding"  text="{$.kuhDetail.vatervv}" />
+				<Label id="mvmvv" class="padding"  text="{$.kuhDetail.mvmvv}" />
+			</View>
+			<View class="subheader">
+				<Label id="name" class="h2 padding" text="{$.kuhDetail.name}" />
+			</View>
+			<View id="info" layout="vertical">
+				<Label id="geburtstag" class="padding" text="{$.kuhDetail.geburtstag}" />
+				<Label id="zuechter" class="padding"text="{$.kuhDetail.zuechter}" />
+				<Label id="gendefekt" class="padding" text="{$.kuhDetail.gendefekt}" />
+				<Label id="aaa" class="padding" text="{$.kuhDetail.aaa}" />
+			</View>
+			<!-->
+			<Label id="herdbuchnr" text="{$.kuhDetail.herdbuchnr}" />
+			<Label id="rasse" text="{$.kuhDetail.rasse}" />
+
+			<Label id="vv" text="{$.kuhDetail.vv}" />
+			<Label id="mv" text="{$.kuhDetail.mv}" />
+			<Label id="mvv" text="{$.kuhDetail.mvv}" />
+			<Label id="mmv" text="{$.kuhDetail.mmv}" />
+			<Label id="gebdattag" text="{$.kuhDetail.gebdattag}" />
+			<Label id="gebdatmonat" text="{$.kuhDetail.gebdatmonat}" />
+			<Label id="gebdatjahr" text="{$.kuhDetail.gebdatjahr}" />
+			-->
+
+		</ScrollView>
+	</Window>
+</Alloy>

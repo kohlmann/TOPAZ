@@ -1,0 +1,19 @@
+<Alloy>
+	
+	<Collection src="kuehe"></Collection>
+	
+	<TabGroup>
+		<Tab title="Start" icon="KS_nav_ui.png">
+			<Window id="kueheWindow" title="Kuehe" class="container" layout="vertical">
+				<Button id="kuhlist" onClick="kuhList">Kuehe in ListView</Button>
+				<Button id="kuhlistred" onClick="kuhListRed">Rote Kuehe in ListView</Button>
+				<!--<Button id="kuhtable" onClick="kuhTable">Kuehe in TableView</Button>-->
+			</Window>
+		</Tab>
+		<Tab title="Tab 2" icon="KS_nav_views.png">
+			<Window>
+				<Label>Tab 2</Label>
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>

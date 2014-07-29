@@ -1,0 +1,4 @@
+"#listItem": {
+	height: Ti.UI.SIZE,
+	backgroundColor: '#FFF'
+}

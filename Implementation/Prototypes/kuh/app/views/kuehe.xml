@@ -1,0 +1,39 @@
+<Alloy>		
+	<Collection src="kuehe" />
+	<Window id="kuhWindow" class="container" layout="vertical">
+		<View id="buttonview">
+			<Button id="closeWindow" onClick="closeWindow"> X </Button>
+			<Button id="toggleSearch" onClick="toggleSearch">Suche</Button>
+		</View>
+		<ScrollView id="optionView" showHorizontalScrollIndicator="true" showVerticalScrollIndicator="false">
+			<Button id="alle" class="option" onClick="clickAlle">Alle</Button>
+			<Button id="sb" class="option" onClick="clickHolFilter">Schwarzbunte</Button>
+			<Button id="rb" class="option" onClick="clickRedFilter">Rotbunte</Button>
+			<Button id="gen" class="option" onClick="clickGenomicFilter">Genomics</Button>
+			<Button id="toe" class="option" onClick="clickToechterFilter">Töchtergeprüfte</Button>
+			<Button id="hl" class="option" onClick="clickHornlosFilter">Hornlose</Button>
+			<Button id="sex" class="option" onClick="clickGesexteFilter">Gesexte</Button>
+		</ScrollView>
+		<View id="sortLabelView">
+			<Label id="sortLabel">Sortieren: </Label>
+		</View>
+		<ScrollView id="sortView" showHorizontalScrollIndicator="true" showVerticalScrollIndicator="false">			
+			<Button id="sortName" class="sortButton" onClick="clickSortName" >Name</Button>
+			<Button id="sortRzg" class="sortButton" onClick="clickSortRZG">RZG</Button>
+			<Button id="sortRzm" class="sortButton" onClick="clickSortRZM">RZM</Button>
+			<Button id="sortMilchKg" class="sortButton" onClick="clickSortMilchKg">Milch/Kg</Button>
+		</ScrollView>
+		<ListView id="list" defaultItemTemplate="requiredTemplate" onItemclick="showId">
+			<SearchBar id="searchBar" barColor="#000" cancel="true" visible="false"  />
+				<Templates>
+					<Require src="itemTemplate"/>
+				</Templates>		
+			<ListSection dataCollection="kuehe" 
+						dataTransform="transformFunction"
+						dataFilter="filterFunction">
+				<Require src="listItem" />
+			</ListSection>
+		</ListView>
+	‚
+	</Window>
+</Alloy>

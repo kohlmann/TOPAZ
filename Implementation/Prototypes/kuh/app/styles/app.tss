@@ -1,0 +1,14 @@
+"#buttonview": {
+	backgroundColor: 'red',	
+	height: '50dp',
+	top: '20dp'	
+},
+
+"#closeWindow": {
+	color: 'white',
+	top: '10dp',
+	font: {
+		fontSize: '20dp',
+		fontWeight: 'bold'
+	}
+}

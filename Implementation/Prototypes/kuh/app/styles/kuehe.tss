@@ -1,0 +1,125 @@
+"#buttonview": {
+	backgroundColor: 'red',	
+	height: '50dp',
+	top: '30dp'	
+},
+
+"#closeWindow": {
+	color: 'white',
+	top: '10dp',
+	left: '5dp',
+	width: '20%',
+	font: {
+		fontSize: '14dp',
+		fontWeight: 'bold'
+	}
+},
+
+"#toggleSearch": {
+	color: 'white',
+	top: '10dp',
+	width: '20%',
+	font: {
+		fontSize: '14dp',
+		fontWeight: 'bold'
+	}
+},
+
+"#searchBar": {
+	height: 0
+},
+
+"#optionView": {
+	layout: 'horizontal',
+	backgroundColor: 'gray',	
+	height: '50dp'
+},
+
+".option": {
+	color: 'white',
+	font: {
+		fontSize: '12dp',
+		fontWeight: 'bold'
+	},
+	left: '15dp'
+},
+
+"#sortView": {
+	layout: 'horizontal',
+	backgroundColor: '#336699',	
+	height: '30dp'
+},
+
+"#sortLabelView": {
+	layout: 'horizontal',
+	backgroundColor: '#336699',
+	height: '25dp'
+},
+
+"#sortLabel": {
+	color: 'white',
+	font: {
+		fontSize: '12dp',
+		fontWeight: 'bold'
+	},
+	left: '15dp',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	top: '5dp'
+},
+
+".sortButton": {
+	color: 'white',
+	font: {
+		fontSize: '12dp',
+		fontWeight: 'bold'
+	},
+	left: '15dp'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

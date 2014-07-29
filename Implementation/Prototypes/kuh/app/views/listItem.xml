@@ -1,0 +1,9 @@
+<Alloy>
+	<ListItem template="{requiredTemplate}" 
+		leftALImage:image="{pical}"
+		headline:text="{headline}" 
+		subheadline:text="{subheadline}" 
+		rasse:text="{Rasse}" 
+		searchableText="{headAndSubheadline}" 
+		itemId:text="{alloy_id}"/>
+</Alloy>

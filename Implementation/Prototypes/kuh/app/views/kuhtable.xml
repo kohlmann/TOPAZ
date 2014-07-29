@@ -1,0 +1,14 @@
+<Alloy>
+	<Window id="kuhTableWindow" class="container" layout="vertical">
+		<View id="buttonview">
+			<Button id="closeWindow" onClick="closeWindow">Schließen</Button>
+		</View>
+		<TableView id="tableview" dataCollection="kuehe" class="container" layout="vertical">
+			<TableViewRow id="row" dataId="" model="{alloy_id}">
+				<Label class="row" id="name" text="{Name}"></Label>
+				<Label class="row" id="herdbuchnr" text="{Herdbuchnr}"></Label>
+			</TableViewRow>
+		</TableView>
+
+	</Window>
+</Alloy>
