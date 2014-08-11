@@ -20,7 +20,7 @@ Alloy.Globals.screenHeight = (Titanium.Platform.displayCaps.platformHeight)/Tita
  * 
  * */
 var TOPAZ = TOPAZ || {};
-
+//TODO: namespacebehandlung noch einmal überlegen
 /**
  * Methode zum Anlegen vom Namensräumen.
  *

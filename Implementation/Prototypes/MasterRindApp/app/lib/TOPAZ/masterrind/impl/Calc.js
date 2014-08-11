@@ -1,11 +1,11 @@
-TOPAZ.namespace('TOPAZ.masterrind.impl.Calc');
+// TOPAZ.namespace('TOPAZ.masterrind.impl.Calc');
 /**
  * Die Klasse Calc implementiert die vier Grundrechenarten.
  *
  * @namespace JSDriverDemo
  * @class Calc
  */
-TOPAZ.masterrind.impl.Calc = function() {
+TOPAZ.namespace('TOPAZ.masterrind.impl.Calc') = function() {
 
 	/**
 	 * Führt Addition durch.

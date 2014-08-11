@@ -19,7 +19,13 @@ require("TOPAZ/masterrind/interfaces/MasterRindFactory");
 TOPAZ.masterrind.impl.CowFactory = function() {
     this.create = function(type) {
         var cow;
-        "BlackColored" == type ? cow = new TOPAZ.masterrind.datatypes.BlackColored() : "DaughterTested" == type ? cow = new TOPAZ.masterrind.datatypes.DaughterTested() : "Genomics" == type ? cow = new TOPAZ.masterrind.datatypes.Genomics() : "Holsteins" == type ? cow = new TOPAZ.masterrind.datatypes.Holsteins() : "Hornless" == type ? cow = new TOPAZ.masterrind.datatypes.Hornless() : "RedColored" == type ? cow = new TOPAZ.masterrind.datatypes.RedColored() : console.log("Unbekannte Kuhart");
+        if ("BlackColored" == type) {
+            cow = new TOPAZ.masterrind.datatypes.BlackColored();
+            console.log("created: " + type);
+        } else if ("DaughterTested" == type) {
+            cow = new TOPAZ.masterrind.datatypes.DaughterTested();
+            console.log("created: " + type);
+        } else "Genomics" == type ? cow = new TOPAZ.masterrind.datatypes.Genomics() : "Holsteins" == type ? cow = new TOPAZ.masterrind.datatypes.Holsteins() : "Hornless" == type ? cow = new TOPAZ.masterrind.datatypes.Hornless() : "RedColored" == type ? cow = new TOPAZ.masterrind.datatypes.RedColored() : console.log("Unbekannte Kuhart");
         return cow;
     };
 };

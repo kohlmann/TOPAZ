@@ -1,4 +1,4 @@
-JSDriverDemo = {};
+var JSDriverDemo = JSDriverDemo || {};
 /**
  * Die Klasse Calc implementiert die vier Grundrechenarten.
  *

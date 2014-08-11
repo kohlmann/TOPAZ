@@ -109,40 +109,55 @@ function Controller() {
     });
     $.__views.__alloyId3.add($.__views.listView);
     $.__views.allCowsTab = Ti.UI.createTab({
-        backgroundColor: "white",
+        height: "100dp",
+        title: "Alle",
+        backgroundImage: "/images/grid_icon_sbt.png",
+        backgroundSelectedColor: "blue",
         window: $.__views.__alloyId3,
-        id: "allCowsTab"
+        id: "allCowsTab",
+        icon: "/images/grid_icon_sbt.png",
+        backgroundColor: "white"
     });
     __alloyId2.push($.__views.allCowsTab);
     $.__views.__alloyId17 = Ti.UI.createWindow({
         id: "__alloyId17"
     });
     $.__views.genomicsTab = Ti.UI.createTab({
-        backgroundColor: "white",
+        title: "Genomics",
+        backgroundImage: "/images/grid_icon_genomics.png",
+        backgroundSelectedColor: "blue",
         window: $.__views.__alloyId17,
-        id: "genomicsTab"
+        id: "genomicsTab",
+        icon: "/images/grid_icon_genomics.png"
     });
     __alloyId2.push($.__views.genomicsTab);
     $.__views.__alloyId18 = Ti.UI.createWindow({
         id: "__alloyId18"
     });
-    $.__views.daughterTested = Ti.UI.createTab({
-        backgroundColor: "white",
+    $.__views.daughterTestedTab = Ti.UI.createTab({
+        title: "Geprüfte",
+        backgroundImage: "/images/grid_icon_gepruefte.png",
+        backgroundSelectedColor: "blue",
         window: $.__views.__alloyId18,
-        id: "daughterTested"
+        id: "daughterTestedTab",
+        icon: "/images/grid_icon_gepruefte.png"
     });
-    __alloyId2.push($.__views.daughterTested);
+    __alloyId2.push($.__views.daughterTestedTab);
     $.__views.__alloyId19 = Ti.UI.createWindow({
         id: "__alloyId19"
     });
-    $.__views.hornless = Ti.UI.createTab({
-        backgroundColor: "white",
+    $.__views.hornlessTab = Ti.UI.createTab({
+        title: "Hornlose",
+        backgroundImage: "/images/grid_icon_hornlose.png",
+        backgroundSelectedColor: "blue",
         window: $.__views.__alloyId19,
-        id: "hornless"
+        id: "hornlessTab",
+        icon: "/images/grid_icon_hornlose.png"
     });
-    __alloyId2.push($.__views.hornless);
+    __alloyId2.push($.__views.hornlessTab);
     $.__views.tabGroup = Ti.UI.createTabGroup({
-        backgroundColor: "white",
+        backgroundImage: "images/grid_icon_sbt.png",
+        backgroundSelectedColor: "blue",
         tabs: __alloyId2,
         id: "tabGroup"
     });

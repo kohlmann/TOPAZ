@@ -225,9 +225,10 @@ function Controller() {
         for (i = 0; favorites.length > i; i++) console.log(favorites[i].getName());
         var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
         mr_cow.loadCowsFromDB();
+        var cows = new Array();
         cows = mr_cow.getCows("BlackColored");
         for (i = 0; cows.length > i; i++) {
-            cow = cows[i];
+            var cow = cows[i];
             console.log(cow.getId() + " " + cow.getName() + " " + cow.getFather());
             model = Alloy.createModel("cowsMod", {
                 id: cow.getId(),

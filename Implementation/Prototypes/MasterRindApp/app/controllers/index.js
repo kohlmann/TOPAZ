@@ -23,8 +23,10 @@ $.appointments.addEventListener('click', function(e) {
 	var win = Alloy.createController('appointments').getView();
 	// win.open();
 
-	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	mr_fav.addFavorite("15", "Huj", "1", "HujFavorit");
+	// var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
+	// mr_fav.addFavorite("15", "Huj", "1", "HujFavorit");
+	var calc = new TOPAZ.masterrind.impl.Calc();
+	console.log(calc.add(3,5));
 });
 
 $.blackColored.addEventListener('click', function(e) {

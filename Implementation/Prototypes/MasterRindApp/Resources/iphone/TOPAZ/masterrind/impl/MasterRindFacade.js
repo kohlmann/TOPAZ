@@ -69,13 +69,12 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
     };
     this.loadCowsFromDB = function() {
         var masterRindRS = db.execute("SELECT id,image,name,father FROM cows");
-        var cow = new TOPAZ.masterrind.interfaces.Cow();
         while (masterRindRS.isValidRow()) {
+            var cow = new TOPAZ.masterrind.interfaces.Cow();
             cow.setId(masterRindRS.fieldByName("id"));
             cow.setImage(masterRindRS.fieldByName("image"));
             cow.setName(masterRindRS.fieldByName("name"));
             cow.setFather(masterRindRS.fieldByName("father"));
-            console.log(masterRindRS.fieldByName("id"));
             m_cows.push(cow);
             masterRindRS.next();
         }
@@ -132,18 +131,21 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
         }
         return contacts;
     };
-    this.getCows = function(type) {
-        var cows = new Array();
+    this.getCows = function() {
+        cs = new Array();
+        new TOPAZ.masterrind.impl.CowFactory();
         for (i = 0; m_cows.length > i; i++) {
-            cow = factory.create(type);
+            var cow = new TOPAZ.masterrind.interfaces.Cow();
             cow.setId(m_cows[i].getId());
             cow.setImage(m_cows[i].getImage());
             cow.setName(m_cows[i].getName());
             cow.setFather(m_cows[i].getFather());
-            console.log(m_cows[2].getId());
-            cows.push(cow);
+            console.log("getCow " + cow.getId());
+            cs.push(cow);
+            console.log("liste-> " + cs[i].getId());
         }
-        return cows;
+        for (i = 0; cs.length > i; i++) console.log("cs-> " + i + " " + cs[i].getId() + " " + cs[i].getName());
+        return cs;
     };
     this.getFavorites = function(type) {
         var favorites = new Array();
