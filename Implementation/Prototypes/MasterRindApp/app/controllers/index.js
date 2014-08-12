@@ -5,6 +5,7 @@ require('TOPAZ/masterrind/interfaces/Favorite');
 require('TOPAZ/masterrind/datatypes/Holsteins');
 
 require('TOPAZ/masterrind/impl/Calc');
+require('TOPAZ/masterrind/util/CodeGenerator');
 
 //Fehler: Schritt zurück erst möglich, wenn die Taste dreimal gedrückt wird.
 //Ursache: eventListener für AboutButton wird mehrfach im Code aufgerufen
@@ -25,8 +26,15 @@ $.appointments.addEventListener('click', function(e) {
 
 	// var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
 	// mr_fav.addFavorite("15", "Huj", "1", "HujFavorit");
-	var calc = new TOPAZ.masterrind.impl.Calc();
-	console.log(calc.add(3,5));
+	// var calc = new TOPAZ.masterrind.impl.Calc();
+	// console.log(calc.add(3,5));
+	var codeGenerator = new TOPAZ.masterrind.util.CodeGenerator();
+	// console.log(codeGenerator.createGetter("huj"));
+	console.log(codeGenerator.createGetterComment("huj"));
+	console.log(codeGenerator.createGetter("huj"));
+	console.log(codeGenerator.createSetterComment("huj"));
+	console.log(codeGenerator.createSetter("huj"));
+
 });
 
 $.blackColored.addEventListener('click', function(e) {
@@ -58,11 +66,12 @@ $.blackColored.addEventListener('click', function(e) {
 
 	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
 	mr_cow.loadCowsFromDB();
-	var cows =new Array();cows = mr_cow.getCows('BlackColored');
+	var cows = new Array();
+	cows = mr_cow.getCows('BlackColored');
 	for ( i = 0; i < cows.length; i++) {
 
 		var cow = cows[i];
-		console.log(cow.getId() + ' ' + cow.getName()+' ' + cow.getFather());
+		console.log(cow.getId() + ' ' + cow.getName() + ' ' + cow.getFather());
 
 		model = Alloy.createModel('cowsMod', {
 			id : cow.getId(),

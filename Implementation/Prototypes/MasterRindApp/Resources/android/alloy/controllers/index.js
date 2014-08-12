@@ -204,14 +204,18 @@ function Controller() {
     require("TOPAZ/masterrind/interfaces/Favorite");
     require("TOPAZ/masterrind/datatypes/Holsteins");
     require("TOPAZ/masterrind/impl/Calc");
+    require("TOPAZ/masterrind/util/CodeGenerator");
     $.about.addEventListener("click", function() {
         var win = Alloy.createController("about").getView();
         win.open();
     });
     $.appointments.addEventListener("click", function() {
         Alloy.createController("appointments").getView();
-        var calc = new TOPAZ.masterrind.impl.Calc();
-        console.log(calc.add(3, 5));
+        var codeGenerator = new TOPAZ.masterrind.util.CodeGenerator();
+        console.log(codeGenerator.createGetterComment("huj"));
+        console.log(codeGenerator.createGetter("huj"));
+        console.log(codeGenerator.createSetterComment("huj"));
+        console.log(codeGenerator.createSetter("huj"));
     });
     $.blackColored.addEventListener("click", function() {
         var win = Alloy.createController("blackColored").getView();
