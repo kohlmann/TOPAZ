@@ -199,11 +199,8 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     require("TOPAZ/masterrind/impl/MasterRindFacade");
-    require("TOPAZ/masterrind/interfaces/Cow");
-    require("TOPAZ/masterrind/datatypes/BlackColored");
-    require("TOPAZ/masterrind/interfaces/Favorite");
-    require("TOPAZ/masterrind/datatypes/Holsteins");
-    require("TOPAZ/masterrind/impl/Calc");
+    require("TOPAZ/masterrind/datatypes/Cow");
+    require("TOPAZ/masterrind/datatypes/Favorite");
     require("TOPAZ/masterrind/util/CodeGenerator");
     $.about.addEventListener("click", function() {
         var win = Alloy.createController("about").getView();
@@ -224,24 +221,18 @@ function Controller() {
         new Array();
         new Array();
         var cows = new Array();
-        var favorites = new Array();
+        new Array();
         var model;
-        var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
-        mr_app.loadAppointmentsFromDB();
-        appointments = mr_app.getAppointments("Meeting");
+        var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade();
+        appointments = mr_app.loadAppointmentsFromDB();
         console.log(appointments.length);
         for (i = 0; appointments.length > i; i++) {
             app = appointments[i];
             console.log(app.getName());
         }
-        var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-        mr_fav.loadFavoritesFromDB();
-        favorites = mr_fav.getFavorites("cow");
-        for (i = 0; favorites.length > i; i++) console.log(favorites[i].getName());
-        var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
+        var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade();
         mr_cow.loadCowsFromDB();
-        var cows = new Array();
-        cows = mr_cow.getCows("BlackColored");
+        cows = mr_cow.loadCowsFromDB();
         for (i = 0; cows.length > i; i++) {
             var cow = cows[i];
             console.log(cow.getId() + " " + cow.getName() + " " + cow.getFather());
@@ -257,35 +248,6 @@ function Controller() {
     $.contacts.addEventListener("click", function() {
         var win = Alloy.createController("contacts").getView();
         win.open();
-        var appointments = new Array();
-        new Array();
-        new Array();
-        var cows = new Array();
-        var favorites = new Array();
-        var model;
-        var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
-        mr_app.loadAppointmentsFromDB();
-        appointments = mr_app.getAppointments("Meeting");
-        console.log(appointments.length);
-        for (i = 0; appointments.length > i; i++) {
-            app = appointments[i];
-            console.log(app.getName());
-        }
-        var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-        mr_fav.loadFavoritesFromDB();
-        favorites = mr_fav.getFavorites("cow");
-        for (i = 0; favorites.length > i; i++) console.log(favorites[i].getName());
-        var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
-        mr_cow.loadCowsFromDB();
-        cows = mr_cow.getCows("BlackColored");
-        for (i = 0; cows.length > i; i++) {
-            cow = cows[i];
-            console.log(cow.getId() + " " + cow.getBase());
-            model = Alloy.createModel("cowsMod", {
-                id: cow.getId()
-            });
-            Alloy.Collections.cowCol.add(model);
-        }
     });
     $.daughterTested.addEventListener("click", function() {
         var win = Alloy.createController("daughterTested").getView();

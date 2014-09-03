@@ -1,6 +1,6 @@
-TOPAZ.namespace("TOPAZ.masterrind.interfaces.Cow");
+TOPAZ.namespace("TOPAZ.masterrind.datatypes.Cow");
 
-TOPAZ.masterrind.interfaces.Cow = function() {
+TOPAZ.masterrind.datatypes.Cow = function() {
     var m_a = "null";
     var m_aAa = "null";
     var m_mating = "null";

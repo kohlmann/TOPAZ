@@ -1,3 +1,5 @@
+var Alloy = require("alloy"), _ = require("alloy/underscore")._, model, collection;
+
 exports.definition = {
     config: {
         columns: {
@@ -11,8 +13,6 @@ exports.definition = {
         }
     }
 };
-
-var Alloy = require("alloy"), _ = require("alloy/underscore")._, model, collection;
 
 model = Alloy.M("cowsMod", exports.definition, []);
 

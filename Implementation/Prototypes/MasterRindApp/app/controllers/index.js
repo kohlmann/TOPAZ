@@ -1,10 +1,7 @@
 require('TOPAZ/masterrind/impl/MasterRindFacade');
-require('TOPAZ/masterrind/interfaces/Cow');
-require('TOPAZ/masterrind/datatypes/BlackColored');
-require('TOPAZ/masterrind/interfaces/Favorite');
-require('TOPAZ/masterrind/datatypes/Holsteins');
+require('TOPAZ/masterrind/datatypes/Cow');
+require('TOPAZ/masterrind/datatypes/Favorite');
 
-require('TOPAZ/masterrind/impl/Calc');
 require('TOPAZ/masterrind/util/CodeGenerator');
 
 //Fehler: Schritt zurück erst möglich, wenn die Taste dreimal gedrückt wird.
@@ -48,31 +45,32 @@ $.blackColored.addEventListener('click', function(e) {
 	var favorites = new Array();
 	var model;
 
-	var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
-	mr_app.loadAppointmentsFromDB();
-	appointments = mr_app.getAppointments('Meeting');
+	var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade();
+	
+	appointments = mr_app.loadAppointmentsFromDB();
 	console.log(appointments.length);
 	for ( i = 0; i < appointments.length; i++) {
 		app = appointments[i];
 		console.log(app.getName());
 	}
 
-	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	mr_fav.loadFavoritesFromDB();
-	favorites = mr_fav.getFavorites('cow');
-	for ( i = 0; i < favorites.length; i++) {
-		console.log(favorites[i].getName());
-	}
-
-	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
+	// var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
+	// mr_fav.loadFavoritesFromDB();
+	// favorites = mr_fav.getFavorites('cow');
+	// for ( i = 0; i < favorites.length; i++) {
+		// console.log(favorites[i].getName());
+	// }
+// 
+	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade();
 	mr_cow.loadCowsFromDB();
-	var cows = new Array();
-	cows = mr_cow.getCows('BlackColored');
+	// var cows = new Array();
+	cows = mr_cow.loadCowsFromDB();
 	for ( i = 0; i < cows.length; i++) {
 
 		var cow = cows[i];
 		console.log(cow.getId() + ' ' + cow.getName() + ' ' + cow.getFather());
 
+		//model in allCows umbenennen
 		model = Alloy.createModel('cowsMod', {
 			id : cow.getId(),
 			name : cow.getName(),
@@ -93,45 +91,45 @@ $.blackColored.addEventListener('click', function(e) {
 $.contacts.addEventListener('click', function(e) {
 	var win = Alloy.createController('contacts').getView();
 	win.open();
-
-	var appointments = new Array();
-	var companies = new Array();
-	var contacts = new Array();
-	var cows = new Array();
-	var favorites = new Array();
-	var model;
-
-	var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
-	mr_app.loadAppointmentsFromDB();
-	appointments = mr_app.getAppointments('Meeting');
-	console.log(appointments.length);
-	for ( i = 0; i < appointments.length; i++) {
-		app = appointments[i];
-		console.log(app.getName());
-	}
-
-	var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	mr_fav.loadFavoritesFromDB();
-	favorites = mr_fav.getFavorites('cow');
-	for ( i = 0; i < favorites.length; i++) {
-		console.log(favorites[i].getName());
-	}
-
-	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
-	mr_cow.loadCowsFromDB();
-	cows = mr_cow.getCows('BlackColored');
-	for ( i = 0; i < cows.length; i++) {
-
-		cow = cows[i];
-		console.log(cow.getId() + ' ' + cow.getBase());
-
-		model = Alloy.createModel('cowsMod', {
-			id : cow.getId()
-		});
-
-		Alloy.Collections.cowCol.add(model);
-
-	}
+// 
+	// var appointments = new Array();
+	// var companies = new Array();
+	// var contacts = new Array();
+	// var cows = new Array();
+	// var favorites = new Array();
+	// var model;
+// 
+	// var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.AppointmentFactory());
+	// mr_app.loadAppointmentsFromDB();
+	// appointments = mr_app.getAppointments('Meeting');
+	// console.log(appointments.length);
+	// for ( i = 0; i < appointments.length; i++) {
+		// app = appointments[i];
+		// console.log(app.getName());
+	// }
+// 
+	// var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
+	// mr_fav.loadFavoritesFromDB();
+	// favorites = mr_fav.getFavorites('cow');
+	// for ( i = 0; i < favorites.length; i++) {
+		// console.log(favorites[i].getName());
+	// }
+// 
+	// var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.CowFactory());
+	// mr_cow.loadCowsFromDB();
+	// cows = mr_cow.getCows('BlackColored');
+	// for ( i = 0; i < cows.length; i++) {
+// 
+		// cow = cows[i];
+		// console.log(cow.getId() + ' ' + cow.getBase());
+// 
+		// model = Alloy.createModel('cowsMod', {
+			// id : cow.getId()
+		// });
+// 
+		// Alloy.Collections.cowCol.add(model);
+// 
+	// }
 
 	// var mr_fav = new TOPAZ.masterrind.MasterRind(new TOPAZ.masterrind.FavoriteFactory());
 	// console.log(mr_fav.addFavorite('cow', '23', 'Peniskopf').getName());

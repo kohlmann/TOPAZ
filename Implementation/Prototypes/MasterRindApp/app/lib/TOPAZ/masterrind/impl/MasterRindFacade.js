@@ -1,14 +1,11 @@
 TOPAZ.namespace('TOPAZ.masterrind.impl.MasterRindFacade');
 
-require('TOPAZ/masterrind/impl/CowFactory');
-require('TOPAZ/masterrind/impl/FavoriteFactory');
-require('TOPAZ/masterrind/impl/AppointmentFactory');
-require('TOPAZ/masterrind/interfaces/MasterRindFactory');
-require('TOPAZ/masterrind/interfaces/Cow');
+
+require('TOPAZ/masterrind/datatypes/Appointment');
 require('TOPAZ/masterrind/datatypes/Company');
 require('TOPAZ/masterrind/datatypes/Contact');
-require('TOPAZ/masterrind/interfaces/Appointment');
-require('TOPAZ/masterrind/interfaces/Favorite');
+require('TOPAZ/masterrind/datatypes/Cow');
+require('TOPAZ/masterrind/datatypes/Favorite');
 
 /**
  * Stellt Methoden für die Kontrollerklasse bereit. Kann als eine
@@ -17,8 +14,8 @@ require('TOPAZ/masterrind/interfaces/Favorite');
  * @namespace TOPAZ.masterrind.impl
  * @class MasterRindFacade
  */
-TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
-	var factory = factory;
+TOPAZ.masterrind.impl.MasterRindFacade = function() {
+	
 	var m_appointments = new Array();
 	var m_companies = new Array();
 	var m_contacts = new Array();
@@ -34,7 +31,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	this.loadAppointmentsFromDB = function() {
 
 		var masterRindRS = db.execute('SELECT date,id, name FROM appointments');
-		var appointment = new TOPAZ.masterrind.interfaces.Appointment();
+		var appointment = new TOPAZ.masterrind.datatypes.Appointment();
 
 		while (masterRindRS.isValidRow()) {
 
@@ -46,8 +43,9 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 
 			masterRindRS.next();
 		}
-
 		masterRindRS.close();
+		
+		return m_appointments;
 	};
 
 	/**
@@ -114,7 +112,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 		var masterRindRS = db.execute('SELECT id,image,name,father FROM cows');
 
 		while (masterRindRS.isValidRow()) {
-			var cow = new TOPAZ.masterrind.interfaces.Cow();
+			var cow = new TOPAZ.masterrind.datatypes.Cow();
 			
 			cow.setId(masterRindRS.fieldByName('id'));
 			cow.setImage(masterRindRS.fieldByName('image'));
@@ -133,6 +131,8 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 		}
 
 		masterRindRS.close();
+		
+		return m_cows;
 	};
 
 	/**
@@ -143,7 +143,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
 	this.loadFavoritesFromDB = function() {
 
 		var masterRindRS = db.execute('SELECT cowId, cowName, id, name FROM favorites');
-		var favorite = new TOPAZ.masterrind.interfaces.Favorite();
+		var favorite = new TOPAZ.masterrind.datatypes.Favorite();
 
 		while (masterRindRS.isValidRow()) {
 

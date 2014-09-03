@@ -1,25 +1,16 @@
 TOPAZ.namespace("TOPAZ.masterrind.impl.MasterRindFacade");
 
-require("TOPAZ/masterrind/impl/CowFactory");
-
-require("TOPAZ/masterrind/impl/FavoriteFactory");
-
-require("TOPAZ/masterrind/impl/AppointmentFactory");
-
-require("TOPAZ/masterrind/interfaces/MasterRindFactory");
-
-require("TOPAZ/masterrind/interfaces/Cow");
+require("TOPAZ/masterrind/datatypes/Appointment");
 
 require("TOPAZ/masterrind/datatypes/Company");
 
 require("TOPAZ/masterrind/datatypes/Contact");
 
-require("TOPAZ/masterrind/interfaces/Appointment");
+require("TOPAZ/masterrind/datatypes/Cow");
 
-require("TOPAZ/masterrind/interfaces/Favorite");
+require("TOPAZ/masterrind/datatypes/Favorite");
 
-TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
-    var factory = factory;
+TOPAZ.masterrind.impl.MasterRindFacade = function() {
     var m_appointments = new Array();
     var m_companies = new Array();
     var m_contacts = new Array();
@@ -28,7 +19,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
     var db = Ti.Database.install("/masterrind.sqlite", "massterrindDB");
     this.loadAppointmentsFromDB = function() {
         var masterRindRS = db.execute("SELECT date,id, name FROM appointments");
-        var appointment = new TOPAZ.masterrind.interfaces.Appointment();
+        var appointment = new TOPAZ.masterrind.datatypes.Appointment();
         while (masterRindRS.isValidRow()) {
             appointment.setDate(masterRindRS.fieldByName("date"));
             appointment.setId(masterRindRS.fieldByName("id"));
@@ -37,6 +28,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
             masterRindRS.next();
         }
         masterRindRS.close();
+        return m_appointments;
     };
     this.loadCompaniesFromDB = function() {
         var masterRindRS = db.execute("SELECT id,description, name, imprint FROM companies");
@@ -70,7 +62,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
     this.loadCowsFromDB = function() {
         var masterRindRS = db.execute("SELECT id,image,name,father FROM cows");
         while (masterRindRS.isValidRow()) {
-            var cow = new TOPAZ.masterrind.interfaces.Cow();
+            var cow = new TOPAZ.masterrind.datatypes.Cow();
             cow.setId(masterRindRS.fieldByName("id"));
             cow.setImage(masterRindRS.fieldByName("image"));
             cow.setName(masterRindRS.fieldByName("name"));
@@ -79,10 +71,11 @@ TOPAZ.masterrind.impl.MasterRindFacade = function(factory) {
             masterRindRS.next();
         }
         masterRindRS.close();
+        return m_cows;
     };
     this.loadFavoritesFromDB = function() {
         var masterRindRS = db.execute("SELECT cowId, cowName, id, name FROM favorites");
-        var favorite = new TOPAZ.masterrind.interfaces.Favorite();
+        var favorite = new TOPAZ.masterrind.datatypes.Favorite();
         while (masterRindRS.isValidRow()) {
             favorite.setCowId(masterRindRS.fieldByName("cowId"));
             favorite.setCowName(masterRindRS.fieldByName("cowName"));

@@ -1,4 +1,4 @@
-TOPAZ.namespace('TOPAZ.masterrind.interfaces.Appointment');
+TOPAZ.namespace('TOPAZ.masterrind.datatypes.Appointment');
 
 require('TOPAZ/masterrind/datatypes/Company');
 require('TOPAZ/masterrind/datatypes/Contact');
@@ -9,7 +9,7 @@ require('TOPAZ/masterrind/datatypes/Contact');
  * @namespace TOPAZ.masterrind.interfaces
  * @class Appointment
  */
-TOPAZ.masterrind.interfaces.Appointment = function() {
+TOPAZ.masterrind.datatypes.Appointment = function() {
 
 	var m_id = "null";
 	var m_name = "null";

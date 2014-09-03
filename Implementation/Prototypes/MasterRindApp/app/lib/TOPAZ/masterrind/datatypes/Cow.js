@@ -1,4 +1,4 @@
-TOPAZ.namespace('TOPAZ.masterrind.interfaces.Cow');
+TOPAZ.namespace('TOPAZ.masterrind.datatypes.Cow');
 
 /**
  * Bildet eine Datenstruktur zum Speichern von Daten einer Kuh.
@@ -6,7 +6,7 @@ TOPAZ.namespace('TOPAZ.masterrind.interfaces.Cow');
  * @namespace TOPAZ.masterrind.interfaces
  * @class Cow
  */
-TOPAZ.masterrind.interfaces.Cow = function() {
+TOPAZ.masterrind.datatypes.Cow = function() {
 
 	var m_a = "null";
 	var m_aAa = "null";
@@ -51,7 +51,28 @@ TOPAZ.masterrind.interfaces.Cow = function() {
 	var m_gRZkd = "null";
 	var m_gRZKM = "null";
 	var m_calfRunningDirectly = "null";
-	var m_cowType = "null";
+
+	var m_backLegsPosition = "null";
+	var m_beckTilt = "null";
+	var m_beckWide = "null";
+	var m_behindUdderHeight = "null";
+	var m_bodyDepth = "null";
+	var m_centralBelt = "null";
+	var m_dairyCharacter = "null";
+	var m_directionOfGrowthBack = "null";
+	var m_directionOfGrowthFront = "null";
+	var m_DirectionOfGrowthLength = "null";
+	var m_foreUdderSuspension = "null";
+	var m_hock = "null";
+	var m_movement = "null";
+	var m_size = "null";
+	var m_stealAngle = "null";
+	var m_strength = "null";
+	var m_udderDepth = "null";
+	var m_hornless = "null";
+	var m_genomics = "null";
+	var m_sexed = "null";
+	var m_freshSemen = "null";
 
 	/**
 	 * Gibt a der Kuh zurück.
@@ -464,13 +485,213 @@ TOPAZ.masterrind.interfaces.Cow = function() {
 	};
 
 	/**
-	 * Gibt den Kuhtyp zurück.
+	 * Gibt Hinterbeinstellung der Kuh zurück.
 	 *
-	 * @method getCowType
-	 * @return {String} m_cowType
+	 * @method getBackLegsPosition
+	 * @return {String} m_backLegsPosition
 	 */
-	this.getCowType = function() {
-		return m_cowType;
+	this.getBackLegsPosition = function() {
+		return m_backLegsPosition;
+	};
+
+	/**
+	 * Gibt Beckenneigung der Kuh zurück.
+	 *
+	 * @method getBeckTilt
+	 * @return {String} m_beckTilt
+	 */
+	this.getBeckTilt = function() {
+		return m_beckTilt;
+	};
+
+	/**
+	 * Gibt Beckenbreite der Kuh zurück.
+	 *
+	 * @method getBeckWide
+	 * @return {String} m_beckWide
+	 */
+	this.getBeckWide = function() {
+		return m_beckWide;
+	};
+
+	/**
+	 * Gibt Hintereuterhöhe der Kuh zurück.
+	 *
+	 * @method getBehindUdderHeight
+	 * @return {String} m_behindUdderHeight
+	 */
+	this.getBehindUdderHeight = function() {
+		return m_behindUdderHeight;
+	};
+
+	/**
+	 * Gibt Körpertiefe der Kuh zurück.
+	 *
+	 * @method getBodyDepth
+	 * @return {String} m_bodyDepth
+	 */
+	this.getBodyDepth = function() {
+		return m_bodyDepth;
+	};
+
+	/**
+	 * Gibt Zentralband der Kuh zurück.
+	 *
+	 * @method getCentralBelt
+	 * @return {String} m_centralBelt
+	 */
+	this.getCentralBelt = function() {
+		return m_centralBelt;
+	};
+
+	/**
+	 * Gibt Milchcharakter der Kuh zurück.
+	 *
+	 * @method getDairyCharacter
+	 * @return {String} m_dairyCharacter
+	 */
+	this.getDairyCharacter = function() {
+		return m_dairyCharacter;
+	};
+
+	/**
+	 * Gibt Strichplatzierung hinten der Kuh zurück.
+	 *
+	 * @method getDirectionOfGrowthBack
+	 * @return {String} m_directionOfGrowthBack
+	 */
+	this.getDirectionOfGrowthBack = function() {
+		return m_directionOfGrowthBack;
+	};
+
+	/**
+	 * Gibt Strichplatzierung vorn der Kuh zurück.
+	 *
+	 * @method getDirectionOfGrowthFront
+	 * @return {String} m_directionOfGrowthFront
+	 */
+	this.getDirectionOfGrowthFront = function() {
+		return m_directionOfGrowthFront;
+	};
+
+	/**
+	 * Gibt Strichlänge der Kuh zurück.
+	 *
+	 * @method getDirectionOfGrowthLength
+	 * @return {String} m_directionOfGrowthLength
+	 */
+	this.getDirectionOfGrowthLength = function() {
+		return m_DirectionOfGrowthLength;
+	};
+
+	/**
+	 * Gibt Vordereuteraufhängung der Kuh zurück.
+	 *
+	 * @method getForeUdderSuspension
+	 * @return {String} m_foreUdderSuspension
+	 */
+	this.getForeUdderSuspension = function() {
+		return m_foreUdderSuspension;
+	};
+
+	/**
+	 * Gibt Hinterbeinstellung der Kuh zurück.
+	 *
+	 * @method getHock
+	 * @return {String} m_hock
+	 */
+	this.getHock = function() {
+		return m_hock;
+	};
+
+	/**
+	 * Gibt Bewegung der Kuh zurück.
+	 *
+	 * @method getMovement
+	 * @return {String} m_movement
+	 */
+	this.getMovement = function() {
+		return m_movement;
+	};
+
+	/**
+	 * Gibt Größe der Kuh zurück.
+	 *
+	 * @method getSize
+	 * @return {String} m_size
+	 */
+	this.getSize = function() {
+		return m_size;
+	};
+
+	/**
+	 * Gibt Klauenwinkel der Kuh zurück.
+	 *
+	 * @method getStealAngle
+	 * @return {String} m_stealAngle
+	 */
+	this.getStealAngle = function() {
+		return m_stealAngle;
+	};
+
+	/**
+	 * Gibt Stärke der Kuh zurück.
+	 *
+	 * @method getStrength
+	 * @return {String} m_strength
+	 */
+	this.getStrength = function() {
+		return m_strength;
+	};
+
+	/**
+	 * Gibt Eutertiefe der Kuh zurück.
+	 *
+	 * @method getUdderDepth
+	 * @return {String} m_udderDepth
+	 */
+	this.getUdderDepth = function() {
+		return m_udderDepth;
+	};
+
+	/**
+	 * Gibt, ob die Kuh hornlos ist, zurück.
+	 *
+	 * @method getHornless
+	 * @return {String} m_hornless
+	 */
+	this.getHornless = function() {
+		return m_hornless;
+	};
+
+	/**
+	 * Gibt, ob die Kuh genomics ist, zurück.
+	 *
+	 * @method getGenomics
+	 * @return {String} m_genomics
+	 */
+	this.getGenomics = function() {
+		return m_genomics;
+	};
+
+	/**
+	 * Gibt, ob die Kuh gesext ist, zurück
+	 *
+	 * @method getSexed
+	 * @return {String} m_sexed
+	 */
+	this.getSexed = function() {
+		return m_sexed;
+	};
+
+	/**
+	 * Gibt Frishsperma zurück.
+	 *
+	 * @method getFreshSemen
+	 * @return {String} m_freshSemen
+	 */
+	this.getFreshSemen = function() {
+		return m_freshSemen;
 	};
 
 	/**
@@ -925,14 +1146,213 @@ TOPAZ.masterrind.interfaces.Cow = function() {
 	};
 
 	/**
-	 * Setzt den Kuhtyp.
+	 * Setzt Hinterbeinstellung der Kuh zurück.
 	 *
-	 * @method setCowType
-	 * @param {String} cowType
-	 *
+	 * @method setBackLegsPosition
+	 * @param {String} backLegsPosition
 	 */
-	this.setCowType = function(cowType) {
-		m_cowType = cowType;
+	this.setBackLegsPosition = function(backLegsPosition) {
+		m_backLegsPosition = backLegsPosition;
+	};
+
+	/**
+	 * Setzt Beckenneigung der Kuh zurück.
+	 *
+	 * @method setBeckTilt
+	 * @param {String} beckTilt
+	 */
+	this.setBeckTilt = function(beckTilt) {
+		m_beckTilt = beckTilt;
+	};
+
+	/**
+	 * Setzt Beckenbreite der Kuh zurück.
+	 *
+	 * @method setBeckWide
+	 * @param {String} beckWide
+	 */
+	this.setBeckWide = function(beckWide) {
+		m_beckWide = beckWide;
+	};
+
+	/**
+	 * Setzt Hintereuterhöhe der Kuh zurück.
+	 *
+	 * @method setBehindUdderHeight
+	 * @param {String} behindUdderHeight
+	 */
+	this.setBehindUdderHeight = function(behindUdderHeight) {
+		m_behindUdderHeight = behindUdderHeight;
+	};
+
+	/**
+	 * Setzt Körpertiefe der Kuh zurück.
+	 *
+	 * @method setBodyDepth
+	 * @return {String} bodyDepth
+	 */
+	this.setBodyDepth = function(bodyDepth) {
+		m_bodyDepth = bodyDepth;
+	};
+
+	/**
+	 * Setzt Zentralband der Kuh zurück.
+	 *
+	 * @method setCentralBelt
+	 * @param {String} centralBelt
+	 */
+	this.setCentralBelt = function(centralBelt) {
+		m_centralBelt = centralBelt;
+	};
+
+	/**
+	 * Setzt Milchcharakter der Kuh zurück.
+	 *
+	 * @method setDairyCharacter
+	 * @param {String} dairyCharacter
+	 */
+	this.setDairyCharacter = function(dairyCharacter) {
+		m_dairyCharacter = dairyCharacter;
+	};
+
+	/**
+	 * Setzt Strichplatzierung hinten der Kuh zurück.
+	 *
+	 * @method setDirectionOfGrowthBack
+	 * @param {String} directionOfGrowthBack
+	 */
+	this.setDirectionOfGrowthBack = function(directionOfGrowthBack) {
+		m_directionOfGrowthBack = directionOfGrowthBack;
+	};
+
+	/**
+	 * Setzt Strichplatzierung vorn der Kuh zurück.
+	 *
+	 * @method setDirectionOfGrowthFront
+	 * @param {String} directionOfGrowthFront
+	 */
+	this.setDirectionOfGrowthFront = function() {
+		m_directionOfGrowthFront = directionOfGrowthFront;
+	};
+
+	/**
+	 * Setzt Strichlänge der Kuh zurück.
+	 *
+	 * @method setDirectionOfGrowthLength
+	 * @param {String} directionOfGrowthLength
+	 */
+	this.setDirectionOfGrowthLength = function(directionOfGrowthFront) {
+		m_DirectionOfGrowthLength = directionOfGrowthFront;
+	};
+
+	/**
+	 * Setzt Vordereuteraufhängung der Kuh zurück.
+	 *
+	 * @method setForeUdderSuspension
+	 * @param {String} foreUdderSuspension
+	 */
+	this.setForeUdderSuspension = function(foreUdderSuspension) {
+		m_foreUdderSuspension = foreUdderSuspension;
+	};
+
+	/**
+	 * Setzt Hinterbeinstellung der Kuh zurück.
+	 *
+	 * @method setHock
+	 * @param {String} hock
+	 */
+	this.setHock = function(hock) {
+		m_hock = hock;
+	};
+
+	/**
+	 * Setzt Bewegung der Kuh zurück.
+	 *
+	 * @method setMovement
+	 * @param {String} movement
+	 */
+	this.setMovement = function(movement) {
+		m_movement = movement;
+	};
+
+	/**
+	 * Setzt Größe der Kuh zurück.
+	 *
+	 * @method setSize
+	 * @param {String} size
+	 */
+	this.setSize = function(size) {
+		m_size = size;
+	};
+
+	/**
+	 * Setzt Klauenwinkel der Kuh zurück.
+	 *
+	 * @method setStealAngle
+	 * @param {String} stealAngle
+	 */
+	this.setStealAngle = function(stealAngle) {
+		m_stealAngle = stealAngle;
+	};
+
+	/**
+	 * Set Stärke der Kuh zurück.
+	 *
+	 * @method setStrength
+	 * @param {String} strength
+	 */
+	this.setStrength = function(strength) {
+		m_strength = strength;
+	};
+
+	/**
+	 * Setzt Eutertiefe der Kuh zurück.
+	 *
+	 * @method setUdderDepth
+	 * @param {String} udderDepth
+	 */
+	this.setUdderDepth = function(udderDepth) {
+		m_udderDepth = udderDepth;
+	};
+
+	/**
+	 * Setzt, ob die Kuh hornlos ist, zurück.
+	 *
+	 * @method setHornless
+	 * @param {String} hornless
+	 */
+	this.setHornless = function(hornless) {
+		m_hornless = hornless;
+	};
+
+	/**
+	 * Setz, ob die Kuh genomics ist, zurück.
+	 *
+	 * @method setGenomics
+	 * @param {String} genomics
+	 */
+	this.setGenomics = function(genomics) {
+		m_genomics = genomics;
+	};
+
+	/**
+	 * Setzt, ob die Kuh gesext ist, zurück
+	 *
+	 * @method setSexed
+	 * @param {String} sexed
+	 */
+	this.setSexed = function(sexed) {
+		m_sexed = sexed;
+	};
+
+	/**
+	 * Setzt Frishsperma zurück.
+	 *
+	 * @method setFreshSemen
+	 * @param {String} freshSemen
+	 */
+	this.setFreshSemen = function(freshSemen) {
+		m_freshSemen = freshSemen;
 	};
 
 };

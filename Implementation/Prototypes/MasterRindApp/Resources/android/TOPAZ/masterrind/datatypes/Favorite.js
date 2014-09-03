@@ -1,6 +1,6 @@
-TOPAZ.namespace("TOPAZ.masterrind.interfaces.Favorite");
+TOPAZ.namespace("TOPAZ.masterrind.datatypes.Favorite");
 
-TOPAZ.masterrind.interfaces.Favorite = function() {
+TOPAZ.masterrind.datatypes.Favorite = function() {
     var m_id = "null";
     var m_name = "null";
     var m_cowId = "null";
