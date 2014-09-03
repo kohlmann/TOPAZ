@@ -2,7 +2,6 @@ require('TOPAZ/masterrind/impl/MasterRindFacade');
 require('TOPAZ/masterrind/datatypes/Cow');
 require('TOPAZ/masterrind/datatypes/Favorite');
 
-require('TOPAZ/masterrind/util/CodeGenerator');
 
 //Fehler: Schritt zurück erst möglich, wenn die Taste dreimal gedrückt wird.
 //Ursache: eventListener für AboutButton wird mehrfach im Code aufgerufen
@@ -19,63 +18,96 @@ $.about.addEventListener('click', function(e) {
  */
 $.appointments.addEventListener('click', function(e) {
 	var win = Alloy.createController('appointments').getView();
-	// win.open();
-
-	// var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	// mr_fav.addFavorite("15", "Huj", "1", "HujFavorit");
-	// var calc = new TOPAZ.masterrind.impl.Calc();
-	// console.log(calc.add(3,5));
-	var codeGenerator = new TOPAZ.masterrind.util.CodeGenerator();
-	// console.log(codeGenerator.createGetter("huj"));
-	console.log(codeGenerator.createGetterComment("huj"));
-	console.log(codeGenerator.createGetter("huj"));
-	console.log(codeGenerator.createSetterComment("huj"));
-	console.log(codeGenerator.createSetter("huj"));
-
+	win.open();
 });
 
 $.blackColored.addEventListener('click', function(e) {
 	var win = Alloy.createController('blackColored').getView();
 	win.open();
 
-	var appointments = new Array();
-	var companies = new Array();
-	var contacts = new Array();
+
 	var cows = new Array();
-	var favorites = new Array();
 	var model;
 
-	var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade();
-	
-	appointments = mr_app.loadAppointmentsFromDB();
-	console.log(appointments.length);
-	for ( i = 0; i < appointments.length; i++) {
-		app = appointments[i];
-		console.log(app.getName());
-	}
 
-	// var mr_fav = new TOPAZ.masterrind.impl.MasterRindFacade(new TOPAZ.masterrind.impl.FavoriteFactory());
-	// mr_fav.loadFavoritesFromDB();
-	// favorites = mr_fav.getFavorites('cow');
-	// for ( i = 0; i < favorites.length; i++) {
-		// console.log(favorites[i].getName());
-	// }
-// 
 	var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade();
-	mr_cow.loadCowsFromDB();
-	// var cows = new Array();
 	cows = mr_cow.loadCowsFromDB();
+	
 	for ( i = 0; i < cows.length; i++) {
 
 		var cow = cows[i];
 		console.log(cow.getId() + ' ' + cow.getName() + ' ' + cow.getFather());
 
-		//model in allCows umbenennen
+		// model = Alloy.createModel('cowsMod', {
+			// id : cow.getId(),
+			// name : cow.getName(),
+			// image : cow.getImage(),
+			// father : cow.getFather()
+		// });
+		
 		model = Alloy.createModel('cowsMod', {
-			id : cow.getId(),
-			name : cow.getName(),
+			// a : "text",
+			// aAa : "text",
+			// mating : "text",
+			// yearOfBirth : "text",
+			// monthOfBirth : "text",
+			// dayOfBirth : "text",
+			// geneDefect : "text",
+			// herdBookNumber : "text",
+			// mmfName : "text",
+			// mmff : "text",
+			// mfName : "text",
+			// mff : "text",
+			// fmf : "text",
+			// ff : "text",
+			// fff : "text",
+			father : cow.getFather(),
+			// breeder : "text",
 			image : cow.getImage(),
-			info : cow.getFather()
+			name : cow.getName(),
+			// race : "text",
+			// id : "text",
+			// gRZG : "text",
+			// gRZM : "text",
+			// milkKg : "text",
+			// fatPercent : "text",
+			// fatKg : "text",
+			// proteinPercent : "text",
+			// proteinKg : "text",
+			// gRZE : "text",
+			// milkType : "text",
+			// body : "text",
+			// base : "text",
+			// udder : "text",
+			// gRZFit : "text",
+			// gRZN : "text",
+			// gRZS : "text",
+			// gRZD : "text",
+			// gRZR : "text",
+			// gRZkd : "text",
+			// gRZKM : "text",
+			// calfRunningDirectly : "text",
+			// backLegsPosition : "text",
+			// beckTilt : "text",
+			// beckWide : "text",
+			// behindUdderHeight : "text",
+			// bodyDepth : "text",
+			// centralBelt : "text",
+			// dairyCharacter : "text",
+			// directionOfGrowthBack : "text",
+			// directionOfGrowthFront : "text",
+			// DirectionOfGrowthLength : "text",
+			// foreUdderSuspension : "text",
+			// hock : "text",
+			// movement : "text",
+			// size : "text",
+			// stealAngle : "text",
+			// strength : "text",
+			// udderDepth : "text",
+			// hornless : "text",
+			// genomics : "text",
+			// sexed : "text",
+			// freshSemen : "text"
 		});
 
 		Alloy.Collections.cowCol.add(model);

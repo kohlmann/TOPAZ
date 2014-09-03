@@ -1,7 +1,7 @@
 <Alloy>
 	<Collection src="cowsMod" />
 	<TabGroup id="tabGroup" class="StartProperties">
-		<Tab id="allCowsTab" icon="/images/grid_icon_sbt.png" backgroundColor="white" class="StartProperties">
+		<Tab id="allCowsTab" backgroundColor="white" class="StartProperties">
 			<Window>
 				<ListView id="listView" defaultItemTemplate="template">
 					<!-- Sets ListView's searchView property.
@@ -22,20 +22,20 @@
 						<!-- You can specify any ListItem or ListDataItem properties in ListItem -->
 						<!-- Specify data to bind to the item template with inline attributes
 						defined as <bindId>:<Ti.UI.Component.property> -->
-						<ListItem id="listItem" info:text="{name}" es_info:text="{info}" pic:image="{image}" searchableText="{name}" />
+						<ListItem id="listItem" info:text="{name}" es_info:text="{father}" pic:image="{image}" searchableText="{name}" />
 					</ListSection>
 				</ListView>
 			</Window>
 		</Tab>
-		<Tab id="genomicsTab" class="StartProperties" icon="/images/grid_icon_genomics.png">
+		<Tab id="genomicsTab" class="StartProperties">
 			<Window>
 			</Window>
 		</Tab>
-		<Tab id="daughterTestedTab" class="StartProperties" icon="/images/grid_icon_gepruefte.png">
+		<Tab id="daughterTestedTab" class="StartProperties">
 			<Window>
 			</Window>
 		</Tab>
-		<Tab id="hornlessTab" class="StartProperties" icon="/images/grid_icon_hornlose.png">
+		<Tab id="hornlessTab" class="StartProperties">
 			<Window>
 			</Window>
 		</Tab>

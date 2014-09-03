@@ -201,46 +201,28 @@ function Controller() {
     require("TOPAZ/masterrind/impl/MasterRindFacade");
     require("TOPAZ/masterrind/datatypes/Cow");
     require("TOPAZ/masterrind/datatypes/Favorite");
-    require("TOPAZ/masterrind/util/CodeGenerator");
     $.about.addEventListener("click", function() {
         var win = Alloy.createController("about").getView();
         win.open();
     });
     $.appointments.addEventListener("click", function() {
-        Alloy.createController("appointments").getView();
-        var codeGenerator = new TOPAZ.masterrind.util.CodeGenerator();
-        console.log(codeGenerator.createGetterComment("huj"));
-        console.log(codeGenerator.createGetter("huj"));
-        console.log(codeGenerator.createSetterComment("huj"));
-        console.log(codeGenerator.createSetter("huj"));
+        var win = Alloy.createController("appointments").getView();
+        win.open();
     });
     $.blackColored.addEventListener("click", function() {
         var win = Alloy.createController("blackColored").getView();
         win.open();
-        var appointments = new Array();
-        new Array();
-        new Array();
         var cows = new Array();
-        new Array();
         var model;
-        var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade();
-        appointments = mr_app.loadAppointmentsFromDB();
-        console.log(appointments.length);
-        for (i = 0; appointments.length > i; i++) {
-            app = appointments[i];
-            console.log(app.getName());
-        }
         var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade();
-        mr_cow.loadCowsFromDB();
         cows = mr_cow.loadCowsFromDB();
         for (i = 0; cows.length > i; i++) {
             var cow = cows[i];
             console.log(cow.getId() + " " + cow.getName() + " " + cow.getFather());
             model = Alloy.createModel("cowsMod", {
-                id: cow.getId(),
-                name: cow.getName(),
+                father: cow.getFather(),
                 image: cow.getImage(),
-                info: cow.getFather()
+                name: cow.getName()
             });
             Alloy.Collections.cowCol.add(model);
         }

@@ -1,31 +1,28 @@
 
 "#tabGroup" :{
-	backgroundImage:'images/grid_icon_sbt.png',
+	backgroundColor:'white',
 	backgroundSelectedColor:'blue'
 }
 
 "#allCowsTab" :{
 	height: '100dp',
 	title:'Alle',
-	backgroundImage:'/images/grid_icon_sbt.png',
 	backgroundSelectedColor:'blue'
 }
 
 "#hornlessTab" :{
 	title:'Hornlose',
-	backgroundImage:'/images/grid_icon_hornlose.png',
+
 	backgroundSelectedColor:'blue'
 }
 
 "#daughterTestedTab" :{
 	title:'Geprüfte',
-	backgroundImage:'/images/grid_icon_gepruefte.png',
 	backgroundSelectedColor:'blue'
 }
 
 "#genomicsTab" :{
 	title:'Genomics',
-	backgroundImage:'/images/grid_icon_genomics.png',
 	backgroundSelectedColor:'blue'
 }
 

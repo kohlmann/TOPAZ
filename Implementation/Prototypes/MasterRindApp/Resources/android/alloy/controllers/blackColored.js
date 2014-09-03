@@ -28,7 +28,7 @@ function Controller() {
                     text: "undefined" != typeof __alloyId12.__transform["name"] ? __alloyId12.__transform["name"] : __alloyId12.get("name")
                 },
                 es_info: {
-                    text: "undefined" != typeof __alloyId12.__transform["info"] ? __alloyId12.__transform["info"] : __alloyId12.get("info")
+                    text: "undefined" != typeof __alloyId12.__transform["father"] ? __alloyId12.__transform["father"] : __alloyId12.get("father")
                 },
                 pic: {
                     image: "undefined" != typeof __alloyId12.__transform["image"] ? __alloyId12.__transform["image"] : __alloyId12.get("image")
@@ -122,11 +122,9 @@ function Controller() {
     $.__views.allCowsTab = Ti.UI.createTab({
         height: "100dp",
         title: "Alle",
-        backgroundImage: "/images/grid_icon_sbt.png",
         backgroundSelectedColor: "blue",
         window: $.__views.__alloyId3,
         id: "allCowsTab",
-        icon: "/images/grid_icon_sbt.png",
         backgroundColor: "white"
     });
     __alloyId2.push($.__views.allCowsTab);
@@ -135,11 +133,9 @@ function Controller() {
     });
     $.__views.genomicsTab = Ti.UI.createTab({
         title: "Genomics",
-        backgroundImage: "/images/grid_icon_genomics.png",
         backgroundSelectedColor: "blue",
         window: $.__views.__alloyId17,
-        id: "genomicsTab",
-        icon: "/images/grid_icon_genomics.png"
+        id: "genomicsTab"
     });
     __alloyId2.push($.__views.genomicsTab);
     $.__views.__alloyId18 = Ti.UI.createWindow({
@@ -147,11 +143,9 @@ function Controller() {
     });
     $.__views.daughterTestedTab = Ti.UI.createTab({
         title: "Geprüfte",
-        backgroundImage: "/images/grid_icon_gepruefte.png",
         backgroundSelectedColor: "blue",
         window: $.__views.__alloyId18,
-        id: "daughterTestedTab",
-        icon: "/images/grid_icon_gepruefte.png"
+        id: "daughterTestedTab"
     });
     __alloyId2.push($.__views.daughterTestedTab);
     $.__views.__alloyId19 = Ti.UI.createWindow({
@@ -159,15 +153,13 @@ function Controller() {
     });
     $.__views.hornlessTab = Ti.UI.createTab({
         title: "Hornlose",
-        backgroundImage: "/images/grid_icon_hornlose.png",
         backgroundSelectedColor: "blue",
         window: $.__views.__alloyId19,
-        id: "hornlessTab",
-        icon: "/images/grid_icon_hornlose.png"
+        id: "hornlessTab"
     });
     __alloyId2.push($.__views.hornlessTab);
     $.__views.tabGroup = Ti.UI.createTabGroup({
-        backgroundImage: "images/grid_icon_sbt.png",
+        backgroundColor: "white",
         backgroundSelectedColor: "blue",
         tabs: __alloyId2,
         id: "tabGroup"

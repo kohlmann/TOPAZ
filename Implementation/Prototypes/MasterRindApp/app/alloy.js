@@ -10,7 +10,8 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
- Alloy.Collections.cowCol = Alloy.createCollection('cowsMod');
+  Alloy.Collections.cowCol = Alloy.createCollection('cowsMod');
+ //Alloy.Collections.allCowsCol = Alloy.createCollection('cowsMod');
 
 Alloy.Globals.screenWidth = (Titanium.Platform.displayCaps.platformWidth)/Titanium.Platform.displayCaps.dpi;
 Alloy.Globals.screenHeight = (Titanium.Platform.displayCaps.platformHeight)/Titanium.Platform.displayCaps.dpi;
