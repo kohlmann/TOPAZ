@@ -364,12 +364,12 @@ TOPAZ.masterrind.datatypes.Cow = function() {
         m_gRZR = gRZR;
     };
     this.setGRZkd = function(gRZkd) {
-        m_gRkd = gRZkd;
+        m_gRZkd = gRZkd;
     };
     this.setGRZKM = function(gRZKM) {
         m_gRZKM = gRZKM;
     };
-    this.setCalfRunningDirectly = function() {
+    this.setCalfRunningDirectly = function(calfRunningDirectly) {
         m_calfRunningDirectly = calfRunningDirectly;
     };
     this.setBackLegsPosition = function(backLegsPosition) {
@@ -396,7 +396,7 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     this.setDirectionOfGrowthBack = function(directionOfGrowthBack) {
         m_directionOfGrowthBack = directionOfGrowthBack;
     };
-    this.setDirectionOfGrowthFront = function() {
+    this.setDirectionOfGrowthFront = function(directionOfGrowthFront) {
         m_directionOfGrowthFront = directionOfGrowthFront;
     };
     this.setDirectionOfGrowthLength = function(directionOfGrowthFront) {

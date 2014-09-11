@@ -1,6 +1,12 @@
 var Alloy = require("alloy"), _ = Alloy._, Backbone = Alloy.Backbone;
 
-Alloy.Collections.cowCol = Alloy.createCollection("cowsMod");
+Alloy.Collections.allCowsCol = Alloy.createCollection("cowsMod");
+
+Alloy.Collections.genomicsCol = Alloy.createCollection("cowsMod");
+
+Alloy.Collections.daughterTestedCol = Alloy.createCollection("cowsMod");
+
+Alloy.Collections.hornlessCol = Alloy.createCollection("cowsMod");
 
 Alloy.Globals.screenWidth = Titanium.Platform.displayCaps.platformWidth / Titanium.Platform.displayCaps.dpi;
 

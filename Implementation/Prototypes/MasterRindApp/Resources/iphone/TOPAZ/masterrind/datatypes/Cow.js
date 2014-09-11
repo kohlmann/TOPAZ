@@ -42,7 +42,27 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     var m_gRZkd = "null";
     var m_gRZKM = "null";
     var m_calfRunningDirectly = "null";
-    var m_cowType = "null";
+    var m_backLegsPosition = "null";
+    var m_beckTilt = "null";
+    var m_beckWide = "null";
+    var m_behindUdderHeight = "null";
+    var m_bodyDepth = "null";
+    var m_centralBelt = "null";
+    var m_dairyCharacter = "null";
+    var m_directionOfGrowthBack = "null";
+    var m_directionOfGrowthFront = "null";
+    var m_DirectionOfGrowthLength = "null";
+    var m_foreUdderSuspension = "null";
+    var m_hock = "null";
+    var m_movement = "null";
+    var m_size = "null";
+    var m_stealAngle = "null";
+    var m_strength = "null";
+    var m_udderDepth = "null";
+    var m_hornless = "null";
+    var m_genomics = "null";
+    var m_sexed = "null";
+    var m_freshSemen = "null";
     this.getA = function() {
         return m_a;
     };
@@ -166,8 +186,68 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     this.getCalfRunningDirectly = function() {
         return m_calfRunningDirectly;
     };
-    this.getCowType = function() {
-        return m_cowType;
+    this.getBackLegsPosition = function() {
+        return m_backLegsPosition;
+    };
+    this.getBeckTilt = function() {
+        return m_beckTilt;
+    };
+    this.getBeckWide = function() {
+        return m_beckWide;
+    };
+    this.getBehindUdderHeight = function() {
+        return m_behindUdderHeight;
+    };
+    this.getBodyDepth = function() {
+        return m_bodyDepth;
+    };
+    this.getCentralBelt = function() {
+        return m_centralBelt;
+    };
+    this.getDairyCharacter = function() {
+        return m_dairyCharacter;
+    };
+    this.getDirectionOfGrowthBack = function() {
+        return m_directionOfGrowthBack;
+    };
+    this.getDirectionOfGrowthFront = function() {
+        return m_directionOfGrowthFront;
+    };
+    this.getDirectionOfGrowthLength = function() {
+        return m_DirectionOfGrowthLength;
+    };
+    this.getForeUdderSuspension = function() {
+        return m_foreUdderSuspension;
+    };
+    this.getHock = function() {
+        return m_hock;
+    };
+    this.getMovement = function() {
+        return m_movement;
+    };
+    this.getSize = function() {
+        return m_size;
+    };
+    this.getStealAngle = function() {
+        return m_stealAngle;
+    };
+    this.getStrength = function() {
+        return m_strength;
+    };
+    this.getUdderDepth = function() {
+        return m_udderDepth;
+    };
+    this.getHornless = function() {
+        return m_hornless;
+    };
+    this.getGenomics = function() {
+        return m_genomics;
+    };
+    this.getSexed = function() {
+        return m_sexed;
+    };
+    this.getFreshSemen = function() {
+        return m_freshSemen;
     };
     this.setA = function(a) {
         m_a = a;
@@ -289,10 +369,70 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     this.setGRZKM = function(gRZKM) {
         m_gRZKM = gRZKM;
     };
-    this.setCalfRunningDirectly = function() {
+    this.setCalfRunningDirectly = function(calfRunningDirectly) {
         m_calfRunningDirectly = calfRunningDirectly;
     };
-    this.setCowType = function(cowType) {
-        m_cowType = cowType;
+    this.setBackLegsPosition = function(backLegsPosition) {
+        m_backLegsPosition = backLegsPosition;
+    };
+    this.setBeckTilt = function(beckTilt) {
+        m_beckTilt = beckTilt;
+    };
+    this.setBeckWide = function(beckWide) {
+        m_beckWide = beckWide;
+    };
+    this.setBehindUdderHeight = function(behindUdderHeight) {
+        m_behindUdderHeight = behindUdderHeight;
+    };
+    this.setBodyDepth = function(bodyDepth) {
+        m_bodyDepth = bodyDepth;
+    };
+    this.setCentralBelt = function(centralBelt) {
+        m_centralBelt = centralBelt;
+    };
+    this.setDairyCharacter = function(dairyCharacter) {
+        m_dairyCharacter = dairyCharacter;
+    };
+    this.setDirectionOfGrowthBack = function(directionOfGrowthBack) {
+        m_directionOfGrowthBack = directionOfGrowthBack;
+    };
+    this.setDirectionOfGrowthFront = function(directionOfGrowthFront) {
+        m_directionOfGrowthFront = directionOfGrowthFront;
+    };
+    this.setDirectionOfGrowthLength = function(directionOfGrowthFront) {
+        m_DirectionOfGrowthLength = directionOfGrowthFront;
+    };
+    this.setForeUdderSuspension = function(foreUdderSuspension) {
+        m_foreUdderSuspension = foreUdderSuspension;
+    };
+    this.setHock = function(hock) {
+        m_hock = hock;
+    };
+    this.setMovement = function(movement) {
+        m_movement = movement;
+    };
+    this.setSize = function(size) {
+        m_size = size;
+    };
+    this.setStealAngle = function(stealAngle) {
+        m_stealAngle = stealAngle;
+    };
+    this.setStrength = function(strength) {
+        m_strength = strength;
+    };
+    this.setUdderDepth = function(udderDepth) {
+        m_udderDepth = udderDepth;
+    };
+    this.setHornless = function(hornless) {
+        m_hornless = hornless;
+    };
+    this.setGenomics = function(genomics) {
+        m_genomics = genomics;
+    };
+    this.setSexed = function(sexed) {
+        m_sexed = sexed;
+    };
+    this.setFreshSemen = function(freshSemen) {
+        m_freshSemen = freshSemen;
     };
 };

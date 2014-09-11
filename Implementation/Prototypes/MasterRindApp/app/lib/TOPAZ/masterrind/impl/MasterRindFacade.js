@@ -1,6 +1,5 @@
 TOPAZ.namespace('TOPAZ.masterrind.impl.MasterRindFacade');
 
-
 require('TOPAZ/masterrind/datatypes/Appointment');
 require('TOPAZ/masterrind/datatypes/Company');
 require('TOPAZ/masterrind/datatypes/Contact');
@@ -15,7 +14,7 @@ require('TOPAZ/masterrind/datatypes/Favorite');
  * @class MasterRindFacade
  */
 TOPAZ.masterrind.impl.MasterRindFacade = function() {
-	
+
 	var m_appointments = new Array();
 	var m_companies = new Array();
 	var m_contacts = new Array();
@@ -30,7 +29,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 	 */
 	this.loadAppointmentsFromDB = function() {
 
-		var masterRindRS = db.execute('SELECT date,id, name FROM appointments');
+		var masterRindRS = db.execute('SELECT * FROM appointments');
 		var appointment = new TOPAZ.masterrind.datatypes.Appointment();
 
 		while (masterRindRS.isValidRow()) {
@@ -38,13 +37,14 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 			appointment.setDate(masterRindRS.fieldByName('date'));
 			appointment.setId(masterRindRS.fieldByName('id'));
 			appointment.setName(masterRindRS.fieldByName('name'));
+			appointment.setDistance(masterRindRS.fieldByName('distance'));
 
 			m_appointments.push(appointment);
 
 			masterRindRS.next();
 		}
 		masterRindRS.close();
-		
+
 		return m_appointments;
 	};
 
@@ -80,7 +80,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 	 */
 	this.loadContactsFromDB = function() {
 
-		var masterRindRS = db.execute('SELECT country,id, name, number,street, town, zipCode FROM contacts');
+		var masterRindRS = db.execute('SELECT * FROM contacts');
 		var contact = new TOPAZ.masterrind.datatypes.Contact();
 
 		while (masterRindRS.isValidRow()) {
@@ -91,47 +91,109 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 			contact.setNumber(masterRindRS.fieldByName('number'));
 			contact.setStreet(masterRindRS.fieldByName('street'));
 			contact.setTown(masterRindRS.fieldByName('town'));
-			contact.setImprint(masterRindRS.fieldByName('zipCode'));
-
+			contact.setZipCode(masterRindRS.fieldByName('zipCode'));
+			contact.setInfo(masterRindRS.fieldByName('info'));
 			m_contacts.push(contact);
 
 			masterRindRS.next();
 		}
 
 		masterRindRS.close();
+
+		return m_contacts;
 	};
 
 	/**
 	 * Holt Kuhdaten aus der Datenbank.
+	 *  - m_cows kann in der ganzen Klasse genutzt werden
+	 *  - Vermeidung von mehereren Verbindungen zur Datenbank
+	 *  - Traffic wird gespart
 	 *
 	 * @method loadCowsFromDB
 	 */
 	this.loadCowsFromDB = function() {
 
 		//RS=ResultSet
-		var masterRindRS = db.execute('SELECT id,image,name,father FROM cows');
+		//var masterRindRS = db.execute('SELECT id,image,name,father FROM cows');
+		var masterRindRS = db.execute('SELECT * FROM cows');
 
 		while (masterRindRS.isValidRow()) {
 			var cow = new TOPAZ.masterrind.datatypes.Cow();
-			
-			cow.setId(masterRindRS.fieldByName('id'));
+
+			// cow.setId(masterRindRS.fieldByName('id'));
+			// cow.setImage(masterRindRS.fieldByName('image'));
+			// cow.setName(masterRindRS.fieldByName('name'));
+			// cow.setFather(masterRindRS.fieldByName('father'));
+
+			cow.setA(masterRindRS.fieldByName('a'));
+			cow.setAAA(masterRindRS.fieldByName('aAa'));
+			cow.setMating(masterRindRS.fieldByName('mating'));
+			cow.setYearOfBirth(masterRindRS.fieldByName('yearOfBirth'));
+			cow.setMonthOfBirth(masterRindRS.fieldByName('monthOfBirth'));
+			cow.setDayOfBirth(masterRindRS.fieldByName('dayOfBirth'));
+			cow.setGeneDefect(masterRindRS.fieldByName('geneDefect'));
+			cow.setHerdBookNumber(masterRindRS.fieldByName('herdBookNumber'));
+			cow.setMMFName(masterRindRS.fieldByName('mmfName'));
+			cow.setMMFF(masterRindRS.fieldByName('mmff'));
+			cow.setMFName(masterRindRS.fieldByName('mfName'));
+			cow.setMFF(masterRindRS.fieldByName('mff'));
+			cow.setFMF(masterRindRS.fieldByName('fmf'));
+			cow.setFF(masterRindRS.fieldByName('ff'));
+			cow.setFFF(masterRindRS.fieldByName('fff'));
+			cow.setFather(masterRindRS.fieldByName('father'));
+			cow.setBreeder(masterRindRS.fieldByName('breeder'));
 			cow.setImage(masterRindRS.fieldByName('image'));
 			cow.setName(masterRindRS.fieldByName('name'));
-			cow.setFather(masterRindRS.fieldByName('father'));
+			cow.setRace(masterRindRS.fieldByName('race'));
+			cow.setId(masterRindRS.fieldByName('id'));
+			cow.setGRZG(masterRindRS.fieldByName('gRZG'));
+			cow.setGRZM(masterRindRS.fieldByName('gRZM'));
+			cow.setMilkKg(masterRindRS.fieldByName('milkKg'));
+			cow.setFatPercent(masterRindRS.fieldByName('fatPercent'));
+			cow.setFatKg(masterRindRS.fieldByName('fatKg'));
+			cow.setProteinPercent(masterRindRS.fieldByName('proteinPercent'));
+			cow.setProteinKg(masterRindRS.fieldByName('proteinKg'));
+			cow.setGRZE(masterRindRS.fieldByName('gRZE'));
+			cow.setMilkType(masterRindRS.fieldByName('milkType'));
+			cow.setBody(masterRindRS.fieldByName('body'));
+			cow.setBase(masterRindRS.fieldByName('base'));
+			cow.setUdder(masterRindRS.fieldByName('udder'));
+			cow.setGRZFit(masterRindRS.fieldByName('gRZFit'));
+			cow.setGRZN(masterRindRS.fieldByName('gRZN'));
+			cow.setGRZS(masterRindRS.fieldByName('gRZS'));
+			cow.setGRZD(masterRindRS.fieldByName('gRZD'));
+			cow.setGRZR(masterRindRS.fieldByName('gRZR'));
+			cow.setGRZkd(masterRindRS.fieldByName('gRZkd'));
+			cow.setGRZKM(masterRindRS.fieldByName('gRZKM'));
+			cow.setCalfRunningDirectly(masterRindRS.fieldByName('calfRunningDirectly'));
+			cow.setBackLegsPosition(masterRindRS.fieldByName('backLegsPosition'));
+			cow.setBeckTilt(masterRindRS.fieldByName('beckTilt'));
+			cow.setBeckWide(masterRindRS.fieldByName('beckWide'));
+			cow.setBehindUdderHeight(masterRindRS.fieldByName('behindUdderHeight'));
+			cow.setBodyDepth(masterRindRS.fieldByName('bodyDepth'));
+			cow.setCentralBelt(masterRindRS.fieldByName('centralBelt'));
+			cow.setDairyCharacter(masterRindRS.fieldByName('dairyCharacter'));
+			cow.setDirectionOfGrowthBack(masterRindRS.fieldByName('directionOfGrowthBack'));
+			cow.setDirectionOfGrowthFront(masterRindRS.fieldByName('directionOfGrowthFront'));
+			cow.setDirectionOfGrowthLength(masterRindRS.fieldByName('directionOfGrowthLength'));
+			cow.setForeUdderSuspension(masterRindRS.fieldByName('foreUdderSuspension'));
+			cow.setHock(masterRindRS.fieldByName('hock'));
+			cow.setMovement(masterRindRS.fieldByName('movement'));
+			cow.setSize(masterRindRS.fieldByName('size'));
+			cow.setStealAngle(masterRindRS.fieldByName('stealAngle'));
+			cow.setStrength(masterRindRS.fieldByName('strength'));
+			cow.setUdderDepth(masterRindRS.fieldByName('udderDepth'));
+			cow.setHornless(masterRindRS.fieldByName('hornless'));
+			cow.setGenomics(masterRindRS.fieldByName('genomics'));
+			cow.setSexed(masterRindRS.fieldByName('sexed'));
+			cow.setFreshSemen(masterRindRS.fieldByName('freshSemen'));
 
-			/**
-			 * Fehler: Es wird immer die gleiche Kuh eingefügt (mit id=4).
-			 * Ursache: cow wurde außerhalb der Schleife erstellt, deshalb
-			 * 			wurde das gleiche Cowobjekt in Array geschrieben und
-			 * 			dabei auch überschrieben.
-			 * Lösung: Cow innerhalb der Schleife erstellen.
-			 */
 			m_cows.push(cow);
 			masterRindRS.next();
 		}
 
 		masterRindRS.close();
-		
+
 		return m_cows;
 	};
 
@@ -142,7 +204,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 	 */
 	this.loadFavoritesFromDB = function() {
 
-		var masterRindRS = db.execute('SELECT cowId, cowName, id, name FROM favorites');
+		var masterRindRS = db.execute('SELECT * FROM favorites');
 		var favorite = new TOPAZ.masterrind.datatypes.Favorite();
 
 		while (masterRindRS.isValidRow()) {
@@ -158,6 +220,8 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 		}
 
 		masterRindRS.close();
+
+		return m_favorites;
 	};
 
 	/**
@@ -244,16 +308,16 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 	 * @param {String} type
 	 * @return {Array} cows
 	 */
-	
+
 	this.getCows = function(type) {
 		cs = new Array();
 		//TODO: factory in allen Methoden anpassen.
-		//TODO: debugging, factories testen, 
+		//TODO: debugging, factories testen,
 		//gleicher fehler wie bei load fromDB?????????
-		var factory=new TOPAZ.masterrind.impl.CowFactory();
-		
+		var factory = new TOPAZ.masterrind.impl.CowFactory();
+
 		for ( i = 0; i < m_cows.length; i++) {
-			
+
 			/**
 			 * Fehler:verschiedene Objekte mit gleichen Eigenschften
 			 * 			im Array.
@@ -266,45 +330,19 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 			cow.setImage(m_cows[i].getImage());
 			cow.setName(m_cows[i].getName());
 			cow.setFather(m_cows[i].getFather());
-console.log("getCow "+cow.getId());
+			console.log("getCow " + cow.getId());
 			cs.push(cow);
-		
-		console.log("liste-> "+cs[i].getId());	
+
+			console.log("liste-> " + cs[i].getId());
 		}
-		
-		for(i=0;i<cs.length;i++){
+
+		for ( i = 0; i < cs.length; i++) {
 			// if(i>1)console.log("liste-> "+i+" "+Object.is(cs[i],cs[i-1]));
 			// console.log("cs-obejct-> "+cs[i]);
-			console.log("cs-> "+i+" "+cs[i].getId()+" "+cs[i].getName());
+			console.log("cs-> " + i + " " + cs[i].getId() + " " + cs[i].getName());
 		}
 
 		return cs;
-	};
-
-	/**
-	 * Erstellt eine Liste mit Favoritobjekten.
-	 *
-	 * @method getFavorites
-	 * @param {String} type
-	 * @return {Array} favorites
-	 */
-	this.getFavorites = function(type) {
-
-		var favorites = new Array();
-
-		for ( i = 0; i < m_favorites.length; i++) {
-
-			favorite = factory.create(type);
-			favorite.setCowId(m_favorites[i].getCowId());
-			favorite.setCowName(m_favorites[i].getCowName());
-			favorite.setId(m_favorites[i].getId());
-			favorite.setName(m_favorites[i].getName());
-
-			favorites.push(favorite);
-		}
-
-		return favorites;
-
 	};
 
 	//Später Kuhobjekt übergeben
@@ -324,12 +362,13 @@ console.log("getCow "+cow.getId());
 		// favorite.setCowId(cowId);
 
 		//db.execute('BEGIN');
-		db.execute('INSERT INTO favorites (cowId,cowName,id,name) VALUES (?,?,?,?)', cowId, cowName, id, name);
+		db.execute('INSERT INTO favorites (cowId,cowName,name) VALUES (?,?,?)', cowId, cowName, name);
 		//db.execute('COMMIT');
 		db.close();
 
 		// return favorite;
 	};
+
 	/**
 	 * Löscht einen Favoriten aus der Datenbank.
 	 *
@@ -340,4 +379,270 @@ console.log("getCow "+cow.getId());
 	this.removeFavorite = function(id) {
 
 	};
+
+	/**
+	 * Liefer eine Liste mit Schwarzbunten Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getBlackcolored
+	 * @return {Object} cows
+	 */
+	this.getBlackColored = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			},
+			genomics : function() {
+				return m_cows;
+			},
+			daughterTested : function() {
+				return m_cows;
+			},
+			hornless : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefer eine Liste mit Rotbunten Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getRedcolored
+	 * @return {Object} cows
+	 */
+	this.getRedColored = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			},
+			genomics : function() {
+				return m_cows;
+			},
+			daughterTested : function() {
+				return m_cows;
+			},
+			hornless : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefer eine Liste mit Hornlosen Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getHornless
+	 * @return {Object} cows
+	 */
+	this.getHornless = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			},
+			homozygous : function() {
+				return m_cows;
+			},
+			daughterTested : function() {
+				return m_cows;
+			},
+			blackColored : function() {
+				return m_cows;
+			},
+			redColored : function() {
+				return m_cows;
+			},
+			genomics : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefer eine Liste mit Tochtergeprüften Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getHornless
+	 * @return {Object} cows
+	 */
+	this.getDaughterTested = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			},
+			blackColored : function() {
+				return m_cows;
+			},
+			redColored : function() {
+				return m_cows;
+			},
+			hornless : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefer eine Liste mit Genomics Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getGenomics
+	 * @return {Object} cows
+	 */
+	this.getGenomics = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			},
+			blackColored : function() {
+				return m_cows;
+			},
+			redColored : function() {
+				return m_cows;
+			},
+			hornless : function() {
+				return m_cows;
+			},
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefert eine Liste mit Holsteins Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getHolsteins
+	 * @return {Object} cows
+	 */
+	this.getHolsteins = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefer eine Liste mit gesexten Kühen. Die Liste wird mit
+	 * einem Object realisiert.
+	 *
+	 * @method getSexed
+	 * @return {Object} cows
+	 */
+	this.getSexed = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefer eine Liste mit Kühen, von denen frisch Sperma vorhanden ist.
+	 * Die Liste wird mit einem Object realisiert.
+	 *
+	 * @method getFreshSemen
+	 * @return {Object} cows
+	 */
+	this.getFreshSemen = function() {
+
+		var cows = {
+			allCows : function() {
+				return m_cows;
+			}
+		};
+
+		return cows;
+	};
+
+	/**
+	 * Liefert Termine für Schauen & Specials zurück.
+	 * Die Liste wird mit einem Object realisiert.
+	 *
+	 * @method getGetShowsAndSpecials
+	 * @return {Object} appointmens
+	 */
+	this.getShowsAndSpecials = function() {
+
+		var appointments = {
+			allAppointments : function() {
+				return m_appointments;
+			}
+		};
+
+		return appointments;
+	};
+
+	/**
+	 * Liefert Termine für Auktioinen zurück.
+	 * Die Liste wird mit einem Object realisiert.
+	 *
+	 * @method getAuctions
+	 * @return {Object} appointmens
+	 */
+	this.getAuctions = function() {
+
+		var appointments = {
+			allAppointments : function() {
+				return m_appointments;
+			},
+			bremervoerde : function() {
+				return m_appointments;
+			},
+			cloppenburg : function() {
+				return m_appointments;
+			},
+			lingen : function() {
+				return m_appointments;
+			},
+			uelzen : function() {
+				return m_appointments;
+			},
+			verden : function() {
+				return m_appointments;
+			}
+		};
+
+		return appointments;
+	};
+
+	/**
+	 * Liefert eine Liste mit Favoritobjekten.
+	 *
+	 * @method getFavorites
+	 * @param {String} type
+	 * @return {Array} favorites
+	 */
+	this.getFavorites = function() {
+
+		var favorites = {
+			allFavorites : function() {
+				return m_favorites;
+			}
+		};
+
+		return favorites;
+
+	};
 };
+

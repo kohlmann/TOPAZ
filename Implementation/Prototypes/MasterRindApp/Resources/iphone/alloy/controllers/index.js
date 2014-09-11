@@ -201,48 +201,298 @@ function Controller() {
     require("TOPAZ/masterrind/impl/MasterRindFacade");
     require("TOPAZ/masterrind/datatypes/Cow");
     require("TOPAZ/masterrind/datatypes/Favorite");
-    require("TOPAZ/masterrind/util/CodeGenerator");
     $.about.addEventListener("click", function() {
         var win = Alloy.createController("about").getView();
         win.open();
     });
     $.appointments.addEventListener("click", function() {
-        Alloy.createController("appointments").getView();
-        var codeGenerator = new TOPAZ.masterrind.util.CodeGenerator();
-        console.log(codeGenerator.createGetterComment("huj"));
-        console.log(codeGenerator.createGetter("huj"));
-        console.log(codeGenerator.createSetterComment("huj"));
-        console.log(codeGenerator.createSetter("huj"));
+        var win = Alloy.createController("appointments").getView();
+        win.open();
     });
     $.blackColored.addEventListener("click", function() {
         var win = Alloy.createController("blackColored").getView();
+        var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
+        masterRindFacade.loadCowsFromDB();
         win.open();
-        var appointments = new Array();
-        new Array();
-        new Array();
-        var cows = new Array();
-        new Array();
-        var model;
-        var mr_app = new TOPAZ.masterrind.impl.MasterRindFacade();
-        appointments = mr_app.loadAppointmentsFromDB();
-        console.log(appointments.length);
-        for (i = 0; appointments.length > i; i++) {
-            app = appointments[i];
-            console.log(app.getName());
-        }
-        var mr_cow = new TOPAZ.masterrind.impl.MasterRindFacade();
-        mr_cow.loadCowsFromDB();
-        cows = mr_cow.loadCowsFromDB();
-        for (i = 0; cows.length > i; i++) {
-            var cow = cows[i];
-            console.log(cow.getId() + " " + cow.getName() + " " + cow.getFather());
-            model = Alloy.createModel("cowsMod", {
-                id: cow.getId(),
-                name: cow.getName(),
+        var allCows = masterRindFacade.getBlackColored().allCows();
+        var genomics = masterRindFacade.getBlackColored().genomics();
+        var daughterTested = masterRindFacade.getBlackColored().daughterTested();
+        var hornless = masterRindFacade.getBlackColored().hornless();
+        Alloy.Collections.allCowsCol.reset();
+        Alloy.Collections.genomicsCol.reset();
+        Alloy.Collections.daughterTestedCol.reset();
+        Alloy.Collections.hornlessCol.reset();
+        for (i = 0; allCows.length > i; i++) {
+            var cow = allCows[i];
+            var model = Alloy.createModel("cowsMod", {
+                a: cow.getA(),
+                aAa: cow.getAAA(),
+                mating: cow.getMating(),
+                yearOfBirth: cow.getYearOfBirth(),
+                monthOfBirth: cow.getMonthOfBirth(),
+                dayOfBirth: cow.getDayOfBirth(),
+                geneDefect: cow.getGeneDefect(),
+                herdBookNumber: cow.getHerdBookNumber(),
+                mmfName: cow.getMMFName(),
+                mmff: cow.getMMFF(),
+                mfName: cow.getMFName(),
+                mff: cow.getMFF(),
+                fmf: cow.getFMF(),
+                ff: "x " + cow.getFF(),
+                fff: "x " + cow.getFFF(),
+                father: cow.getFather(),
+                breeder: cow.getBreeder(),
                 image: cow.getImage(),
-                info: cow.getFather()
+                name: cow.getName(),
+                race: cow.getRace(),
+                id: cow.getId(),
+                gRZG: "RZG" + cow.getGRZG(),
+                gRZM: cow.getGRZM(),
+                milkKg: cow.getMilkKg(),
+                fatPercent: cow.getFatPercent(),
+                fatKg: cow.getFatKg(),
+                proteinPercent: cow.getProteinPercent(),
+                proteinKg: cow.getProteinKg(),
+                gRZE: cow.getGRZE(),
+                milkType: cow.getMilkType(),
+                body: cow.getBody(),
+                base: cow.getBase(),
+                udder: cow.getUdder(),
+                gRZFit: cow.getGRZFit(),
+                gRZN: cow.getGRZN(),
+                gRZS: cow.getGRZS(),
+                gRZD: cow.getGRZD(),
+                gRZR: cow.getGRZR(),
+                gRZkd: cow.getGRZkd(),
+                gRZKM: cow.getGRZKM(),
+                calfRunningDirectly: cow.getCalfRunningDirectly(),
+                backLegsPosition: cow.getBackLegsPosition(),
+                beckTilt: cow.getBeckTilt(),
+                beckWide: cow.getBeckWide(),
+                behindUdderHeight: cow.getBehindUdderHeight(),
+                bodyDepth: cow.getBodyDepth(),
+                centralBelt: cow.getCentralBelt(),
+                dairyCharacter: cow.getDairyCharacter(),
+                directionOfGrowthBack: cow.getDirectionOfGrowthBack(),
+                directionOfGrowthFront: cow.getDirectionOfGrowthFront(),
+                DirectionOfGrowthLength: cow.getDirectionOfGrowthLength(),
+                foreUdderSuspension: cow.getForeUdderSuspension(),
+                hock: cow.getHock(),
+                movement: cow.getMovement(),
+                size: cow.getSize(),
+                stealAngle: cow.getStealAngle(),
+                strength: cow.getStrength(),
+                udderDepth: cow.getUdderDepth(),
+                hornless: cow.getHornless(),
+                genomics: cow.getGenomics(),
+                sexed: cow.getSexed(),
+                freshSemen: cow.getFreshSemen()
             });
-            Alloy.Collections.cowCol.add(model);
+            Alloy.Collections.allCowsCol.add(model);
+        }
+        for (i = 0; genomics.length > i; i++) {
+            var cow = genomics[i];
+            var model = Alloy.createModel("cowsMod", {
+                a: cow.getA(),
+                aAa: cow.getAAA(),
+                mating: cow.getMating(),
+                yearOfBirth: cow.getYearOfBirth(),
+                monthOfBirth: cow.getMonthOfBirth(),
+                dayOfBirth: cow.getDayOfBirth(),
+                geneDefect: cow.getGeneDefect(),
+                herdBookNumber: cow.getHerdBookNumber(),
+                mmfName: cow.getMMFName(),
+                mmff: cow.getMMFF(),
+                mfName: cow.getMFName(),
+                mff: cow.getMFF(),
+                fmf: cow.getFMF(),
+                ff: cow.getFF(),
+                fff: cow.getFFF(),
+                father: cow.getFather(),
+                breeder: cow.getBreeder(),
+                image: cow.getImage(),
+                name: cow.getName(),
+                race: cow.getRace(),
+                id: cow.getId(),
+                gRZG: cow.getGRZG(),
+                gRZM: cow.getGRZM(),
+                milkKg: cow.getMilkKg(),
+                fatPercent: cow.getFatPercent(),
+                fatKg: cow.getFatKg(),
+                proteinPercent: cow.getProteinPercent(),
+                proteinKg: cow.getProteinKg(),
+                gRZE: cow.getGRZE(),
+                milkType: cow.getMilkType(),
+                body: cow.getBody(),
+                base: cow.getBase(),
+                udder: cow.getUdder(),
+                gRZFit: cow.getGRZFit(),
+                gRZN: cow.getGRZN(),
+                gRZS: cow.getGRZS(),
+                gRZD: cow.getGRZD(),
+                gRZR: cow.getGRZR(),
+                gRZkd: cow.getGRZkd(),
+                gRZKM: cow.getGRZKM(),
+                calfRunningDirectly: cow.getCalfRunningDirectly(),
+                backLegsPosition: cow.getBackLegsPosition(),
+                beckTilt: cow.getBeckTilt(),
+                beckWide: cow.getBeckWide(),
+                behindUdderHeight: cow.getBehindUdderHeight(),
+                bodyDepth: cow.getBodyDepth(),
+                centralBelt: cow.getCentralBelt(),
+                dairyCharacter: cow.getDairyCharacter(),
+                directionOfGrowthBack: cow.getDirectionOfGrowthBack(),
+                directionOfGrowthFront: cow.getDirectionOfGrowthFront(),
+                DirectionOfGrowthLength: cow.getDirectionOfGrowthLength(),
+                foreUdderSuspension: cow.getForeUdderSuspension(),
+                hock: cow.getHock(),
+                movement: cow.getMovement(),
+                size: cow.getSize(),
+                stealAngle: cow.getStealAngle(),
+                strength: cow.getStrength(),
+                udderDepth: cow.getUdderDepth(),
+                hornless: cow.getHornless(),
+                genomics: cow.getGenomics(),
+                sexed: cow.getSexed(),
+                freshSemen: cow.getFreshSemen()
+            });
+            Alloy.Collections.genomicsCol.add(model);
+        }
+        for (i = 0; daughterTested.length > i; i++) {
+            var cow = daughterTested[i];
+            var model = Alloy.createModel("cowsMod", {
+                a: cow.getA(),
+                aAa: cow.getAAA(),
+                mating: cow.getMating(),
+                yearOfBirth: cow.getYearOfBirth(),
+                monthOfBirth: cow.getMonthOfBirth(),
+                dayOfBirth: cow.getDayOfBirth(),
+                geneDefect: cow.getGeneDefect(),
+                herdBookNumber: cow.getHerdBookNumber(),
+                mmfName: cow.getMMFName(),
+                mmff: cow.getMMFF(),
+                mfName: cow.getMFName(),
+                mff: cow.getMFF(),
+                fmf: cow.getFMF(),
+                ff: cow.getFF(),
+                fff: cow.getFFF(),
+                father: cow.getFather(),
+                breeder: cow.getBreeder(),
+                image: cow.getImage(),
+                name: cow.getName(),
+                race: cow.getRace(),
+                id: cow.getId(),
+                gRZG: cow.getGRZG(),
+                gRZM: cow.getGRZM(),
+                milkKg: cow.getMilkKg(),
+                fatPercent: cow.getFatPercent(),
+                fatKg: cow.getFatKg(),
+                proteinPercent: cow.getProteinPercent(),
+                proteinKg: cow.getProteinKg(),
+                gRZE: cow.getGRZE(),
+                milkType: cow.getMilkType(),
+                body: cow.getBody(),
+                base: cow.getBase(),
+                udder: cow.getUdder(),
+                gRZFit: cow.getGRZFit(),
+                gRZN: cow.getGRZN(),
+                gRZS: cow.getGRZS(),
+                gRZD: cow.getGRZD(),
+                gRZR: cow.getGRZR(),
+                gRZkd: cow.getGRZkd(),
+                gRZKM: cow.getGRZKM(),
+                calfRunningDirectly: cow.getCalfRunningDirectly(),
+                backLegsPosition: cow.getBackLegsPosition(),
+                beckTilt: cow.getBeckTilt(),
+                beckWide: cow.getBeckWide(),
+                behindUdderHeight: cow.getBehindUdderHeight(),
+                bodyDepth: cow.getBodyDepth(),
+                centralBelt: cow.getCentralBelt(),
+                dairyCharacter: cow.getDairyCharacter(),
+                directionOfGrowthBack: cow.getDirectionOfGrowthBack(),
+                directionOfGrowthFront: cow.getDirectionOfGrowthFront(),
+                DirectionOfGrowthLength: cow.getDirectionOfGrowthLength(),
+                foreUdderSuspension: cow.getForeUdderSuspension(),
+                hock: cow.getHock(),
+                movement: cow.getMovement(),
+                size: cow.getSize(),
+                stealAngle: cow.getStealAngle(),
+                strength: cow.getStrength(),
+                udderDepth: cow.getUdderDepth(),
+                hornless: cow.getHornless(),
+                genomics: cow.getGenomics(),
+                sexed: cow.getSexed(),
+                freshSemen: cow.getFreshSemen()
+            });
+            Alloy.Collections.daughterTestedCol.add(model);
+        }
+        for (i = 0; hornless.length > i; i++) {
+            var cow = hornless[i];
+            var model = Alloy.createModel("cowsMod", {
+                a: cow.getA(),
+                aAa: cow.getAAA(),
+                mating: cow.getMating(),
+                yearOfBirth: cow.getYearOfBirth(),
+                monthOfBirth: cow.getMonthOfBirth(),
+                dayOfBirth: cow.getDayOfBirth(),
+                geneDefect: cow.getGeneDefect(),
+                herdBookNumber: cow.getHerdBookNumber(),
+                mmfName: cow.getMMFName(),
+                mmff: cow.getMMFF(),
+                mfName: cow.getMFName(),
+                mff: cow.getMFF(),
+                fmf: cow.getFMF(),
+                ff: cow.getFF(),
+                fff: cow.getFFF(),
+                father: cow.getFather(),
+                breeder: cow.getBreeder(),
+                image: cow.getImage(),
+                name: cow.getName(),
+                race: cow.getRace(),
+                id: cow.getId(),
+                gRZG: cow.getGRZG(),
+                gRZM: cow.getGRZM(),
+                milkKg: cow.getMilkKg(),
+                fatPercent: cow.getFatPercent(),
+                fatKg: cow.getFatKg(),
+                proteinPercent: cow.getProteinPercent(),
+                proteinKg: cow.getProteinKg(),
+                gRZE: cow.getGRZE(),
+                milkType: cow.getMilkType(),
+                body: cow.getBody(),
+                base: cow.getBase(),
+                udder: cow.getUdder(),
+                gRZFit: cow.getGRZFit(),
+                gRZN: cow.getGRZN(),
+                gRZS: cow.getGRZS(),
+                gRZD: cow.getGRZD(),
+                gRZR: cow.getGRZR(),
+                gRZkd: cow.getGRZkd(),
+                gRZKM: cow.getGRZKM(),
+                calfRunningDirectly: cow.getCalfRunningDirectly(),
+                backLegsPosition: cow.getBackLegsPosition(),
+                beckTilt: cow.getBeckTilt(),
+                beckWide: cow.getBeckWide(),
+                behindUdderHeight: cow.getBehindUdderHeight(),
+                bodyDepth: cow.getBodyDepth(),
+                centralBelt: cow.getCentralBelt(),
+                dairyCharacter: cow.getDairyCharacter(),
+                directionOfGrowthBack: cow.getDirectionOfGrowthBack(),
+                directionOfGrowthFront: cow.getDirectionOfGrowthFront(),
+                DirectionOfGrowthLength: cow.getDirectionOfGrowthLength(),
+                foreUdderSuspension: cow.getForeUdderSuspension(),
+                hock: cow.getHock(),
+                movement: cow.getMovement(),
+                size: cow.getSize(),
+                stealAngle: cow.getStealAngle(),
+                strength: cow.getStrength(),
+                udderDepth: cow.getUdderDepth(),
+                hornless: cow.getHornless(),
+                genomics: cow.getGenomics(),
+                sexed: cow.getSexed(),
+                freshSemen: cow.getFreshSemen()
+            });
+            Alloy.Collections.hornlessCol.add(model);
         }
     });
     $.contacts.addEventListener("click", function() {

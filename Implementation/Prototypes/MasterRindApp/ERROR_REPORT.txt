@@ -1,0 +1,23 @@
+//Fehler: Schritt zurück erst möglich, wenn die Taste dreimal gedrückt wird.
+//Ursache: eventListener für AboutButton wird mehrfach im Code aufgerufen
+//Lösung: EventListener nur einmal aufrufen.
+
+			/**
+			 * Fehler: Es wird immer die gleiche Kuh eingefügt (mit id=4).
+			 * Ursache: cow wurde außerhalb der Schleife erstellt, deshalb
+			 * 			wurde das gleiche Cowobjekt in Array geschrieben und
+			 * 			dabei auch überschrieben.
+			 * Lösung: Cow innerhalb der Schleife erstellen.
+			 */
+			
+/**
+ * Fehler: Favorit wird mehrmals (>10) eingefügt.
+ * Ursache: unbekannt
+ * Lösung: unbekannt
+ */
+
+/**
+ * Fehler: Liste wird erweitert beim mehrmaligen Klicken.
+ * Ursache: Alloy.Collections.cowCol muss auf leer gesetzt werden
+ * Lösung: unbekant
+ */

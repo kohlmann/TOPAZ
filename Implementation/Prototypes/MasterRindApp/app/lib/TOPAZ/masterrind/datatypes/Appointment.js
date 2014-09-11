@@ -14,8 +14,9 @@ TOPAZ.masterrind.datatypes.Appointment = function() {
 	var m_id = "null";
 	var m_name = "null";
 	var m_date = "null";
-	var m_company;
-	var m_contact;
+	var m_company = "null";
+	var m_contact = "null";
+	var m_distance = "null";
 
 	/**
 	 * Gibt die Id des Termins zurück.
@@ -65,6 +66,16 @@ TOPAZ.masterrind.datatypes.Appointment = function() {
 	 */
 	this.getContact = function() {
 		return m_contact;
+	};
+
+	/**
+	 * Gibt die Entfernung des Termins zurück.
+	 *
+	 * @method getDistance
+	 * @return {String} m_distance
+	 */
+	this.getDistance = function() {
+		return m_distance;
 	};
 
 	/**
@@ -120,6 +131,17 @@ TOPAZ.masterrind.datatypes.Appointment = function() {
 	 */
 	this.setId = function(id) {
 		m_id = id;
+	};
+
+	/**
+	 * Setzt die Entfernung des Termins.
+	 *
+	 * @method setDistance
+	 * @param {String} distance
+	 *
+	 */
+	this.setDistance = function(distance) {
+		m_distance = distance;
 	};
 
 };

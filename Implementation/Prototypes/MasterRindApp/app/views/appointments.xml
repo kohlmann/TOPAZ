@@ -1,3 +1,39 @@
 <Alloy>
-	<Window></Window>
+	<Collection src="appointmentMod" />
+	<TabGroup id="tabGroup" class="StartProperties">
+		<Tab id="auctionsTab" class="StartProperties">
+			<Window>
+				<ListView id="listView" defaultItemTemplate="template" onItemclick="itemClick">
+					<Templates>
+						<ItemTemplate name="template" id="template">
+							<Label bindId="name" id="name" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection>
+						<ListItem id="listItem" name:text="Bremervoerde" itemId="Bremervoerde"/>
+						<ListItem id="listItem" name:text="Cloppenburg" itemId="Cloppenburg"/>
+						<ListItem id="listItem" name:text="Lingen"itemId="Lingen"/>
+						<ListItem id="listItem" name:text="Uelzen"itemId="Uelzen"/>
+						<ListItem id="listItem" name:text="Verden"itemId="Verden"/>
+					</ListSection>
+				</ListView>
+			</Window>
+		</Tab>
+		<Tab id="showsTab" class="StartProperties">
+			<Window>
+				<ListView id="listView" defaultItemTemplate="template">
+					<Templates>
+						<ItemTemplate name="template" id="template">
+							<Label bindId="name" id="name" />
+							<Label bindId="date" id="date" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection dataCollection="Alloy.Collections.allShowsCol">
+						<ListItem id="listItem" name:text="{name}" date:text="{date}"/>
+					</ListSection>
+				</ListView>
+			</Window>
+		</Tab>
+
+	</TabGroup>
 </Alloy>
