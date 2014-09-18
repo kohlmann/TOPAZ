@@ -120,11 +120,6 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 		while (masterRindRS.isValidRow()) {
 			var cow = new TOPAZ.masterrind.datatypes.Cow();
 
-			// cow.setId(masterRindRS.fieldByName('id'));
-			// cow.setImage(masterRindRS.fieldByName('image'));
-			// cow.setName(masterRindRS.fieldByName('name'));
-			// cow.setFather(masterRindRS.fieldByName('father'));
-
 			cow.setA(masterRindRS.fieldByName('a'));
 			cow.setAAA(masterRindRS.fieldByName('aAa'));
 			cow.setMating(masterRindRS.fieldByName('mating'));
