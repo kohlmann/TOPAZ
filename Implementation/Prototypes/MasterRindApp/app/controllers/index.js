@@ -7,15 +7,17 @@ require('TOPAZ/masterrind/datatypes/Favorite');
  */
 //TODO:
 //hinterbeinwinkelung überall einfügen, Milzuchtwert und Exterieur binden
-// hol, sex, sperm anpassen, wenn alle anderen fertig sind
 
+
+var masterRindFacade;
 $.about.addEventListener('click', function(e) {
 	var win = Alloy.createController('about').getView();
 	//win.open();
-
-	var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-	masterRindFacade.addFavorite("10", "Test", "TEST");
-	console.log("-----Favorite eingefügt-------");
+// 
+	// var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
+	// masterRindFacade.addFavorite("10", "Test", "TEST");
+	// console.log("-----Favorite eingefügt-------");
+	
 });
 
 $.appointments.addEventListener('click', function(e) {
@@ -127,7 +129,7 @@ $.appointments.addEventListener('click', function(e) {
 $.blackColored.addEventListener('click', function(e) {
 	var win = Alloy.createController('blackColored').getView();
 	var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-	masterRindFacade.loadCowsFromDB();
+	//masterRindFacade.loadCowsFromDB();
 	win.open();
 
 	var allCows = masterRindFacade.getBlackColored().allCows();
@@ -136,7 +138,7 @@ $.blackColored.addEventListener('click', function(e) {
 	var hornless = masterRindFacade.getBlackColored().hornless();
 
 	Alloy.Collections.allCowsCol.reset();
-	Alloy.Collections.genomicsCol.reset();
+	Alloy.Collections.genomicsCol.reset(); 
 	Alloy.Collections.daughterTestedCol.reset();
 	Alloy.Collections.hornlessCol.reset();
 
@@ -1183,8 +1185,7 @@ $.genomics.addEventListener('click', function(e) {
 
 $.holsteins.addEventListener('click', function(e) {
 	var win = Alloy.createController('holsteins').getView();
-
-	var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
+	masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
 	masterRindFacade.loadCowsFromDB();
 	win.open();
 
@@ -1271,7 +1272,7 @@ $.hornless.addEventListener('click', function(e) {
 	win.open();
 
 	var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-	masterRindFacade.loadCowsFromDB();
+	//masterRindFacade.loadCowsFromDB();
 
 	var allCows = masterRindFacade.getHornless().allCows();
 	var genomics = masterRindFacade.getHornless().genomics();

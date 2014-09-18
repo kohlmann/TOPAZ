@@ -63,6 +63,12 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     var m_genomics = "null";
     var m_sexed = "null";
     var m_freshSemen = "null";
+    var m_backLegsAngularity = "null";
+    var m_beefMeatRace = "null";
+    var m_redfactor = "null";
+    var m_robot = "null";
+    var m_gRZG_RZF = "null";
+    var m_gRZRobot = "null";
     this.getA = function() {
         return m_a;
     };
@@ -249,6 +255,24 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     this.getFreshSemen = function() {
         return m_freshSemen;
     };
+    this.getBackLegsAngularity = function() {
+        return m_backLegsAngularity;
+    };
+    this.getBeefMeatRace = function() {
+        return m_beefMeatRace;
+    };
+    this.getRedfactor = function() {
+        return m_redfactor;
+    };
+    this.getRobot = function() {
+        return m_Robot;
+    };
+    this.getGRZRobot = function() {
+        return m_gRZRobot;
+    };
+    this.getGRZG_RZF = function() {
+        return m_gRZG_RZF;
+    };
     this.setA = function(a) {
         m_a = a;
     };
@@ -434,5 +458,23 @@ TOPAZ.masterrind.datatypes.Cow = function() {
     };
     this.setFreshSemen = function(freshSemen) {
         m_freshSemen = freshSemen;
+    };
+    this.setBackLegsAngularity = function(backLegsAngularity) {
+        m_backLegsAngularity = backLegsAngularity;
+    };
+    this.setBeefMeatRace = function(beefMeatRace) {
+        m_beefMeatRace = beefMeatRace;
+    };
+    this.setRedfactor = function(redfactor) {
+        m_redfactor = redfactor;
+    };
+    this.setRobot = function(robot) {
+        m_robot = robot;
+    };
+    this.setGRZRobot = function(gRZRobot) {
+        m_gRZRobot = gRZRobot;
+    };
+    this.setGRZG_RZF = function(gRZG_RZF) {
+        m_gRZG_RZF = gRZG_RZF;
     };
 };

@@ -73,6 +73,12 @@ TOPAZ.masterrind.datatypes.Cow = function() {
 	var m_genomics = "null";
 	var m_sexed = "null";
 	var m_freshSemen = "null";
+	var m_backLegsAngularity = "null";
+	var m_beefMeatRace = "null";
+	var m_redfactor = "null";
+	var m_robot = "null";
+	var m_gRZG_RZF = "null";
+	var m_gRZRobot = "null";
 
 	/**
 	 * Gibt a der Kuh zurück.
@@ -692,6 +698,66 @@ TOPAZ.masterrind.datatypes.Cow = function() {
 	 */
 	this.getFreshSemen = function() {
 		return m_freshSemen;
+	};
+
+	/**
+	 * Gibt Hinterbeinwinkelung zurück.
+	 *
+	 * @method getBackLegs Angularity
+	 * @return {String} m_backLegsAngularity
+	 */
+	this.getBackLegsAngularity = function() {
+		return m_backLegsAngularity;
+	};
+
+	/**
+	 * Gibt Fleischrinderrasse zurück.
+	 *
+	 * @method getBeefMeatRace
+	 * @return {String} m_beefMeatRace
+	 */
+	this.getBeefMeatRace = function() {
+		return m_beefMeatRace;
+	};
+
+	/**
+	 * Gibt Rotfaktor zurück.
+	 *
+	 * @method getRedfactor
+	 * @return {String} m_redfactor
+	 */
+	this.getRedfactor = function() {
+		return m_redfactor;
+	};
+
+	/**
+	 * Gibt Robot zurück.
+	 *
+	 * @method getRobot
+	 * @return {String} m_robot
+	 */
+	this.getRobot = function() {
+		return m_Robot;
+	};
+
+	/**
+	 * Gibt gRZRobot zurück.
+	 *
+	 * @method getGRZRobot
+	 * @return {String} m_gRZRobot
+	 */
+	this.getGRZRobot = function() {
+		return m_gRZRobot;
+	};
+
+	/**
+	 * Gibt gRZG-RZF zurück.
+	 *
+	 * @method getGRZG_RZF
+	 * @return {String} m_gRZG_RZF
+	 */
+	this.getGRZG_RZF = function() {
+		return m_gRZG_RZF;
 	};
 
 	/**
@@ -1346,13 +1412,73 @@ TOPAZ.masterrind.datatypes.Cow = function() {
 	};
 
 	/**
-	 * Setzt Frishsperma zurück.
+	 * Setzt Frishsperma.
 	 *
 	 * @method setFreshSemen
 	 * @param {String} freshSemen
 	 */
 	this.setFreshSemen = function(freshSemen) {
 		m_freshSemen = freshSemen;
+	};
+
+	/**
+	 * Setzt Hinterbeinwinkelung.
+	 *
+	 * @method setBackLegsAngularity
+	 * @param {String} backLegsAngularity
+	 */
+	this.setBackLegsAngularity = function(backLegsAngularity) {
+		m_backLegsAngularity = backLegsAngularity;
+	};
+
+	/**
+	 * Setzt Fleischrinderrasse.
+	 *
+	 * @method setBeefMeatRace
+	 * @param {String} beefMeatRace
+	 */
+	this.setBeefMeatRace = function(beefMeatRace) {
+		m_beefMeatRace = beefMeatRace;
+	};
+
+	/**
+	 * Setzt Rotfaktor.
+	 *
+	 * @method setRedfactor
+	 * @param {String} redfactor
+	 */
+	this.setRedfactor = function(redfactor) {
+		m_redfactor = redfactor;
+	};
+
+	/**
+	 * Setzt Robot.
+	 *
+	 * @method setRobot
+	 * @param {String} robot
+	 */
+	this.setRobot = function(robot) {
+		m_robot = robot;
+	};
+
+	/**
+	 * Setzt gRZRobot.
+	 *
+	 * @method setGRZRobot
+	 * @param {String} gRZRobot
+	 */
+	this.setGRZRobot = function(gRZRobot) {
+		m_gRZRobot = gRZRobot;
+	};
+
+	/**
+	 * Setzt gRZG-RZF.
+	 *
+	 * @method setGRZG_RZF
+	 * @param {String} gRZG_RZF
+	 */
+	this.setGRZG_RZF = function(gRZG_RZF) {
+		m_gRZG_RZF = gRZG_RZF;
 	};
 
 };

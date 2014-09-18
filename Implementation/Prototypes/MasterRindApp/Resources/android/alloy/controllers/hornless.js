@@ -225,7 +225,6 @@ function Controller() {
     }
     function init() {
         masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-        masterRindFacade.loadCowsFromDB();
     }
     function itemClick(e) {
         var win = Alloy.createController("cowDetails").getView();

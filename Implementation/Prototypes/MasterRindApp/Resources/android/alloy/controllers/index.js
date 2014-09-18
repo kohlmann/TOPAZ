@@ -201,11 +201,9 @@ function Controller() {
     require("TOPAZ/masterrind/impl/MasterRindFacade");
     require("TOPAZ/masterrind/datatypes/Cow");
     require("TOPAZ/masterrind/datatypes/Favorite");
+    var masterRindFacade;
     $.about.addEventListener("click", function() {
         Alloy.createController("about").getView();
-        var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-        masterRindFacade.addFavorite("10", "Test", "TEST");
-        console.log("-----Favorite eingefügt-------");
     });
     $.appointments.addEventListener("click", function() {
         var win = Alloy.createController("appointments").getView();
@@ -289,7 +287,6 @@ function Controller() {
     $.blackColored.addEventListener("click", function() {
         var win = Alloy.createController("blackColored").getView();
         var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-        masterRindFacade.loadCowsFromDB();
         win.open();
         var allCows = masterRindFacade.getBlackColored().allCows();
         var genomics = masterRindFacade.getBlackColored().genomics();
@@ -1263,7 +1260,7 @@ function Controller() {
     });
     $.holsteins.addEventListener("click", function() {
         var win = Alloy.createController("holsteins").getView();
-        var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
+        masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
         masterRindFacade.loadCowsFromDB();
         win.open();
         var allCows = masterRindFacade.getHolsteins().allCows();
@@ -1341,7 +1338,6 @@ function Controller() {
         var win = Alloy.createController("hornless").getView();
         win.open();
         var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-        masterRindFacade.loadCowsFromDB();
         var allCows = masterRindFacade.getHornless().allCows();
         var genomics = masterRindFacade.getHornless().genomics();
         var daughterTested = masterRindFacade.getHornless().daughterTested();

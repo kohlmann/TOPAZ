@@ -18,12 +18,13 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
     var m_favorites = new Array();
     var db = Ti.Database.install("/masterrind.sqlite", "massterrindDB");
     this.loadAppointmentsFromDB = function() {
-        var masterRindRS = db.execute("SELECT date,id, name FROM appointments");
+        var masterRindRS = db.execute("SELECT * FROM appointments");
         var appointment = new TOPAZ.masterrind.datatypes.Appointment();
         while (masterRindRS.isValidRow()) {
             appointment.setDate(masterRindRS.fieldByName("date"));
             appointment.setId(masterRindRS.fieldByName("id"));
             appointment.setName(masterRindRS.fieldByName("name"));
+            appointment.setDistance(masterRindRS.fieldByName("distance"));
             m_appointments.push(appointment);
             masterRindRS.next();
         }
@@ -44,7 +45,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
         masterRindRS.close();
     };
     this.loadContactsFromDB = function() {
-        var masterRindRS = db.execute("SELECT country,id, name, number,street, town, zipCode FROM contacts");
+        var masterRindRS = db.execute("SELECT * FROM contacts");
         var contact = new TOPAZ.masterrind.datatypes.Contact();
         while (masterRindRS.isValidRow()) {
             contact.setCountry(masterRindRS.fieldByName("country"));
@@ -53,11 +54,13 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
             contact.setNumber(masterRindRS.fieldByName("number"));
             contact.setStreet(masterRindRS.fieldByName("street"));
             contact.setTown(masterRindRS.fieldByName("town"));
-            contact.setImprint(masterRindRS.fieldByName("zipCode"));
+            contact.setZipCode(masterRindRS.fieldByName("zipCode"));
+            contact.setInfo(masterRindRS.fieldByName("info"));
             m_contacts.push(contact);
             masterRindRS.next();
         }
         masterRindRS.close();
+        return m_contacts;
     };
     this.loadCowsFromDB = function() {
         var masterRindRS = db.execute("SELECT * FROM cows");
@@ -132,7 +135,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
         return m_cows;
     };
     this.loadFavoritesFromDB = function() {
-        var masterRindRS = db.execute("SELECT cowId, cowName, id, name FROM favorites");
+        var masterRindRS = db.execute("SELECT * FROM favorites");
         var favorite = new TOPAZ.masterrind.datatypes.Favorite();
         while (masterRindRS.isValidRow()) {
             favorite.setCowId(masterRindRS.fieldByName("cowId"));
@@ -143,6 +146,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
             masterRindRS.next();
         }
         masterRindRS.close();
+        return m_favorites;
     };
     this.getAppointments = function(type) {
         var appointments = new Array();
@@ -198,20 +202,8 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
         for (i = 0; cs.length > i; i++) console.log("cs-> " + i + " " + cs[i].getId() + " " + cs[i].getName());
         return cs;
     };
-    this.getFavorites = function(type) {
-        var favorites = new Array();
-        for (i = 0; m_favorites.length > i; i++) {
-            favorite = factory.create(type);
-            favorite.setCowId(m_favorites[i].getCowId());
-            favorite.setCowName(m_favorites[i].getCowName());
-            favorite.setId(m_favorites[i].getId());
-            favorite.setName(m_favorites[i].getName());
-            favorites.push(favorite);
-        }
-        return favorites;
-    };
     this.addFavorite = function(cowId, cowName, id, name) {
-        db.execute("INSERT INTO favorites (cowId,cowName,id,name) VALUES (?,?,?,?)", cowId, cowName, id, name);
+        db.execute("INSERT INTO favorites (cowId,cowName,name) VALUES (?,?,?)", cowId, cowName, name);
         db.close();
     };
     this.removeFavorite = function() {};
@@ -272,7 +264,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
         };
         return cows;
     };
-    this.getHornless = function() {
+    this.getDaughterTested = function() {
         var cows = {
             allCows: function() {
                 return m_cows;
@@ -282,11 +274,14 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
             },
             redColored: function() {
                 return m_cows;
+            },
+            hornless: function() {
+                return m_cows;
             }
         };
         return cows;
     };
-    this.getHornless = function() {
+    this.getGenomics = function() {
         var cows = {
             allCows: function() {
                 return m_cows;
@@ -304,15 +299,66 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
         return cows;
     };
     this.getHolsteins = function() {
-        var cows = m_cows;
+        var cows = {
+            allCows: function() {
+                return m_cows;
+            }
+        };
         return cows;
     };
     this.getSexed = function() {
-        var cows = m_cows;
+        var cows = {
+            allCows: function() {
+                return m_cows;
+            }
+        };
         return cows;
     };
     this.getFreshSemen = function() {
-        var cows = m_cows;
+        var cows = {
+            allCows: function() {
+                return m_cows;
+            }
+        };
         return cows;
+    };
+    this.getShowsAndSpecials = function() {
+        var appointments = {
+            allAppointments: function() {
+                return m_appointments;
+            }
+        };
+        return appointments;
+    };
+    this.getAuctions = function() {
+        var appointments = {
+            allAppointments: function() {
+                return m_appointments;
+            },
+            bremervoerde: function() {
+                return m_appointments;
+            },
+            cloppenburg: function() {
+                return m_appointments;
+            },
+            lingen: function() {
+                return m_appointments;
+            },
+            uelzen: function() {
+                return m_appointments;
+            },
+            verden: function() {
+                return m_appointments;
+            }
+        };
+        return appointments;
+    };
+    this.getFavorites = function() {
+        var favorites = {
+            allFavorites: function() {
+                return m_favorites;
+            }
+        };
+        return favorites;
     };
 };

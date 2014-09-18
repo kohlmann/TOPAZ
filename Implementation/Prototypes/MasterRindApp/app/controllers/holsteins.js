@@ -7,11 +7,14 @@ require('TOPAZ/masterrind/impl/MasterRindFacade');
  * Lösung: unbekannt
  */
 function itemClick(e) {
+		
 	var win = Alloy.createController('cowDetails').getView();
-	win.open();
-
 	var section = $.listView.sections[e.sectionIndex];
 	var item = section.getItemAt(e.itemIndex);
+	console.log(e.itemindex);
+	win.open();
+
+
 
 	var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
 	masterRindFacade.loadCowsFromDB();

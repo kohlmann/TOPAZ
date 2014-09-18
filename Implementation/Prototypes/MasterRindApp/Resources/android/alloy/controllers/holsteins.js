@@ -53,9 +53,10 @@ function Controller() {
     }
     function itemClick(e) {
         var win = Alloy.createController("cowDetails").getView();
-        win.open();
         var section = $.listView.sections[e.sectionIndex];
         section.getItemAt(e.itemIndex);
+        console.log(e.itemindex);
+        win.open();
         var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
         masterRindFacade.loadCowsFromDB();
         var allCows = masterRindFacade.getHolsteins().allCows();

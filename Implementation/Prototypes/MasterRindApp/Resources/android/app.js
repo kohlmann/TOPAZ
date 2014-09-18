@@ -14,6 +14,8 @@ Alloy.Collections.redColoredCol = Alloy.createCollection("cowsMod");
 
 Alloy.Collections.blackColoredCol = Alloy.createCollection("cowsMod");
 
+Alloy.Collections.cowDetailsCol = Alloy.createCollection("cowsMod");
+
 Alloy.Collections.allFavoritesCol = Alloy.createCollection("favoriteMod");
 
 Alloy.Collections.animalSalesCol = Alloy.createCollection("contactMod");

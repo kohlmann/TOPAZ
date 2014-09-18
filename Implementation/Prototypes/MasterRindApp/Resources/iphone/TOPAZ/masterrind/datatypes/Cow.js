@@ -364,7 +364,7 @@ TOPAZ.masterrind.datatypes.Cow = function() {
         m_gRZR = gRZR;
     };
     this.setGRZkd = function(gRZkd) {
-        m_gRkd = gRZkd;
+        m_gRZkd = gRZkd;
     };
     this.setGRZKM = function(gRZKM) {
         m_gRZKM = gRZKM;

@@ -14,7 +14,7 @@ function init() {
 	//masterrind
 	//load
 	masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-	masterRindFacade.loadCowsFromDB();
+	//masterRindFacade.loadCowsFromDB();
 }
 
 $.tabGroup.addEventListener('focus', function(e) {
