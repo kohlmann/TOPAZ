@@ -597,7 +597,7 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 
 		var cows = {
 			allCows : function() {
-				return m_cows;
+				return globCows;
 			}
 		};
 
@@ -775,6 +775,96 @@ TOPAZ.masterrind.impl.MasterRindFacade = function() {
 		}
 
 		masterRindRS.close();
+		globCows = cows;
+
+		return cows;
+	};
+
+	/**
+	 * Setzt die Kuhobjekte.
+	 *
+	 * @method setCows
+	 * @param ResultSet
+	 * @return {Array} cows
+	 */
+	this.getCowsDB = function() {
+
+		var cows = new Array();
+		var masterRindRS = db.execute('SELECT * FROM RSH');
+
+		while (masterRindRS.isValidRow()) {
+			var cow = new TOPAZ.masterrind.datatypes.Cow();
+
+			cow.setA(masterRindRS.fieldByName('all'));
+			cow.setAAA(masterRindRS.fieldByName('aAa'));
+			cow.setMating(masterRindRS.fieldByName('Anpaarung'));
+			cow.setYearOfBirth(masterRindRS.fieldByName('Gebdat_Jahr'));
+			cow.setMonthOfBirth(masterRindRS.fieldByName('Gebdat_Monat'));
+			cow.setDayOfBirth(masterRindRS.fieldByName('Gebdat_Tag'));
+			cow.setGeneDefect(masterRindRS.fieldByName('Genedefekt'));
+			cow.setHerdBookNumber(masterRindRS.fieldByName('Herdbuchnr'));
+			cow.setMMFName(masterRindRS.fieldByName('MMV_Name'));
+			cow.setMMFF(masterRindRS.fieldByName('MMVV'));
+			cow.setMFName(masterRindRS.fieldByName('MV_Name'));
+			cow.setMFF(masterRindRS.fieldByName('MVV'));
+			cow.setFMF(masterRindRS.fieldByName('VMV'));
+			cow.setFF(masterRindRS.fieldByName('VV'));
+			cow.setFFF(masterRindRS.fieldByName('VVV'));
+			cow.setFather(masterRindRS.fieldByName('Vater'));
+			cow.setBreeder(masterRindRS.fieldByName('Zuechter'));
+			cow.setImage(masterRindRS.fieldByName('s_bild_al'));
+			cow.setName(masterRindRS.fieldByName('Name'));
+			cow.setRace(masterRindRS.fieldByName('Rasse'));
+			cow.setId(masterRindRS.fieldByName('Id'));
+			cow.setGRZG(masterRindRS.fieldByName('gRZG'));
+			cow.setGRZM(masterRindRS.fieldByName('gRZM'));
+			cow.setMilkKg(masterRindRS.fieldByName('Milch-Kg'));
+			cow.setFatPercent(masterRindRS.fieldByName('Fett-Pr'));
+			cow.setFatKg(masterRindRS.fieldByName('Fett-Kg'));
+			cow.setProteinPercent(masterRindRS.fieldByName('Eiw-Pr'));
+			cow.setProteinKg(masterRindRS.fieldByName('Eiw-Kg'));
+			cow.setGRZE(masterRindRS.fieldByName('gRZE'));
+			cow.setMilkType(masterRindRS.fieldByName('Milchtyp'));
+			cow.setBody(masterRindRS.fieldByName('Koerper'));
+			cow.setBase(masterRindRS.fieldByName('Fundament'));
+			cow.setUdder(masterRindRS.fieldByName('Euter'));
+			cow.setGRZFit(masterRindRS.fieldByName('gRZFit'));
+			cow.setGRZN(masterRindRS.fieldByName('gRZN'));
+			cow.setGRZS(masterRindRS.fieldByName('gRZS'));
+			cow.setGRZD(masterRindRS.fieldByName('gRZD'));
+			cow.setGRZR(masterRindRS.fieldByName('gRZR'));
+			cow.setGRZkd(masterRindRS.fieldByName('gRZkd'));
+			cow.setGRZKM(masterRindRS.fieldByName('gRZKm'));
+			cow.setCalfRunningDirectly(masterRindRS.fieldByName('Kalbverlauf direkt'));
+			cow.setBackLegsPosition(masterRindRS.fieldByName('Hbeinstell'));
+			cow.setBackLegsAngularity(masterRindRS.fieldByName('Hbeinwi'));
+			cow.setBeckTilt(masterRindRS.fieldByName('Beckenneig'));
+			cow.setBeckWide(masterRindRS.fieldByName('Beckenbr'));
+			cow.setBehindUdderHeight(masterRindRS.fieldByName('Hintereuterh'));
+			cow.setBodyDepth(masterRindRS.fieldByName('Koerpertiefe'));
+			cow.setCentralBelt(masterRindRS.fieldByName('Zentralband'));
+			cow.setDairyCharacter(masterRindRS.fieldByName('Milchchar'));
+			cow.setDirectionOfGrowthBack(masterRindRS.fieldByName('Strichpl_h'));
+			cow.setDirectionOfGrowthFront(masterRindRS.fieldByName('Strichpl_v'));
+			cow.setDirectionOfGrowthLength(masterRindRS.fieldByName('Strichl'));
+			cow.setForeUdderSuspension(masterRindRS.fieldByName('VeutAuf'));
+			cow.setHock(masterRindRS.fieldByName('Sprunggel'));
+			cow.setMovement(masterRindRS.fieldByName('Bewegung'));
+			cow.setSize(masterRindRS.fieldByName('Groesse'));
+			cow.setStealAngle(masterRindRS.fieldByName('Klauenwi'));
+			cow.setStrength(masterRindRS.fieldByName('Staerke'));
+			cow.setUdderDepth(masterRindRS.fieldByName('Eutertiefe'));
+			cow.setHornless(masterRindRS.fieldByName('Hornlos'));
+			cow.setGenomics(masterRindRS.fieldByName('Genomic'));
+			cow.setSexed(masterRindRS.fieldByName('gesexed'));
+			cow.setFreshSemen(masterRindRS.fieldByName('Frischsperma'));
+
+			cows.push(cow);
+			masterRindRS.next();
+		}
+
+		masterRindRS.close();
+		globCows = cows;
 
 		return cows;
 	};

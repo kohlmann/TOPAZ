@@ -1,5 +1,7 @@
 var Alloy = require("alloy"), _ = Alloy._, Backbone = Alloy.Backbone;
 
+var globCows;
+
 Alloy.Collections.allCowsCol = Alloy.createCollection("cowsMod");
 
 Alloy.Collections.genomicsCol = Alloy.createCollection("cowsMod");

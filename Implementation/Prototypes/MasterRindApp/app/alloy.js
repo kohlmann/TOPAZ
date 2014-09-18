@@ -10,6 +10,8 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+var globCows;
+
 Alloy.Collections.allCowsCol = Alloy.createCollection('cowsMod');
 Alloy.Collections.genomicsCol = Alloy.createCollection('cowsMod');
 Alloy.Collections.daughterTestedCol = Alloy.createCollection('cowsMod');
