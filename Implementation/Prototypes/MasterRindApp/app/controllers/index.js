@@ -1,6 +1,7 @@
 require('TOPAZ/masterrind/impl/MasterRindFacade');
 require('TOPAZ/masterrind/datatypes/Cow');
 require('TOPAZ/masterrind/datatypes/Favorite');
+require('TOPAZ/masterrind/impl/MasterRindSingelton');
 
 /**
  * factorymethode für index überlegen
@@ -13,11 +14,14 @@ $.about.addEventListener('click', function(e) {
 	var win = Alloy.createController('about').getView();
 	//win.open();
 	//
-	var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
+	// var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
 	//masterRindFacade.getCowsDB();
-	globCows = masterRindFacade.getBlackColored();
+	// globCows = masterRindFacade.getBlackColored();
+	
+	console.log("-----starte-------");
+	var masterRindSingelton=new TOPAZ.masterrind.impl.MasterRindSingelton();
+	masterRindSingelton.myConstructor();
 	console.log("-----DB geladen-------");
-
 });
 
 $.appointments.addEventListener('click', function(e) {
@@ -128,8 +132,6 @@ $.appointments.addEventListener('click', function(e) {
 
 $.blackColored.addEventListener('click', function(e) {
 	var win = Alloy.createController('blackColored').getView();
-	//var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-	//masterRindFacade.loadCowsFromDB();
 	win.open();
 
 });

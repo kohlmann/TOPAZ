@@ -1,5 +1,6 @@
 require('TOPAZ/masterrind/datatypes/Cow');
 require('TOPAZ/masterrind/impl/MasterRindFacade');
+require('TOPAZ/masterrind/impl/MasterRindSingelton');
 
 /**
  * Fehler: app stürzt ab, wenn die Liste das zweite Mal angeklickt wird
@@ -7,325 +8,51 @@ require('TOPAZ/masterrind/impl/MasterRindFacade');
  * Lösung: unbekannt
  */
 
-var cows;
-var masterRindFacade;
+/**
+ * Fehler: Collection ist leer, wenn fetch aufgerufen wird
+ * Ursache: Daten wurden nicht gespeichert
+ * Lösung: save() aufrufen z.B. model.save()
+ */
 
-function init() {
-	masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-	//masterRindFacade.loadCowsFromDB();
-}
+//TODO: close bei allen controllern einfügen
+$.tabGroup.addEventListener('close', function() {
+	$.destroy();
+});
 
 $.tabGroup.addEventListener('focus', function(e) {
-	//init();
-	var allCows = globCows.allCows();
-	var genomics = globCows.genomics();
-	var daughterTested = globCows.daughterTested();
-	var hornless = globCows.hornless();
 
+	var masterRindSingelton = new TOPAZ.masterrind.impl.MasterRindSingelton();
 	Alloy.Collections.allCowsCol.reset();
-	Alloy.Collections.genomicsCol.reset();
 	Alloy.Collections.daughterTestedCol.reset();
 	Alloy.Collections.hornlessCol.reset();
+	Alloy.Collections.genomicsCol.reset();
 
 	switch(e.index) {
 		case 0:
 			{
-				for ( i = 0; i < allCows.length; i++) {
-
-					var cow = allCows[i];
-					// console.log(cow.getId() + ' ' + cow.getName() + ' ' + cow.getFather());
-
-					var model = Alloy.createModel('cowsMod', {
-						a : cow.getA(),
-						aAa : cow.getAAA(),
-						mating : cow.getMating(),
-						yearOfBirth : cow.getYearOfBirth(),
-						monthOfBirth : cow.getMonthOfBirth(),
-						dayOfBirth : cow.getDayOfBirth(),
-						geneDefect : cow.getGeneDefect(),
-						herdBookNumber : cow.getHerdBookNumber(),
-						mmfName : cow.getMMFName(),
-						mmff : cow.getMMFF(),
-						mfName : cow.getMFName(),
-						mff : cow.getMFF(),
-						fmf : cow.getFMF(),
-						ff : "x " + cow.getFF(),
-						fff : "x " + cow.getFFF(),
-						father : cow.getFather(),
-						breeder : cow.getBreeder(),
-						image : cow.getImage(),
-						name : cow.getName(),
-						race : cow.getRace(),
-						id : cow.getId(),
-						gRZG : "RZG" + cow.getGRZG(),
-						gRZM : cow.getGRZM(),
-						milkKg : cow.getMilkKg(),
-						fatPercent : cow.getFatPercent(),
-						fatKg : cow.getFatKg(),
-						proteinPercent : cow.getProteinPercent(),
-						proteinKg : cow.getProteinKg(),
-						gRZE : cow.getGRZE(),
-						milkType : cow.getMilkType(),
-						body : cow.getBody(),
-						base : cow.getBase(),
-						udder : cow.getUdder(),
-						gRZFit : cow.getGRZFit(),
-						gRZN : cow.getGRZN(),
-						gRZS : cow.getGRZS(),
-						gRZD : cow.getGRZD(),
-						gRZR : cow.getGRZR(),
-						gRZkd : cow.getGRZkd(),
-						gRZKM : cow.getGRZKM(),
-						calfRunningDirectly : cow.getCalfRunningDirectly(),
-						backLegsPosition : cow.getBackLegsPosition(),
-						beckTilt : cow.getBeckTilt(),
-						beckWide : cow.getBeckWide(),
-						behindUdderHeight : cow.getBehindUdderHeight(),
-						bodyDepth : cow.getBodyDepth(),
-						centralBelt : cow.getCentralBelt(),
-						dairyCharacter : cow.getDairyCharacter(),
-						directionOfGrowthBack : cow.getDirectionOfGrowthBack(),
-						directionOfGrowthFront : cow.getDirectionOfGrowthFront(),
-						DirectionOfGrowthLength : cow.getDirectionOfGrowthLength(),
-						foreUdderSuspension : cow.getForeUdderSuspension(),
-						hock : cow.getHock(),
-						movement : cow.getMovement(),
-						size : cow.getSize(),
-						stealAngle : cow.getStealAngle(),
-						strength : cow.getStrength(),
-						udderDepth : cow.getUdderDepth(),
-						hornless : cow.getHornless(),
-						genomics : cow.getGenomics(),
-						sexed : cow.getSexed(),
-						freshSemen : cow.getFreshSemen(),
-					});
-
-					Alloy.Collections.allCowsCol.add(model);
+				for ( i = 0; i <= masterRindSingelton.allCowsModels.length; i++) {
+					Alloy.Collections.allCowsCol.add(masterRindSingelton.allCowsModels[i]);
 				}
 			}
 			break;
 		case 1:
 			{
-				for ( i = 0; i < genomics.length; i++) {
-
-					var cow = genomics[i];
-
-					var model = Alloy.createModel('cowsMod', {
-						a : cow.getA(),
-						aAa : cow.getAAA(),
-						mating : cow.getMating(),
-						yearOfBirth : cow.getYearOfBirth(),
-						monthOfBirth : cow.getMonthOfBirth(),
-						dayOfBirth : cow.getDayOfBirth(),
-						geneDefect : cow.getGeneDefect(),
-						herdBookNumber : cow.getHerdBookNumber(),
-						mmfName : cow.getMMFName(),
-						mmff : cow.getMMFF(),
-						mfName : cow.getMFName(),
-						mff : cow.getMFF(),
-						fmf : cow.getFMF(),
-						ff : "x " + cow.getFF(),
-						fff : "x " + cow.getFFF(),
-						father : cow.getFather(),
-						breeder : cow.getBreeder(),
-						image : cow.getImage(),
-						name : cow.getName(),
-						race : cow.getRace(),
-						id : cow.getId(),
-						gRZG : "RZG" + cow.getGRZG(),
-						gRZM : cow.getGRZM(),
-						milkKg : cow.getMilkKg(),
-						fatPercent : cow.getFatPercent(),
-						fatKg : cow.getFatKg(),
-						proteinPercent : cow.getProteinPercent(),
-						proteinKg : cow.getProteinKg(),
-						gRZE : cow.getGRZE(),
-						milkType : cow.getMilkType(),
-						body : cow.getBody(),
-						base : cow.getBase(),
-						udder : cow.getUdder(),
-						gRZFit : cow.getGRZFit(),
-						gRZN : cow.getGRZN(),
-						gRZS : cow.getGRZS(),
-						gRZD : cow.getGRZD(),
-						gRZR : cow.getGRZR(),
-						gRZkd : cow.getGRZkd(),
-						gRZKM : cow.getGRZKM(),
-						calfRunningDirectly : cow.getCalfRunningDirectly(),
-						backLegsPosition : cow.getBackLegsPosition(),
-						beckTilt : cow.getBeckTilt(),
-						beckWide : cow.getBeckWide(),
-						behindUdderHeight : cow.getBehindUdderHeight(),
-						bodyDepth : cow.getBodyDepth(),
-						centralBelt : cow.getCentralBelt(),
-						dairyCharacter : cow.getDairyCharacter(),
-						directionOfGrowthBack : cow.getDirectionOfGrowthBack(),
-						directionOfGrowthFront : cow.getDirectionOfGrowthFront(),
-						DirectionOfGrowthLength : cow.getDirectionOfGrowthLength(),
-						foreUdderSuspension : cow.getForeUdderSuspension(),
-						hock : cow.getHock(),
-						movement : cow.getMovement(),
-						size : cow.getSize(),
-						stealAngle : cow.getStealAngle(),
-						strength : cow.getStrength(),
-						udderDepth : cow.getUdderDepth(),
-						hornless : cow.getHornless(),
-						genomics : cow.getGenomics(),
-						sexed : cow.getSexed(),
-						freshSemen : cow.getFreshSemen(),
-					});
-
-					Alloy.Collections.genomicsCol.add(model);
+				for ( i = 0; i <= masterRindSingelton.genomicsModels.length; i++) {
+					Alloy.Collections.genomicsCol.add(masterRindSingelton.genomicsModels[i]);
 				}
 			}
 			break;
 		case 2:
 			{
-				for ( i = 0; i < daughterTested.length; i++) {
-
-					var cow = daughterTested[i];
-
-					var model = Alloy.createModel('cowsMod', {
-						a : cow.getA(),
-						aAa : cow.getAAA(),
-						mating : cow.getMating(),
-						yearOfBirth : cow.getYearOfBirth(),
-						monthOfBirth : cow.getMonthOfBirth(),
-						dayOfBirth : cow.getDayOfBirth(),
-						geneDefect : cow.getGeneDefect(),
-						herdBookNumber : cow.getHerdBookNumber(),
-						mmfName : cow.getMMFName(),
-						mmff : cow.getMMFF(),
-						mfName : cow.getMFName(),
-						mff : cow.getMFF(),
-						fmf : cow.getFMF(),
-						ff : "x " + cow.getFF(),
-						fff : "x " + cow.getFFF(),
-						father : cow.getFather(),
-						breeder : cow.getBreeder(),
-						image : cow.getImage(),
-						name : cow.getName(),
-						race : cow.getRace(),
-						id : cow.getId(),
-						gRZG : "RZG" + cow.getGRZG(),
-						gRZM : cow.getGRZM(),
-						milkKg : cow.getMilkKg(),
-						fatPercent : cow.getFatPercent(),
-						fatKg : cow.getFatKg(),
-						proteinPercent : cow.getProteinPercent(),
-						proteinKg : cow.getProteinKg(),
-						gRZE : cow.getGRZE(),
-						milkType : cow.getMilkType(),
-						body : cow.getBody(),
-						base : cow.getBase(),
-						udder : cow.getUdder(),
-						gRZFit : cow.getGRZFit(),
-						gRZN : cow.getGRZN(),
-						gRZS : cow.getGRZS(),
-						gRZD : cow.getGRZD(),
-						gRZR : cow.getGRZR(),
-						gRZkd : cow.getGRZkd(),
-						gRZKM : cow.getGRZKM(),
-						calfRunningDirectly : cow.getCalfRunningDirectly(),
-						backLegsPosition : cow.getBackLegsPosition(),
-						beckTilt : cow.getBeckTilt(),
-						beckWide : cow.getBeckWide(),
-						behindUdderHeight : cow.getBehindUdderHeight(),
-						bodyDepth : cow.getBodyDepth(),
-						centralBelt : cow.getCentralBelt(),
-						dairyCharacter : cow.getDairyCharacter(),
-						directionOfGrowthBack : cow.getDirectionOfGrowthBack(),
-						directionOfGrowthFront : cow.getDirectionOfGrowthFront(),
-						DirectionOfGrowthLength : cow.getDirectionOfGrowthLength(),
-						foreUdderSuspension : cow.getForeUdderSuspension(),
-						hock : cow.getHock(),
-						movement : cow.getMovement(),
-						size : cow.getSize(),
-						stealAngle : cow.getStealAngle(),
-						strength : cow.getStrength(),
-						udderDepth : cow.getUdderDepth(),
-						hornless : cow.getHornless(),
-						genomics : cow.getGenomics(),
-						sexed : cow.getSexed(),
-						freshSemen : cow.getFreshSemen(),
-					});
-
-					Alloy.Collections.daughterTestedCol.add(model);
+				for ( i = 0; i <= masterRindSingelton.daughterTestedModels.length; i++) {
+					Alloy.Collections.daughterTestedCol.add(masterRindSingelton.daughterTestedModels[i]);
 				}
 			}
 			break;
 		case 3:
 			{
-				for ( i = 0; i < hornless.length; i++) {
-
-					var cow = hornless[i];
-
-					var model = Alloy.createModel('cowsMod', {
-						a : cow.getA(),
-						aAa : cow.getAAA(),
-						mating : cow.getMating(),
-						yearOfBirth : cow.getYearOfBirth(),
-						monthOfBirth : cow.getMonthOfBirth(),
-						dayOfBirth : cow.getDayOfBirth(),
-						geneDefect : cow.getGeneDefect(),
-						herdBookNumber : cow.getHerdBookNumber(),
-						mmfName : cow.getMMFName(),
-						mmff : cow.getMMFF(),
-						mfName : cow.getMFName(),
-						mff : cow.getMFF(),
-						fmf : cow.getFMF(),
-						ff : "x " + cow.getFF(),
-						fff : "x " + cow.getFFF(),
-						father : cow.getFather(),
-						breeder : cow.getBreeder(),
-						image : cow.getImage(),
-						name : cow.getName(),
-						race : cow.getRace(),
-						id : cow.getId(),
-						gRZG : "RZG" + cow.getGRZG(),
-						gRZM : cow.getGRZM(),
-						milkKg : cow.getMilkKg(),
-						fatPercent : cow.getFatPercent(),
-						fatKg : cow.getFatKg(),
-						proteinPercent : cow.getProteinPercent(),
-						proteinKg : cow.getProteinKg(),
-						gRZE : cow.getGRZE(),
-						milkType : cow.getMilkType(),
-						body : cow.getBody(),
-						base : cow.getBase(),
-						udder : cow.getUdder(),
-						gRZFit : cow.getGRZFit(),
-						gRZN : cow.getGRZN(),
-						gRZS : cow.getGRZS(),
-						gRZD : cow.getGRZD(),
-						gRZR : cow.getGRZR(),
-						gRZkd : cow.getGRZkd(),
-						gRZKM : cow.getGRZKM(),
-						calfRunningDirectly : cow.getCalfRunningDirectly(),
-						backLegsPosition : cow.getBackLegsPosition(),
-						beckTilt : cow.getBeckTilt(),
-						beckWide : cow.getBeckWide(),
-						behindUdderHeight : cow.getBehindUdderHeight(),
-						bodyDepth : cow.getBodyDepth(),
-						centralBelt : cow.getCentralBelt(),
-						dairyCharacter : cow.getDairyCharacter(),
-						directionOfGrowthBack : cow.getDirectionOfGrowthBack(),
-						directionOfGrowthFront : cow.getDirectionOfGrowthFront(),
-						DirectionOfGrowthLength : cow.getDirectionOfGrowthLength(),
-						foreUdderSuspension : cow.getForeUdderSuspension(),
-						hock : cow.getHock(),
-						movement : cow.getMovement(),
-						size : cow.getSize(),
-						stealAngle : cow.getStealAngle(),
-						strength : cow.getStrength(),
-						udderDepth : cow.getUdderDepth(),
-						hornless : cow.getHornless(),
-						genomics : cow.getGenomics(),
-						sexed : cow.getSexed(),
-						freshSemen : cow.getFreshSemen(),
-					});
-
-					Alloy.Collections.hornlessCol.add(model);
+				for ( i = 0; i <= masterRindSingelton.hornlessModels.length; i++) {
+					Alloy.Collections.hornlessCol.add(masterRindSingelton.hornlessModels[i]);
 				}
 			}
 			break;

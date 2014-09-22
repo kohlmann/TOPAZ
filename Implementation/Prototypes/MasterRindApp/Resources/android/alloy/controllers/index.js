@@ -201,11 +201,13 @@ function Controller() {
     require("TOPAZ/masterrind/impl/MasterRindFacade");
     require("TOPAZ/masterrind/datatypes/Cow");
     require("TOPAZ/masterrind/datatypes/Favorite");
+    require("TOPAZ/masterrind/impl/MasterRindSingelton");
     var masterRindFacade;
     $.about.addEventListener("click", function() {
         Alloy.createController("about").getView();
-        var masterRindFacade = new TOPAZ.masterrind.impl.MasterRindFacade();
-        globCows = masterRindFacade.getBlackColored();
+        console.log("-----starte-------");
+        var masterRindSingelton = new TOPAZ.masterrind.impl.MasterRindSingelton();
+        masterRindSingelton.myConstructor();
         console.log("-----DB geladen-------");
     });
     $.appointments.addEventListener("click", function() {

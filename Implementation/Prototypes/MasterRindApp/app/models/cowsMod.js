@@ -66,8 +66,19 @@ exports.definition = {
 			"freshSemen" : "text"
 		},
 		adapter : {
-			// type : "sql",
-			collection_name : "cowsMod"
+			//type : "sql",
+			collection_name : "RSH",
+			// db_file gibt an, dass products.sqlite benutzt wird um die Datenbank zu installieren
+			// Pre-load the database (safe method)
+			//db_file : "/RSH.sqlite",
+
+			// db_name sagt dem model, dass es den Namen anstatt des Dateinamens verwenden soll
+			// db_name required when pre-loading a db
+			// should the name of your pre-loaded db
+			//db_name : "RSH",
+			
+			//wichtig, wenn in db primerykey gesetzt ist
+			// idAttribute: 'id'
 		}
 	}
 };

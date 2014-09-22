@@ -67,7 +67,7 @@ exports.definition = {
             freshSemen: "text"
         },
         adapter: {
-            collection_name: "cowsMod"
+            collection_name: "RSH"
         }
     }
 };
