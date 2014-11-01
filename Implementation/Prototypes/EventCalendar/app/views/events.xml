@@ -1,0 +1,24 @@
+<Alloy>
+	<Collection src="EventCalendarModel"/>
+
+	<Window class="container">
+		<View id="body">
+			<ListView id="eventsList" defaultItemTemplate="template" onItemclick="click">
+				<Templates>
+					<ItemTemplate name="template" id="template">
+						<Label bindId="name" id="name" />
+						<Label bindId="date_from" id="date_from" />
+						<Label bindId="date_to" id="date_to" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection dataCollection="eventsCollection">
+					<ListItem id="item" itemId="{id}" name:text="{name}" date_from:text="{datum_von}" date_to:text="{datum_bis}" />
+				</ListSection>
+			</ListView>
+		</View>
+		<View id="footer">
+			<Button id="sortByDistance" onClick="sortByDistanceClick">Sortieren nach Entfernung</Button>
+			<Button id="sortByName" onClick="sortByNameClick">Sortieren nach Namen</Button>
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,187 @@
+".container":{
+	backgroundColor: "white",
+	orientationModes: [Ti.UI.PORTRAIT]
+}
+
+".generalProperties": {
+	color: "black",
+	layout: "vertical"
+}
+
+"#mainInfo": {
+	left: "2%",
+	top: 0,
+	height: "20%"
+}
+
+"#contactDetails": {
+	left: "2%",
+	top: "20%",
+	height: "25%"
+}
+
+"#other": {
+	left: "2%",
+	top: "45%",
+	height: "20%"
+}
+
+"#contact": {
+	left: "2%",
+	top: "70%",
+	height: "40%"
+}
+
+"#name": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#date_from": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+"#date_to": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#time_from": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#time_to": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#image": {
+	//Anpassen
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL,
+	height:"15%"
+}
+
+"#organizer": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#street": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#zipcode": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#place": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#meetingplace": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#dues": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#link": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "16dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#route": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "20dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#call": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "20dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#saveInCalendar": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "20dp"
+	},
+	width:Ti.UI.FILL
+}
+
+"#email": {
+	color:"black",
+	font: {
+		fontFamily: "Arial",
+		fontSize: "20dp"
+	},
+	width:Ti.UI.FILL
+}

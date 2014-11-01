@@ -1,0 +1,17 @@
+<Alloy>
+	<Collection src="EventCalendarModel" />
+	<Window class="container">
+		<ListView id="categoriesList" defaultItemTemplate="template" onItemclick="click">
+			<Templates>
+				<ItemTemplate name="template" id="template">
+					<ImageView bindId="pic" id="icon" />
+					<Label bindId="name" id="name" />
+					<Label bindId="numberOfEvents" id="numberOfEvents" />
+				</ItemTemplate>
+			</Templates>
+			<ListSection dataCollection="categoriesCollection">
+				<ListItem id="item" itemId="{id}" name:text="{kategorie}" pic:image="{image}" numberOfEvents:text="{numberOfEvents}" />
+			</ListSection>
+		</ListView>
+	</Window>
+</Alloy>

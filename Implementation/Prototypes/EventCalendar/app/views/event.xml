@@ -1,0 +1,32 @@
+<Alloy>
+	<Collection src="EventCalendarModel"/>
+	<Window class="container" >
+		<ScrollView dataCollection="eventCollection">
+			<View id="mainInfo" layout="vertical" class="generalProperties">
+				<Label id="name" text="{name}"></Label>
+				<Label id="date_from" text="{datum_von}"></Label>
+				<Label id="date_to" text="{datum_bis}"></Label>
+				<Label id="time_from" text="{zeit_von}"></Label>
+				<Label id="time_to" text="{zeit_bis}"></Label>
+			</View>
+			<View id="contactDetails" class="generalProperties" >
+				<ImageView id="image"></ImageView>
+				<Label id="organizer" text="{veranstalter}"></Label>
+				<Label id="street" text="{starsse}"></Label>
+				<Label id="zipcode" text="{plz}"></Label>
+				<Label id="place" text="{ort}"></Label>
+			</View>
+			<View id="other" class="generalProperties" >
+				<Label id="meetingplace" text="{treffpunkt}"></Label>
+				<Label id="dues" text="{gebuehren}"></Label>
+				<Label id="link" text="{Link}"></Label>
+			</View>
+			<View id="contact" class="generalProperties">
+				<Button id="route" onClick="routeClick">Karte</Button>
+				<Button id="call" onClick="callClick">Anrufen</Button>
+				<Button id="saveInCalendar" onClick="saveInCalendarClick">Im Telfonkalender speichern</Button>
+				<Button id="email" onClick="emailClick">Email schreiben</Button>
+			</View>
+		</ScrollView>
+	</Window>
+</Alloy>
