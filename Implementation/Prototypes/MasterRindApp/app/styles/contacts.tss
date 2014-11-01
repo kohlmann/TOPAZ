@@ -1,0 +1,37 @@
+
+"#tabGroup" :{
+	backgroundColor:'white',
+	backgroundSelectedColor:'blue'
+}
+
+"#animalSalesTab" :{
+	height: '100dp',
+	title:'Alle',
+	backgroundSelectedColor:'blue'
+}
+
+".StartProperties" :{
+	backgroundColor:'white'
+}
+
+"#name" : {
+    color: 'black',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '10dp', top: 0
+}
+
+"#info" : {
+    color: 'gray',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '14dp' },
+    left: '10dp', top: '25dp'
+}
+
+"#listItem" :{
+	width: Titanium.UI.FILL,
+	height: Titanium.UI.FILL,
+	left:'10'
+}
+
+

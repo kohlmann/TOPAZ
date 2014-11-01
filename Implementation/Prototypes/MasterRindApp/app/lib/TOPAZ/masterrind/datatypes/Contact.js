@@ -1,5 +1,11 @@
 TOPAZ.namespace('TOPAZ.masterrind.datatypes.Contact');
 
+/**
+ * Bildet eine Datenstruktur zum Speichern von Daten eines Kontaktes.
+ *
+ * @namespace TOPAZ.masterrind.datatypes
+ * @class Contact
+ */
 TOPAZ.masterrind.datatypes.Contact = function() {
 	var m_name = "null";
 	var m_street = "null";
@@ -7,10 +13,22 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 	var m_zipCode = "null";
 	var m_town = "null";
 	var m_country = "null";
+	var m_id = "null";
+	var m_info = "null";
+
+	/**
+	 * Gibt die Id des Kontakts zurück.
+	 *
+	 * @method getId
+	 * @return {String} m_id
+	 */
+	this.getId = function() {
+		return m_id;
+	};
 
 	/**
 	 * Gibt den Namen des Kontakts zurück.
-	 * 
+	 *
 	 * @method getName
 	 * @return {String} m_name
 	 */
@@ -20,7 +38,7 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Gibt die Strasse des Kontakts zurück.
-	 * 
+	 *
 	 * @method getStreet
 	 * @return {String} m_street
 	 */
@@ -30,7 +48,7 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Gibt die PLZ des Kontakts zurück.
-	 * 
+	 *
 	 * @method getZipCode
 	 * @return {String} m_zipCode
 	 */
@@ -40,7 +58,7 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Gibt die des Kontakts zurück.
-	 * 
+	 *
 	 * @method getTown
 	 * @return {String} m_town
 	 */
@@ -50,7 +68,7 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Gibt das Land des Kontakts zurück.
-	 * 
+	 *
 	 * @method getCountry
 	 * @return {String} m_country
 	 */
@@ -59,11 +77,31 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 	};
 
 	/**
+	 * Gibt Info des Kontakts zurück.
+	 *
+	 * @method getInfo
+	 * @return {String} m_info
+	 */
+	this.getInfo = function() {
+		return m_info;
+	};
+
+	/**
+	 * Gibt Nummer des Kontakts zurück.
+	 *
+	 * @method getNumber
+	 * @return {String} m_number
+	 */
+	this.getNumber = function() {
+		return m_number;
+	};
+
+	/**
 	 * Setzt den Namen des Kontakts.
-	 * 
+	 *
 	 * @method setName
 	 * @param {String} name
-	 * 
+	 *
 	 */
 	this.setName = function(name) {
 		m_name = name;
@@ -71,10 +109,10 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Setzt die Strasse des Kontakts.
-	 * 
+	 *
 	 * @method setStreet
 	 * @param {String} street
-	 * 
+	 *
 	 */
 	this.setStreet = function(street) {
 		m_street = street;
@@ -82,10 +120,10 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Setzt die Nummer des Kontakts.
-	 * 
+	 *
 	 * @method setNumber
 	 * @param {String} number
-	 * 
+	 *
 	 */
 	this.setNumber = function(number) {
 		m_number = number;
@@ -93,35 +131,57 @@ TOPAZ.masterrind.datatypes.Contact = function() {
 
 	/**
 	 * Setzt die PLZ des Kontakts.
-	 * 
+	 *
 	 * @method setName
 	 * @param {String} name
-	 * 
+	 *
 	 */
 	this.setZipCode = function(zipCode) {
-		m_zipCode = name;
+		m_zipCode = zipCode;
 	};
 
 	/**
 	 * Setzt die Stadt des Kontakts.
-	 * 
+	 *
 	 * @method setTown
 	 * @param {String} town
-	 * 
+	 *
 	 */
 	this.setTown = function(town) {
 		m_town = town;
 	};
-	
+
 	/**
 	 * Setzt das Land des Kontakts.
-	 * 
+	 *
 	 * @method setCountry
 	 * @param {String} country
-	 * 
+	 *
 	 */
 	this.setCountry = function(country) {
 		m_country = country;
 	};
 
-}; 
+	/**
+	 * Setzt die Id des Kontakts.
+	 *
+	 * @method setId
+	 * @param {String} id
+	 *
+	 */
+	this.setId = function(id) {
+		m_id = id;
+	};
+
+	/**
+	 * Setzt die Info des Kontakts.
+	 *
+	 * @method setInfo
+	 * @param {String} info
+	 *
+	 */
+	this.setInfo = function(info) {
+		m_info = info;
+	};
+
+};

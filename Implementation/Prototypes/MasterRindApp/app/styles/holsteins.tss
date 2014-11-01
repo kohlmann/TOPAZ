@@ -1,15 +1,85 @@
-"#body": {
-	width: Alloy.Globals.screenWidth,
-	height: Alloy.Globals.screenHeight,
-	backgroundImage: '/images/grid_an_hintergrund_ap01.png'
-},
-"#header":{
-	width: Ti.UI.FILL,
-	height: Ti.UI.FILL,
-	backgroundImage: "/images/MAR_Logo01_xl.png"	
-},
-"#footer":{
-	width: Ti.UI.FILL,
-	height: Ti.UI.FILL ,
-	backgroundImage: "/images/MAR_Logo01_xl.png"	
+
+"#tabGroup" :{
+	backgroundColor:'white',
+	backgroundSelectedColor:'blue'
 }
+
+"#allCowsTab" :{
+	height: '100dp',
+	title:'Alle',
+	backgroundSelectedColor:'blue'
+}
+
+"#hornlessTab" :{
+	title:'Hornlose',
+
+	backgroundSelectedColor:'blue'
+}
+
+"#daughterTestedTab" :{
+	title:'Geprüfte',
+	backgroundSelectedColor:'blue'
+}
+
+"#genomicsTab" :{
+	title:'Genomics',
+	backgroundSelectedColor:'blue'
+}
+
+".StartProperties" :{
+	backgroundColor:'white'
+}
+
+"#icon" : {
+    width: '50dp', height: '50dp', left: 0
+}
+
+"#name" : {
+    color: 'black',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '60dp', top: 0
+}
+
+"#aaa" : {
+    color: 'black',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '160dp', top: 0
+}
+
+"#grzg" : {
+    color: 'black',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '260dp', top: 0
+}
+
+"#father" : {
+    color: 'gray',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '14dp' },
+    left: '60dp', top: '25dp'
+}
+
+"#ff" : {
+    color: 'gray',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '14dp' },
+    left: '180dp', top: '25dp'
+}
+
+"#fff" : {
+    color: 'gray',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '14dp' },
+    left: '270dp', top: '25dp'
+}
+
+"#listItem" :{
+	width: Titanium.UI.FILL,
+	height: Titanium.UI.FILL,
+	left:'10'
+}
+
+

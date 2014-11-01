@@ -1,0 +1,30 @@
+
+"#tabGroup" :{
+	backgroundColor:'white',
+	backgroundSelectedColor:'blue'
+}
+
+".StartProperties" :{
+	backgroundColor:'white'
+}
+
+"#allFavoritesTab" :{
+	height: '100dp',
+	title:'Alle',
+	backgroundSelectedColor:'blue'
+}
+
+"#name" : {
+    color: 'black',
+    backgroundColor: 'white',
+    font: { fontFamily:'Arial', fontSize: '20dp', fontWeight:'bold' },
+    left: '60dp', top: 0
+}
+
+"#listItem" :{
+	width: Titanium.UI.FILL,
+	height: Titanium.UI.FILL,
+	left:'10'
+}
+
+

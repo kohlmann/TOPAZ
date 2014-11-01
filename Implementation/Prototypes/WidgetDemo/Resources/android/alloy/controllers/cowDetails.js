@@ -1,32 +1,20 @@
-function Controller() {
-    function itemclick() {
-        var win = Ti.UI.createWindow();
-        var scrollView = Titanium.UI.createScrollView({
-            contentWidth: Ti.Platform.displayCaps.platformWidth,
-            contentHeight: Ti.Platform.displayCaps.platformHeight,
-            height: Ti.Platform.displayCaps.platformHeight,
-            width: Ti.Platform.displayCaps.platformWidth,
-            backgroundColor: "#343434",
-            showVerticalScrollIndicator: true,
-            showHorizontalScrollIndicator: true,
-            maxZoomScale: 100,
-            minZoomScale: 1
-        });
-        win.add(scrollView);
-        var mainImage = Ti.UI.createImageView({
-            height: "auto",
-            width: "auto",
-            image: "/images/cow.png"
-        });
-        mainImage.enableZoomControls = "true";
-        scrollView.add(mainImage);
-        win.open();
+function __processArg(obj, key) {
+    var arg = null;
+    if (obj) {
+        arg = obj[key] || null;
+        delete obj[key];
     }
+    return arg;
+}
+
+function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "cowDetails";
-    arguments[0] ? arguments[0]["__parentSymbol"] : null;
-    arguments[0] ? arguments[0]["$model"] : null;
-    arguments[0] ? arguments[0]["__itemTemplate"] : null;
+    if (arguments[0]) {
+        __processArg(arguments[0], "__parentSymbol");
+        __processArg(arguments[0], "$model");
+        __processArg(arguments[0], "__itemTemplate");
+    }
     var $ = this;
     var exports = {};
     var __defers = {};

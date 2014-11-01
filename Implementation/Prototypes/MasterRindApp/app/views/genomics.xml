@@ -1,3 +1,89 @@
 <Alloy>
-	<Window></Window>
+	<Collection src="cowsMod" />
+	<TabGroup id="tabGroup" class="StartProperties">
+		<Tab id="allCowsTab" class="StartProperties">
+			<Window>
+				<ListView id="listView" defaultItemTemplate="template" onItemclick="itemClick">
+					<Templates>
+						<ItemTemplate name="template" id="template">
+							<ImageView bindId="pic" id="icon" />
+							<Label bindId="name" id="name" />
+							<Label bindId="aAa" id="aaa" />
+							<Label bindId="gRZG" id="grzg" />
+							<Label bindId="father" id="father" />
+							<Label bindId="ff" id="ff" />
+							<Label bindId="fff" id="fff" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection dataCollection="Alloy.Collections.allCowsCol">
+						<ListItem id="listItem" itemId="{id}" name:text="{name}" aAa:text="{aAa}" gRZG:text="{gRZG}" father:text="{father}"
+						ff:text="{ff}" fff:text="{fff}" pic:image="{image}" searchableText="{name}" />
+					</ListSection>
+				</ListView>
+			</Window>
+		</Tab>
+		<Tab id="blackColoredTab" class="StartProperties">
+			<Window>
+				<ListView id="listView" defaultItemTemplate="template" onItemclick="itemClick">
+					<Templates>
+						<ItemTemplate name="template" id="template">
+							<ImageView bindId="pic" id="icon" />
+							<Label bindId="name" id="name" />
+							<Label bindId="aAa" id="aaa" />
+							<Label bindId="gRZG" id="grzg" />
+							<Label bindId="father" id="father" />
+							<Label bindId="ff" id="ff" />
+							<Label bindId="fff" id="fff" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection dataCollection="Alloy.Collections.blackColoredCol">
+						<ListItem id="listItem" itemId="{id}" name:text="{name}" aAa:text="{aAa}" gRZG:text="{gRZG}" father:text="{father}"
+						ff:text="{ff}" fff:text="{fff}" pic:image="{image}" searchableText="{name}" />
+					</ListSection>
+				</ListView>
+			</Window>
+		</Tab>
+		<Tab id="hornlessTab" class="StartProperties">
+			<Window>
+				<ListView id="listView" defaultItemTemplate="template" onItemclick="itemClick">
+					<Templates>
+						<ItemTemplate name="template" id="template">
+							<ImageView bindId="pic" id="icon" />
+							<Label bindId="name" id="name" />
+							<Label bindId="aAa" id="aaa" />
+							<Label bindId="gRZG" id="grzg" />
+							<Label bindId="father" id="father" />
+							<Label bindId="ff" id="ff" />
+							<Label bindId="fff" id="fff" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection dataCollection="Alloy.Collections.hornlessCol">
+						<ListItem id="listItem" itemId="{id}" name:text="{name}" aAa:text="{aAa}" gRZG:text="{gRZG}" father:text="{father}"
+						ff:text="{ff}" fff:text="{fff}" pic:image="{image}" searchableText="{name}" />
+					</ListSection>
+				</ListView>
+			</Window>
+		</Tab>
+		<Tab id="redColoredTab" class="StartProperties">
+			<Window>
+				<ListView id="listView" defaultItemTemplate="template" onItemclick="itemClick">
+					<Templates>
+						<ItemTemplate name="template" id="template">
+							<ImageView bindId="pic" id="icon" />
+							<Label bindId="name" id="name" />
+							<Label bindId="aAa" id="aaa" />
+							<Label bindId="gRZG" id="grzg" />
+							<Label bindId="father" id="father" />
+							<Label bindId="ff" id="ff" />
+							<Label bindId="fff" id="fff" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection dataCollection="Alloy.Collections.redColoredCol">
+						<ListItem id="listItem" itemId="{id}" name:text="{name}" aAa:text="{aAa}" gRZG:text="{gRZG}" father:text="{father}"
+						ff:text="{ff}" fff:text="{fff}" pic:image="{image}" searchableText="{name}" />
+					</ListSection>
+				</ListView>
+			</Window>
+		</Tab>
+	</TabGroup>
 </Alloy>

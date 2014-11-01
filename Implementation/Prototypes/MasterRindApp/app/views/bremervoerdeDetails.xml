@@ -1,0 +1,16 @@
+<Alloy>
+	<Collection src="appointmentMod" />
+	<Window>
+		<ListView id="listView" defaultItemTemplate="template">
+			<Templates>
+				<ItemTemplate name="template" id="template">
+					<Label bindId="name" id="name" />
+					<Label bindId="date" id="date" />
+				</ItemTemplate>
+			</Templates>
+			<ListSection dataCollection="Alloy.Collections.bremervoerdeCol">
+				<ListItem id="listItem" name:text="{name}" date:text="{date}" />
+			</ListSection>
+		</ListView>
+	</Window>
+</Alloy>
